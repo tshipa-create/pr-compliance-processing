@@ -1,0 +1,80 @@
+[
+  {
+    "sha": "9b59ceca478585a6713096b1b44be0407f78b541",
+    "commit": {
+      "author": {
+        "name": "Ville Skytt\u00c3\u00a4",
+        "email": "ville.skytta@iki.fi",
+        "date": "2026-11-14T22:27:03Z"
+      },
+      "committer": {
+        "name": "Ville Skytt\u00c3\u00a4",
+        "email": "ville.skytta@iki.fi",
+        "date": "2026-11-15T09:20:35Z"
+      },
+      "message": "Add tests to guard against missing positional arg and flag completions"
+    },
+    "author": {
+      "login": "scop",
+      "id": 109152,
+      "type": "User"
+    },
+    "committer": {
+      "login": "scop",
+      "id": 109152,
+      "type": "User"
+    }
+  },
+  {
+    "sha": "3c3f1d36f7902b3e1117d38369f5e4f187f1153c",
+    "commit": {
+      "author": {
+        "name": "Ville Skytt\u00c3\u00a4",
+        "email": "ville.skytta@iki.fi",
+        "date": "2026-11-14T22:14:13Z"
+      },
+      "committer": {
+        "name": "Ville Skytt\u00c3\u00a4",
+        "email": "ville.skytta@iki.fi",
+        "date": "2026-11-15T09:27:16Z"
+      },
+      "message": "Add missing bool completions"
+    },
+    "author": {
+      "login": "scop",
+      "id": 109152,
+      "type": "User"
+    },
+    "committer": {
+      "login": "scop",
+      "id": 109152,
+      "type": "User"
+    }
+  },
+  {
+    "sha": "255070585d185ef8ccf8e65ae8af7a6cd2356efc",
+    "commit": {
+      "author": {
+        "name": "Ville Skytt\u00c3\u00a4",
+        "email": "ville.skytta@iki.fi",
+        "date": "2026-11-14T22:12:23Z"
+      },
+      "committer": {
+        "name": "Ville Skytt\u00c3\u00a4",
+        "email": "ville.skytta@iki.fi",
+        "date": "2026-11-15T09:27:25Z"
+      },
+      "message": "Fix network update --ipvx-nameserver (non-)completions\n\nThe flags are ...nameser"
+    },
+    "author": {
+      "login": "scop",
+      "id": 109152,
+      "type": "User"
+    },
+    "committer": {
+      "login": "scop",
+      "id": 109152,
+      "type": "User"
+    }
+  }
+]

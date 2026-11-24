@@ -1,0 +1,444 @@
+[
+  {
+    "author_association": "MEMBER",
+    "created_at": "2026-11-14T22:28:45Z",
+    "title": "Fix flag argument completion issues, test missing flags and positional arg completions",
+    "user": {
+      "login": "scop",
+      "id": 109152,
+      "type": "User"
+    },
+    "draft": false,
+    "html_url": "https://github.com/home-assistant/cli/pull/699",
+    "state": "closed",
+    "merge_commit_sha": "66d704d34424eb14e9e99381d3672456e164b08a",
+    "closed_at": "2026-11-16T13:10:08Z",
+    "base": {
+      "ref": "main",
+      "sha": "a9bea5764909a7592500a1483efaf2f5a1cc7440",
+      "repo": {
+        "name": "cli",
+        "full_name": "home-assistant/cli"
+      }
+    },
+    "merged_at": "2026-11-16T13:10:08Z",
+    "updated_at": "2026-11-16T17:32:37Z",
+    "number": 699,
+    "head": {
+      "ref": "test/missing-flag-completions",
+      "sha": "255070585d185ef8ccf8e65ae8af7a6cd2356efc",
+      "repo": {
+        "name": "cli",
+        "full_name": "scop/cli"
+      }
+    }
+  },
+  {
+    "author_association": "MEMBER",
+    "created_at": "2026-11-14T22:14:41Z",
+    "title": "Add some missing bool completions",
+    "user": {
+      "login": "scop",
+      "id": 109152,
+      "type": "User"
+    },
+    "draft": false,
+    "html_url": "https://github.com/home-assistant/cli/pull/698",
+    "state": "closed",
+    "merge_commit_sha": "168405521e9026b25dfb29f0c07e2973d754943a",
+    "closed_at": "2026-11-15T09:28:18Z",
+    "base": {
+      "ref": "main",
+      "sha": "a9bea5764909a7592500a1483efaf2f5a1cc7440",
+      "repo": {
+        "name": "cli",
+        "full_name": "home-assistant/cli"
+      }
+    },
+    "merged_at": null,
+    "updated_at": "2026-11-15T09:28:24Z",
+    "number": 698,
+    "head": {
+      "ref": "fix/missing-bool-completions",
+      "sha": "155672e705da8e0114acaccf1fc8fb7bf4770ec8",
+      "repo": {
+        "name": "cli",
+        "full_name": "scop/cli"
+      }
+    }
+  },
+  {
+    "author_association": "MEMBER",
+    "created_at": "2026-11-14T22:13:11Z",
+    "title": "Fix network update --ipvx-nameserver (non-)completions",
+    "user": {
+      "login": "scop",
+      "id": 109152,
+      "type": "User"
+    },
+    "draft": false,
+    "html_url": "https://github.com/home-assistant/cli/pull/697",
+    "state": "closed",
+    "merge_commit_sha": "ad5f3bdebb5cc9eed4b085e6d504feb8088eaf4e",
+    "closed_at": "2026-11-15T09:27:59Z",
+    "base": {
+      "ref": "main",
+      "sha": "a9bea5764909a7592500a1483efaf2f5a1cc7440",
+      "repo": {
+        "name": "cli",
+        "full_name": "home-assistant/cli"
+      }
+    },
+    "merged_at": null,
+    "updated_at": "2026-11-15T09:28:06Z",
+    "number": 697,
+    "head": {
+      "ref": "fix/ipvx-nameserver-completions",
+      "sha": "6b68a644d22cdc8651bfb11c7c15399065cff515",
+      "repo": {
+        "name": "cli",
+        "full_name": "scop/cli"
+      }
+    }
+  },
+  {
+    "author_association": "MEMBER",
+    "created_at": "2026-11-12T09:44:44Z",
+    "title": "Bypass http.Transport to drop TLS and HTTP/2 from the binary",
+    "user": {
+      "login": "agners",
+      "id": 34061,
+      "type": "User"
+    },
+    "draft": false,
+    "html_url": "https://github.com/home-assistant/cli/pull/695",
+    "state": "closed",
+    "merge_commit_sha": "a9bea5764909a7592500a1483efaf2f5a1cc7440",
+    "closed_at": "2026-11-12T13:58:50Z",
+    "base": {
+      "ref": "main",
+      "sha": "1aa746fd4fa8da64f2d3d31ebc607aab2935ec44",
+      "repo": {
+        "name": "cli",
+        "full_name": "home-assistant/cli"
+      }
+    },
+    "merged_at": "2026-11-12T13:58:50Z",
+    "updated_at": "2026-11-12T13:58:53Z",
+    "number": 695,
+    "head": {
+      "ref": "bypass-http-transport",
+      "sha": "16f6f8fe208fba120e7bc7ea5e2d1a637bf6e9e3",
+      "repo": {
+        "name": "cli",
+        "full_name": "home-assistant/cli"
+      }
+    }
+  },
+  {
+    "author_association": "MEMBER",
+    "created_at": "2026-11-12T09:46:49Z",
+    "title": "Run the tests in CI",
+    "user": {
+      "login": "agners",
+      "id": 34061,
+      "type": "User"
+    },
+    "draft": false,
+    "html_url": "https://github.com/home-assistant/cli/pull/696",
+    "state": "closed",
+    "merge_commit_sha": "1aa746fd4fa8da64f2d3d31ebc607aab2935ec44",
+    "closed_at": "2026-11-12T13:47:19Z",
+    "base": {
+      "ref": "main",
+      "sha": "92d4d6f6cf773e42bfc93b52a5b606141a021c8c",
+      "repo": {
+        "name": "cli",
+        "full_name": "home-assistant/cli"
+      }
+    },
+    "merged_at": "2026-11-12T13:47:19Z",
+    "updated_at": "2026-11-12T13:47:21Z",
+    "number": 696,
+    "head": {
+      "ref": "ci-go-test",
+      "sha": "5ce1ba13dbf8efd5cd0bc863dea4b933feb97ca4",
+      "repo": {
+        "name": "cli",
+        "full_name": "home-assistant/cli"
+      }
+    }
+  },
+  {
+    "author_association": "MEMBER",
+    "created_at": "2026-11-12T09:42:34Z",
+    "title": "Replace viper and go-homedir with a small config package",
+    "user": {
+      "login": "agners",
+      "id": 34061,
+      "type": "User"
+    },
+    "draft": false,
+    "html_url": "https://github.com/home-assistant/cli/pull/694",
+    "state": "closed",
+    "merge_commit_sha": "c0278cddc972ce3e9d680185e3d4fc06a327e92d",
+    "closed_at": "2026-11-12T13:43:16Z",
+    "base": {
+      "ref": "main",
+      "sha": "92d4d6f6cf773e42bfc93b52a5b606141a021c8c",
+      "repo": {
+        "name": "cli",
+        "full_name": "home-assistant/cli"
+      }
+    },
+    "merged_at": "2026-11-12T13:43:16Z",
+    "updated_at": "2026-11-12T13:43:18Z",
+    "number": 694,
+    "head": {
+      "ref": "replace-viper",
+      "sha": "8d51720b1d48c06ae217e8b972dae237145d30b8",
+      "repo": {
+        "name": "cli",
+        "full_name": "home-assistant/cli"
+      }
+    }
+  },
+  {
+    "author_association": "MEMBER",
+    "created_at": "2026-11-09T16:39:57Z",
+    "title": "Apply each request's timeout instead of the first one's",
+    "user": {
+      "login": "mdegat01",
+      "id": 2037026,
+      "type": "User"
+    },
+    "draft": true,
+    "html_url": "https://github.com/home-assistant/cli/pull/691",
+    "state": "closed",
+    "merge_commit_sha": null,
+    "closed_at": "2026-11-12T09:12:45Z",
+    "base": {
+      "ref": "main",
+      "sha": "07b13f928619f2bccfc1bf8e60025cfbd00014f2",
+      "repo": {
+        "name": "cli",
+        "full_name": "home-assistant/cli"
+      }
+    },
+    "merged_at": null,
+    "updated_at": "2026-11-12T09:12:46Z",
+    "number": 691,
+    "head": {
+      "ref": "per-request-timeouts",
+      "sha": "a22bce283ff10e3495041e569b704a656a8337d8",
+      "repo": {
+        "name": "cli",
+        "full_name": "home-assistant/cli"
+      }
+    }
+  },
+  {
+    "author_association": "MEMBER",
+    "created_at": "2026-11-11T15:39:20Z",
+    "title": "Replace resty with net/http",
+    "user": {
+      "login": "agners",
+      "id": 34061,
+      "type": "User"
+    },
+    "draft": false,
+    "html_url": "https://github.com/home-assistant/cli/pull/693",
+    "state": "closed",
+    "merge_commit_sha": "92d4d6f6cf773e42bfc93b52a5b606141a021c8c",
+    "closed_at": "2026-11-12T09:12:21Z",
+    "base": {
+      "ref": "main",
+      "sha": "2c7a9476699ec9fa0a0371ad3f45349193f9f28c",
+      "repo": {
+        "name": "cli",
+        "full_name": "home-assistant/cli"
+      }
+    },
+    "merged_at": "2026-11-12T09:12:21Z",
+    "updated_at": "2026-11-12T09:12:21Z",
+    "number": 693,
+    "head": {
+      "ref": "replace-resty-with-net-http",
+      "sha": "c46a08d7ff39f307897dfd7fe5d31cfd66a0df76",
+      "repo": {
+        "name": "cli-1",
+        "full_name": "agners/cli-1"
+      }
+    }
+  },
+  {
+    "author_association": "MEMBER",
+    "created_at": "2026-11-11T15:31:11Z",
+    "title": "Replace ghodss/yaml with go.yaml.in/yaml/v3",
+    "user": {
+      "login": "agners",
+      "id": 34061,
+      "type": "User"
+    },
+    "draft": false,
+    "html_url": "https://github.com/home-assistant/cli/pull/692",
+    "state": "closed",
+    "merge_commit_sha": "2c7a9476699ec9fa0a0371ad3f45349193f9f28c",
+    "closed_at": "2026-11-12T08:38:32Z",
+    "base": {
+      "ref": "main",
+      "sha": "07b13f928619f2bccfc1bf8e60025cfbd00014f2",
+      "repo": {
+        "name": "cli",
+        "full_name": "home-assistant/cli"
+      }
+    },
+    "merged_at": "2026-11-12T08:38:32Z",
+    "updated_at": "2026-11-12T08:38:35Z",
+    "number": 692,
+    "head": {
+      "ref": "yaml-v3",
+      "sha": "1912f630f36d1513935896aa89ae1bf7097d9721",
+      "repo": {
+        "name": "cli",
+        "full_name": "home-assistant/cli"
+      }
+    }
+  },
+  {
+    "author_association": "MEMBER",
+    "created_at": "2026-11-04T21:54:34Z",
+    "title": "Send a CLI User-Agent and allow setting X-Hass-Source",
+    "user": {
+      "login": "mdegat01",
+      "id": 2037026,
+      "type": "User"
+    },
+    "draft": false,
+    "html_url": "https://github.com/home-assistant/cli/pull/690",
+    "state": "closed",
+    "merge_commit_sha": "07b13f928619f2bccfc1bf8e60025cfbd00014f2",
+    "closed_at": "2026-11-11T14:54:41Z",
+    "base": {
+      "ref": "main",
+      "sha": "9e23d32d7dc2245bcf5f8b83225b93e3016b063e",
+      "repo": {
+        "name": "cli",
+        "full_name": "home-assistant/cli"
+      }
+    },
+    "merged_at": "2026-11-11T14:54:41Z",
+    "updated_at": "2026-11-11T14:54:43Z",
+    "number": 690,
+    "head": {
+      "ref": "cli-user-agent",
+      "sha": "a0add5c69a27dd66a3c6b44722dc8533fcd1f262",
+      "repo": {
+        "name": "cli",
+        "full_name": "home-assistant/cli"
+      }
+    }
+  },
+  {
+    "author_association": "CONTRIBUTOR",
+    "created_at": "2026-10-28T22:48:21Z",
+    "title": "Fix exit code 0 on API errors when using --raw-json",
+    "user": {
+      "login": "lebauce",
+      "id": 28005,
+      "type": "User"
+    },
+    "draft": false,
+    "html_url": "https://github.com/home-assistant/cli/pull/688",
+    "state": "closed",
+    "merge_commit_sha": "4138f575f7811b719d6650f3c41a2d460f8f3eaf",
+    "closed_at": "2026-11-11T14:54:28Z",
+    "base": {
+      "ref": "main",
+      "sha": "af832b7fda8fb45ff063a3dbcd1700bfb4fa26c7",
+      "repo": {
+        "name": "cli",
+        "full_name": "home-assistant/cli"
+      }
+    },
+    "merged_at": "2026-11-11T14:54:28Z",
+    "updated_at": "2026-11-11T14:54:28Z",
+    "number": 688,
+    "head": {
+      "ref": "fix/raw-json-exit-code",
+      "sha": "537024a6b28af5a617a826e4dd5f7f70a4e59221",
+      "repo": {
+        "name": "cli",
+        "full_name": "lebauce/cli"
+      }
+    }
+  },
+  {
+    "author_association": "MEMBER",
+    "created_at": "2026-10-20T10:55:38Z",
+    "title": "Switch default branch from master to main",
+    "user": {
+      "login": "agners",
+      "id": 34061,
+      "type": "User"
+    },
+    "draft": false,
+    "html_url": "https://github.com/home-assistant/cli/pull/685",
+    "state": "closed",
+    "merge_commit_sha": "af832b7fda8fb45ff063a3dbcd1700bfb4fa26c7",
+    "closed_at": "2026-11-11T14:40:27Z",
+    "base": {
+      "ref": "main",
+      "sha": "9e23d32d7dc2245bcf5f8b83225b93e3016b063e",
+      "repo": {
+        "name": "cli",
+        "full_name": "home-assistant/cli"
+      }
+    },
+    "merged_at": "2026-11-11T14:40:27Z",
+    "updated_at": "2026-11-11T14:40:30Z",
+    "number": 685,
+    "head": {
+      "ref": "switch-default-branch-to-main",
+      "sha": "aa140646d98fae5a6963c14862765864385ff352",
+      "repo": {
+        "name": "cli",
+        "full_name": "home-assistant/cli"
+      }
+    }
+  },
+  {
+    "merge_commit_sha": "948cc3a1f74a278088537866c5d9f04a33302e50",
+    "merged_at": "2026-10-05T06:15:54Z",
+    "user": {
+      "login": "dependabot[bot]",
+      "id": 49699333,
+      "type": "Bot"
+    },
+    "closed_at": "2026-10-05T06:15:54Z",
+    "number": 681,
+    "html_url": "https://github.com/home-assistant/cli/pull/681",
+    "state": "closed",
+    "head": {
+      "ref": "dependabot/github_actions/release-drafter/release-drafter-7.9.0",
+      "sha": "ab3dd0277ae7509e8744226a5e419dce4629c82d",
+      "repo": {
+        "name": "cli",
+        "full_name": "home-assistant/cli"
+      }
+    },
+    "created_at": "2026-10-05T06:03:16Z",
+    "updated_at": "2026-10-05T06:15:57Z",
+    "draft": false,
+    "base": {
+      "ref": "master",
+      "sha": "08e8bb4061467aa95d9b8626e44d375b98c25b31",
+      "repo": {
+        "name": "cli",
+        "full_name": "home-assistant/cli"
+      }
+    },
+    "author_association": "CONTRIBUTOR",
+    "title": "Bump release-drafter/release-drafter from 7.7.0 to 7.9.0"
+  }
+]

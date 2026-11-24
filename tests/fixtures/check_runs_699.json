@@ -1,0 +1,65 @@
+{
+  "total_count": 5,
+  "check_runs": [
+    {
+      "id": 132766839140,
+      "name": "lint",
+      "head_sha": "255070585d185ef8ccf8e65ae8af7a6cd2356efc",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-15T09:27:41Z",
+      "completed_at": "2026-11-15T09:28:04Z",
+      "app": {
+        "slug": "github-actions"
+      }
+    },
+    {
+      "id": 132766838784,
+      "name": "Build ha_amd64",
+      "head_sha": "255070585d185ef8ccf8e65ae8af7a6cd2356efc",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-15T09:27:41Z",
+      "completed_at": "2026-11-15T09:28:08Z",
+      "app": {
+        "slug": "github-actions"
+      }
+    },
+    {
+      "id": 132766838655,
+      "name": "Run tests",
+      "head_sha": "255070585d185ef8ccf8e65ae8af7a6cd2356efc",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-15T09:27:41Z",
+      "completed_at": "2026-11-15T09:27:59Z",
+      "app": {
+        "slug": "github-actions"
+      }
+    },
+    {
+      "id": 132766838542,
+      "name": "Build ha_aarch64",
+      "head_sha": "255070585d185ef8ccf8e65ae8af7a6cd2356efc",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-15T09:27:41Z",
+      "completed_at": "2026-11-15T09:28:03Z",
+      "app": {
+        "slug": "github-actions"
+      }
+    },
+    {
+      "id": 132766838482,
+      "name": "codespell",
+      "head_sha": "255070585d185ef8ccf8e65ae8af7a6cd2356efc",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-15T09:27:41Z",
+      "completed_at": "2026-11-15T09:27:51Z",
+      "app": {
+        "slug": "github-actions"
+      }
+    }
+  ]
+}

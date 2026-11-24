@@ -1,0 +1,14 @@
+[
+  {
+    "id": 5410553792,
+    "state": "APPROVED",
+    "submitted_at": "2026-10-05T06:15:48Z",
+    "commit_id": "ab3dd0277ae7509e8744226a5e419dce4629c82d",
+    "author_association": "MEMBER",
+    "user": {
+      "login": "frenck",
+      "id": 195327,
+      "type": "User"
+    }
+  }
+]

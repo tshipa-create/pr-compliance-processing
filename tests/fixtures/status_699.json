@@ -1,0 +1,23 @@
+{
+  "state": "success",
+  "sha": "255070585d185ef8ccf8e65ae8af7a6cd2356efc",
+  "total_count": 2,
+  "statuses": [
+    {
+      "id": 58955157646,
+      "state": "success",
+      "context": "cla-bot",
+      "description": "Everyone involved has signed the CLA.",
+      "created_at": "2026-11-15T09:27:38Z",
+      "updated_at": "2026-11-15T09:27:38Z"
+    },
+    {
+      "id": 58955192978,
+      "state": "success",
+      "context": "CodeRabbit",
+      "description": "Review completed",
+      "created_at": "2026-11-15T09:28:57Z",
+      "updated_at": "2026-11-15T09:28:57Z"
+    }
+  ]
+}

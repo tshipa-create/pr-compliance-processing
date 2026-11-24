@@ -1,0 +1,23 @@
+{
+  "state": "success",
+  "sha": "ab3dd0277ae7509e8744226a5e419dce4629c82d",
+  "total_count": 2,
+  "statuses": [
+    {
+      "id": 55577845744,
+      "state": "success",
+      "context": "cla-bot",
+      "description": "Everyone involved are ignored",
+      "created_at": "2026-10-05T06:03:19Z",
+      "updated_at": "2026-10-05T06:03:19Z"
+    },
+    {
+      "id": 55577862988,
+      "state": "success",
+      "context": "CodeRabbit",
+      "description": "Review skipped: bot user not eligible for review",
+      "created_at": "2026-10-05T06:03:45Z",
+      "updated_at": "2026-10-05T06:03:45Z"
+    }
+  ]
+}

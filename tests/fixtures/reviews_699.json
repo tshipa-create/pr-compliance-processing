@@ -1,0 +1,50 @@
+[
+  {
+    "id": 5910026169,
+    "state": "COMMENTED",
+    "submitted_at": "2026-11-15T09:23:19Z",
+    "commit_id": "9b59ceca478585a6713096b1b44be0407f78b541",
+    "author_association": "CONTRIBUTOR",
+    "user": {
+      "login": "coderabbitai[bot]",
+      "id": 136622811,
+      "type": "Bot"
+    }
+  },
+  {
+    "id": 5910049153,
+    "state": "COMMENTED",
+    "submitted_at": "2026-11-15T09:30:37Z",
+    "commit_id": "255070585d185ef8ccf8e65ae8af7a6cd2356efc",
+    "author_association": "MEMBER",
+    "user": {
+      "login": "scop",
+      "id": 109152,
+      "type": "User"
+    }
+  },
+  {
+    "id": 5919984580,
+    "state": "COMMENTED",
+    "submitted_at": "2026-11-16T12:30:32Z",
+    "commit_id": "255070585d185ef8ccf8e65ae8af7a6cd2356efc",
+    "author_association": "CONTRIBUTOR",
+    "user": {
+      "login": "copilot-pull-request-reviewer[bot]",
+      "id": 175728472,
+      "type": "Bot"
+    }
+  },
+  {
+    "id": 5920484614,
+    "state": "APPROVED",
+    "submitted_at": "2026-11-16T13:09:53Z",
+    "commit_id": "255070585d185ef8ccf8e65ae8af7a6cd2356efc",
+    "author_association": "MEMBER",
+    "user": {
+      "login": "agners",
+      "id": 34061,
+      "type": "User"
+    }
+  }
+]
