@@ -53,6 +53,7 @@ def build_alert(context: Mapping[str, Any]) -> dict[str, Any]:
         "dag_id": getattr(ti, "dag_id", None),
         "task_id": getattr(ti, "task_id", None),
         "map_index": getattr(ti, "map_index", -1),
+        "map_label": getattr(ti, "rendered_map_index", None),  # e.g. the repo name
         "try_number": getattr(ti, "try_number", None),
         "run_id": getattr(dag_run, "run_id", None) or getattr(ti, "run_id", None),
         "logical_date": str(logical_date) if logical_date else None,

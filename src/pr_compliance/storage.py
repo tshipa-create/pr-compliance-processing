@@ -15,6 +15,7 @@ from __future__ import annotations
 import json
 import os
 import shutil
+import time
 from datetime import date
 from pathlib import Path
 from typing import Any
@@ -26,6 +27,20 @@ import pyarrow.parquet as pq
 
 def ds_str(ds: date) -> str:
     return ds.isoformat()
+
+
+def _rename(src: Path, dst: Path, attempts: int = 5) -> None:
+    """Directory rename with a short retry. On Windows hosts a virus scanner can hold a
+    just-written file for a moment (PermissionError); on Linux this never loops."""
+    for attempt in range(attempts):
+        try:
+            src.rename(dst)
+        except PermissionError:
+            if attempt == attempts - 1:
+                raise
+            time.sleep(0.2 * (attempt + 1))
+        else:
+            return
 
 
 class Storage:
@@ -94,8 +109,8 @@ class Storage:
         if backup.exists():
             shutil.rmtree(backup)
         if final.exists():
-            final.rename(backup)
-        staging.rename(final)
+            _rename(final, backup)
+        _rename(staging, final)
         if backup.exists():
             shutil.rmtree(backup)
         return final
