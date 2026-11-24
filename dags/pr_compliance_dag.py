@@ -11,6 +11,7 @@ overwrite the same files and upsert the same rows.
 
 from __future__ import annotations
 
+from collections.abc import Callable
 from datetime import timedelta
 from typing import Any
 
@@ -24,11 +25,13 @@ from airflow.sdk import (
     task,
 )
 from airflow.sdk.definitions.deadline import AsyncCallback, DeadlineAlert, DeadlineReference
+from airflow.sdk.exceptions import AirflowFailException
 
 # Only light modules at parse time: the DAG processor re-parses this file every ~30s.
 # pandas/pyarrow/pandera (via pr_compliance.pipeline) are imported inside the tasks.
 from pr_compliance.alerts import notify_failure, notify_retry
 from pr_compliance.config import Settings
+from pr_compliance.exceptions import ConfigurationError, GitHubAuthError, GitHubResourceError
 from pr_compliance.github.models import Window
 from pr_compliance.metrics import DbConnection, EtlRunRecorder, TaskIdentity
 
@@ -80,6 +83,17 @@ def _ident(ctx: Any, window: Window) -> TaskIdentity:
 
 RECORDER = EtlRunRecorder(_db)
 
+# Errors a retry cannot fix (bad token, missing repo, bad config): fail the task now
+# instead of burning Airflow retries. Transient errors were already retried in the client.
+PERMANENT_ERRORS = (ConfigurationError, GitHubAuthError, GitHubResourceError)
+
+
+def _no_retry_on_permanent[T](call: Callable[[], T]) -> T:
+    try:
+        return call()
+    except PERMANENT_ERRORS as exc:
+        raise AirflowFailException(f"{type(exc).__name__}: {exc}") from exc
+
 
 @dag(
     dag_id="pr_compliance",
@@ -116,7 +130,8 @@ def pr_compliance() -> None:
 
         ctx = get_current_context()
         settings = _settings()
-        return pipeline.list_repos(settings, _ident(ctx, _window(ctx, settings)), RECORDER)
+        ident = _ident(ctx, _window(ctx, settings))
+        return _no_retry_on_permanent(lambda: pipeline.list_repos(settings, ident, RECORDER))
 
     @task(max_active_tis_per_dag=3, map_index_template="{{ task.op_kwargs['repo'] }}")
     def extract(repo: str) -> str:
@@ -125,7 +140,10 @@ def pr_compliance() -> None:
         ctx = get_current_context()
         settings = _settings()
         window = _window(ctx, settings)
-        return pipeline.extract(settings, _ident(ctx, window), RECORDER, repo, window)
+        ident = _ident(ctx, window)
+        return _no_retry_on_permanent(
+            lambda: pipeline.extract(settings, ident, RECORDER, repo, window)
+        )
 
     @task(trigger_rule="all_done")
     def transform() -> dict[str, str]:
