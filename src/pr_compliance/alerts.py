@@ -57,8 +57,10 @@ def build_alert(context: Mapping[str, Any]) -> dict[str, Any]:
         "try_number": getattr(ti, "try_number", None),
         "run_id": getattr(dag_run, "run_id", None) or getattr(ti, "run_id", None),
         "logical_date": str(logical_date) if logical_date else None,
-        "error_class": type(exc).__name__ if exc else None,
-        "error": str(exc)[:2000] if exc else None,
+        # No exception object means the task never raised: it was killed, timed out,
+        # lost its heartbeat or could not start (e.g. the API server was down).
+        "error_class": type(exc).__name__ if exc else "TaskKilledOrLost",
+        "error": str(exc)[:2000] if exc else "no exception: killed, timed out or failed to start",
         "log_url": getattr(ti, "log_url", None),
     }
 

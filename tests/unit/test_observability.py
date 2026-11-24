@@ -181,3 +181,11 @@ def test_structlog_bridge_keeps_level_and_fields(monkeypatch: pytest.MonkeyPatch
     assert events[-1]["method"] == "info"
     assert events[-1]["event"] == "pr_skipped"
     assert events[-1]["pr_number"] == 7 and events[-1]["run_id"] == "r9"
+
+
+def test_alert_without_exception_is_explained() -> None:
+    sent: list[tuple[str, str, str]] = []
+    ctx = _context()
+    del ctx["exception"]
+    alerts.notify_failure(ctx, sender=lambda to, s, b: sent.append((to, s, b)))
+    assert sent[0][1].endswith("- TaskKilledOrLost")
