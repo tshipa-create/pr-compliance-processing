@@ -49,7 +49,7 @@ def test_tasks_and_dependencies(dag) -> None:  # type: ignore[no-untyped-def]
     assert t["transform"].upstream_task_ids == {"extract"}
     assert t["load"].upstream_task_ids == {"transform"}
     assert t["data_quality_check"].upstream_task_ids == {"load", "list_repos"}
-    assert t["transform"].trigger_rule == "all_done"
+    assert t["transform"].trigger_rule == "all_done_min_one_success"
 
 
 def test_failure_callbacks_and_retries(dag) -> None:  # type: ignore[no-untyped-def]

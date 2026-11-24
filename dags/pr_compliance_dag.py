@@ -20,6 +20,7 @@ from airflow.sdk import (
     Asset,
     Connection,
     CronDataIntervalTimetable,
+    TriggerRule,
     dag,
     get_current_context,
     task,
@@ -151,10 +152,11 @@ def pr_compliance() -> None:
             lambda: pipeline.extract(settings, ident, RECORDER, repo, window)
         )
 
-    @task(trigger_rule="all_done")
+    # Healthy repos still flow through when some repos failed; the data_quality_check
+    # task then fails the run so the gap is alerted on. "min one success" stops a run
+    # in which nothing was extracted (e.g. list_repos failed) from loading anything.
+    @task(trigger_rule=TriggerRule.ALL_DONE_MIN_ONE_SUCCESS)
     def transform() -> dict[str, str]:
-        # all_done: healthy repos still flow through when one repo failed; the
-        # data_quality_check task then fails the run so the gap is alerted on.
         from pr_compliance import pipeline
 
         ctx = get_current_context()

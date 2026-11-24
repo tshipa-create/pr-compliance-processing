@@ -51,7 +51,7 @@ def transform(
     configure_logging()
     with tracked_task(ident, recorder) as metrics:
         storage = Storage(settings.data_dir)
-        silver = SilverBuilder(storage, metrics).build(ds)
+        silver = SilverBuilder(storage, metrics).build(ds, ident.run_id)
         cfg = RuleConfig(settings.min_approvals, settings.no_checks_passes)
         gold = GoldBuilder(storage, cfg, settings.exclude_bots).build(silver.frames, ds)
         return gold.as_xcom()

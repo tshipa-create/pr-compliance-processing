@@ -105,8 +105,10 @@ class SilverBuilder:
         self.storage = storage
         self.metrics = metrics or RunMetrics()
 
-    def build(self, ds: date) -> SilverResult:
-        manifests = self.read_manifests(ds)
+    def build(self, ds: date, run_id: str | None = None) -> SilverResult:
+        """Build silver for ``ds``. With ``run_id``, only partitions written by that DAG
+        run are used, so stale partitions (another allowlist or window) never leak in."""
+        manifests = self.read_manifests(ds, run_id)
         rows: dict[str, list[dict[str, Any]]] = {e: [] for e in COLUMN_SPECS}
         quarantined: dict[str, list[dict[str, Any]]] = {e: [] for e in COLUMN_SPECS}
         counts = {e: {"valid": 0, "quarantined": 0} for e in COLUMN_SPECS}
@@ -164,7 +166,7 @@ class SilverBuilder:
         return SilverResult(paths=paths, stats=stats, frames=frames)
 
     # ---- helpers -------------------------------------------------------------------------
-    def read_manifests(self, ds: date) -> list[tuple[Path, Manifest]]:
+    def read_manifests(self, ds: date, run_id: str | None = None) -> list[tuple[Path, Manifest]]:
         """Usable bronze partitions for ``ds`` (sorted by repo for determinism)."""
         found: list[tuple[Path, Manifest]] = []
         for repo_dir in sorted(self.storage.bronze_ds(ds).glob("repo=*")):
@@ -173,6 +175,12 @@ class SilverBuilder:
                 logger.warning("bronze_partition_without_manifest", extra={"path": str(repo_dir)})
                 continue
             manifest: Manifest = self.storage.read_json(manifest_path)
+            if run_id is not None and manifest["run_id"] != run_id:
+                logger.warning(
+                    "bronze_partition_stale",
+                    extra={"repo": manifest["repo"], "written_by": manifest["run_id"]},
+                )
+                continue
             if manifest["status"] in USABLE_MANIFEST_STATUSES:
                 found.append((repo_dir, manifest))
         return found

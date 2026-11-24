@@ -150,3 +150,16 @@ def test_exclude_bots(storage: Storage, fixture: Callable[[str], Any]) -> None:
     silver = SilverBuilder(storage).build(DS)
     gold = GoldBuilder(storage, RuleConfig(), exclude_bots=True).build(silver.frames, DS)
     assert gold.rows == 1
+
+
+def test_silver_ignores_partitions_from_other_runs(
+    storage: Storage, fixture: Callable[[str], Any]
+) -> None:
+    write_bronze(storage, fixture, pick(fixture, 699), run_id="current", repo="cli")
+    write_bronze(storage, fixture, pick(fixture, 681), run_id="older", repo="version")
+    assert set(SilverBuilder(storage).build(DS).frames["pull_requests"]["repository"]) == {
+        "cli",
+        "version",
+    }
+    result = SilverBuilder(storage).build(DS, run_id="current")
+    assert set(result.frames["pull_requests"]["repository"]) == {"cli"}
