@@ -34,6 +34,7 @@ dev = [
     "types-jsonschema",
     "types-psycopg2",
     "pip-audit>=2.7",
+    "structlog>=25.1",
 ]
 # Airflow itself is provided by the Docker image. It is only installed for the DAG
 # import test (Linux/CI); it is not a runtime dependency of the package.
@@ -59,6 +60,7 @@ constraint-dependencies = [
     "pydantic-settings==2.14.2",
     "psycopg2-binary==2.9.12",
     "SQLAlchemy==2.0.51",
+    "structlog==26.1.0",
     "pendulum==3.2.0",
     "apache-airflow-providers-postgres==6.8.0",
     "apache-airflow-providers-smtp==3.0.1",
@@ -83,6 +85,7 @@ ignore = ["PLR0913", "PLR0917", "PLR2004", "TRY003", "PLR0911"]
 
 [tool.ruff.lint.per-file-ignores]
 "tests/**" = ["PLR2004", "S101", "PLC0415", "TRY301"]
+"dags/**" = ["PLC0415"]  # heavy imports deferred to task run time on purpose
 
 [tool.mypy]
 python_version = "3.13"

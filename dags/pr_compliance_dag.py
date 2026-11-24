@@ -15,7 +15,6 @@ from datetime import timedelta
 from typing import Any
 
 import pendulum
-from airflow.providers.postgres.hooks.postgres import PostgresHook
 from airflow.sdk import (
     Asset,
     Connection,
@@ -26,9 +25,11 @@ from airflow.sdk import (
 )
 from airflow.sdk.definitions.deadline import AsyncCallback, DeadlineAlert, DeadlineReference
 
-from pr_compliance import pipeline
+# Only light modules at parse time: the DAG processor re-parses this file every ~30s.
+# pandas/pyarrow/pandera (via pr_compliance.pipeline) are imported inside the tasks.
 from pr_compliance.alerts import notify_failure, notify_retry
 from pr_compliance.config import Settings
+from pr_compliance.github.models import Window
 from pr_compliance.metrics import DbConnection, EtlRunRecorder, TaskIdentity
 
 COMPLIANCE_CONN_ID = "compliance_db"
@@ -51,6 +52,8 @@ def _settings() -> Settings:
 
 
 def _db() -> DbConnection:
+    from airflow.providers.postgres.hooks.postgres import PostgresHook
+
     conn: DbConnection = PostgresHook(postgres_conn_id=COMPLIANCE_CONN_ID).get_conn()
     return conn
 
@@ -65,8 +68,8 @@ def _ident(ctx: Any) -> TaskIdentity:
     )
 
 
-def _window(ctx: Any, settings: Settings) -> Any:
-    return pipeline.make_window(
+def _window(ctx: Any, settings: Settings) -> Window:
+    return Window.for_interval(
         ctx["data_interval_start"], ctx["data_interval_end"], settings.lookback_days
     )
 
@@ -105,11 +108,15 @@ RECORDER = EtlRunRecorder(_db)
 def pr_compliance() -> None:
     @task
     def list_repos() -> list[str]:
+        from pr_compliance import pipeline
+
         ctx = get_current_context()
         return pipeline.list_repos(_settings(), _ident(ctx), RECORDER)
 
     @task(max_active_tis_per_dag=3, map_index_template="{{ task.op_kwargs['repo'] }}")
     def extract(repo: str) -> str:
+        from pr_compliance import pipeline
+
         ctx = get_current_context()
         settings = _settings()
         return pipeline.extract(settings, _ident(ctx), RECORDER, repo, _window(ctx, settings))
@@ -118,12 +125,16 @@ def pr_compliance() -> None:
     def transform() -> dict[str, str]:
         # all_done: healthy repos still flow through when one repo failed; the
         # data_quality_check task then fails the run so the gap is alerted on.
+        from pr_compliance import pipeline
+
         ctx = get_current_context()
         settings = _settings()
         return pipeline.transform(settings, _ident(ctx), RECORDER, _window(ctx, settings).ds)
 
     @task(outlets=[COMPLIANCE_TABLE])
     def load(gold_paths: dict[str, str]) -> dict[str, int]:
+        from pr_compliance import pipeline
+
         ctx = get_current_context()
         settings = _settings()
         ds = _window(ctx, settings).ds
@@ -131,6 +142,8 @@ def pr_compliance() -> None:
 
     @task
     def data_quality_check(repos: list[str], _loaded: dict[str, int]) -> dict[str, bool]:
+        from pr_compliance import pipeline
+
         ctx = get_current_context()
         settings = _settings()
         window = _window(ctx, settings)

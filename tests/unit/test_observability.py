@@ -149,3 +149,27 @@ def test_notify_failure_swallows_delivery_errors(caplog: pytest.LogCaptureFixtur
         raise OSError("smtp down")
 
     alerts.notify_failure(_context(), sender=broken)  # must not raise
+
+
+def test_structlog_bridge_keeps_level_and_fields(monkeypatch: pytest.MonkeyPatch) -> None:
+    structlog = pytest.importorskip("structlog")
+    from pr_compliance import logging_config
+
+    events: list[dict[str, Any]] = []
+
+    def capture(_: Any, method: str, event_dict: dict[str, Any]) -> Any:
+        events.append({"method": method, **event_dict})
+        raise structlog.DropEvent
+
+    structlog.configure(processors=[capture])
+    try:
+        logger = logging_config.configure_logging()
+        assert isinstance(logger.handlers[-1], logging_config.StructlogBridgeHandler)
+        with log_context(run_id="r9"):
+            logging.getLogger("pr_compliance.x").info("pr_skipped", extra={"pr_number": 7})
+    finally:
+        structlog.reset_defaults()
+        logging_config.configure_logging()
+    assert events[-1]["method"] == "info"
+    assert events[-1]["event"] == "pr_skipped"
+    assert events[-1]["pr_number"] == 7 and events[-1]["run_id"] == "r9"

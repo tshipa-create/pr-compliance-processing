@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from datetime import date, datetime
+from datetime import UTC, date, datetime, timedelta
 from typing import Any, TypedDict
 
 # Bronze entity file names. Each file is ``{"<pr_number>": <raw API payload>}`` except
@@ -30,6 +30,21 @@ class Window:
 
     def contains(self, ts: datetime) -> bool:
         return self.start <= ts < self.end
+
+    @classmethod
+    def for_interval(
+        cls, interval_start: datetime, interval_end: datetime, lookback_days: int | None = None
+    ) -> Window:
+        """Merge window for a run. ``ds`` is the day the interval starts (Airflow's ``ds``).
+
+        ``LOOKBACK_DAYS`` widens the start for demos/backfills; the partition key stays
+        the same so reruns remain idempotent.
+        """
+        start = interval_start.astimezone(UTC)
+        end = interval_end.astimezone(UTC)
+        if lookback_days:
+            start = end - timedelta(days=lookback_days)
+        return cls(start=start, end=end, ds=interval_start.astimezone(UTC).date())
 
 
 class SkippedPR(TypedDict):

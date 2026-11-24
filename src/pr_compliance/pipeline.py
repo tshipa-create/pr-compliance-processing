@@ -7,7 +7,7 @@ imports, so the whole pipeline can be run and tested without Airflow.
 
 from __future__ import annotations
 
-from datetime import UTC, date, datetime, timedelta
+from datetime import date, datetime
 from pathlib import Path
 
 from pr_compliance.config import Settings
@@ -22,21 +22,6 @@ from pr_compliance.storage import Storage
 from pr_compliance.transform.gold import GoldBuilder
 from pr_compliance.transform.rules import RuleConfig
 from pr_compliance.transform.silver import SilverBuilder
-
-
-def make_window(
-    interval_start: datetime, interval_end: datetime, lookback_days: int | None = None
-) -> Window:
-    """Merge window for a run. ``ds`` is the day the interval starts (Airflow's ``ds``).
-
-    ``LOOKBACK_DAYS`` widens the start for demos/backfills; the partition key stays the
-    same so reruns remain idempotent.
-    """
-    start = interval_start.astimezone(UTC)
-    end = interval_end.astimezone(UTC)
-    if lookback_days:
-        start = end - timedelta(days=lookback_days)
-    return Window(start=start, end=end, ds=interval_start.astimezone(UTC).date())
 
 
 def list_repos(settings: Settings, ident: TaskIdentity, recorder: EtlRunRecorder) -> list[str]:
