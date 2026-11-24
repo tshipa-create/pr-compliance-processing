@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pr-compliance.local/schemas/_defs.schema.json",
+  "title": "Shared definitions",
+  "$defs": {
+    "timestamp": { "type": "string", "format": "date-time" },
+    "nullable_timestamp": { "type": ["string", "null"], "format": "date-time" },
+    "user": {
+      "description": "GitHub user; null when the account was deleted (shown as 'ghost').",
+      "type": ["object", "null"],
+      "properties": {
+        "login": { "type": "string" },
+        "id": { "type": "integer" },
+        "type": { "type": "string" }
+      },
+      "required": ["login", "id"]
+    }
+  }
+}

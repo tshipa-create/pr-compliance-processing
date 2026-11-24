@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pr-compliance.local/schemas/pull_request.schema.json",
+  "title": "Pull request (GET /repos/{owner}/{repo}/pulls item)",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["number", "title", "state", "merged_at", "updated_at", "user", "base", "head"],
+  "properties": {
+    "number": { "type": "integer", "minimum": 1 },
+    "title": { "type": "string" },
+    "state": { "type": "string", "const": "closed" },
+    "merged_at": { "type": "string", "format": "date-time", "description": "Non-null: merged" },
+    "updated_at": { "$ref": "_defs.schema.json#/$defs/timestamp" },
+    "html_url": { "type": "string" },
+    "draft": { "type": "boolean" },
+    "user": { "$ref": "_defs.schema.json#/$defs/user" },
+    "base": {
+      "type": "object",
+      "required": ["ref", "sha"],
+      "properties": { "ref": { "type": "string" }, "sha": { "type": "string" } }
+    },
+    "head": {
+      "type": "object",
+      "required": ["ref", "sha"],
+      "properties": {
+        "ref": { "type": "string" },
+        "sha": { "type": "string" },
+        "repo": { "type": ["object", "null"], "description": "null when the fork was deleted" }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pr-compliance.local/schemas/check_run.schema.json",
+  "title": "Check run (GET /repos/{owner}/{repo}/commits/{ref}/check-runs, check_runs[] item)",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["id", "name", "status"],
+  "properties": {
+    "id": { "type": "integer" },
+    "name": { "type": "string" },
+    "head_sha": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["queued", "in_progress", "completed", "waiting", "requested", "pending"]
+    },
+    "conclusion": {
+      "type": ["string", "null"],
+      "enum": ["success", "failure", "neutral", "cancelled", "skipped", "timed_out",
+               "action_required", "stale", "startup_failure", null]
+    },
+    "started_at": { "$ref": "_defs.schema.json#/$defs/nullable_timestamp" },
+    "completed_at": { "$ref": "_defs.schema.json#/$defs/nullable_timestamp" },
+    "app": {
+      "type": ["object", "null"],
+      "properties": { "slug": { "type": "string" } }
+    }
+  }
+}

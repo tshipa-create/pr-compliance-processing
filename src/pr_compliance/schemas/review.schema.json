@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pr-compliance.local/schemas/review.schema.json",
+  "title": "Pull request review (GET /repos/{owner}/{repo}/pulls/{n}/reviews item)",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["id", "state", "user"],
+  "properties": {
+    "id": { "type": "integer" },
+    "state": {
+      "type": "string",
+      "enum": ["APPROVED", "CHANGES_REQUESTED", "COMMENTED", "DISMISSED", "PENDING"]
+    },
+    "submitted_at": { "$ref": "_defs.schema.json#/$defs/nullable_timestamp" },
+    "commit_id": { "type": ["string", "null"] },
+    "author_association": { "type": "string" },
+    "user": { "$ref": "_defs.schema.json#/$defs/user" }
+  }
+}

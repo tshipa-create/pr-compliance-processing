@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pr-compliance.local/schemas/commit.schema.json",
+  "title": "Pull request commit (GET /repos/{owner}/{repo}/pulls/{n}/commits item)",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["sha", "commit"],
+  "properties": {
+    "sha": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+    "commit": {
+      "type": "object",
+      "required": ["author"],
+      "properties": {
+        "author": {
+          "type": ["object", "null"],
+          "properties": {
+            "name": { "type": "string" },
+            "date": { "$ref": "_defs.schema.json#/$defs/timestamp" }
+          }
+        }
+      }
+    },
+    "author": { "$ref": "_defs.schema.json#/$defs/user" }
+  }
+}

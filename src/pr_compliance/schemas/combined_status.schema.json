@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pr-compliance.local/schemas/combined_status.schema.json",
+  "title": "Combined commit status (GET /repos/{owner}/{repo}/commits/{ref}/status)",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["state", "sha", "total_count", "statuses"],
+  "properties": {
+    "state": { "type": "string", "enum": ["success", "pending", "failure", "error"] },
+    "sha": { "type": "string" },
+    "total_count": { "type": "integer", "minimum": 0 },
+    "statuses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["context", "state"],
+        "properties": {
+          "id": { "type": "integer" },
+          "context": { "type": "string" },
+          "state": { "type": "string", "enum": ["success", "pending", "failure", "error"] },
+          "description": { "type": ["string", "null"] },
+          "updated_at": { "$ref": "_defs.schema.json#/$defs/timestamp" }
+        }
+      }
+    }
+  }
+}
