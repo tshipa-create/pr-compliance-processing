@@ -144,6 +144,14 @@ def test_notify_failure_sends_email() -> None:
     assert "http://localhost:8080/log" in body
 
 
+def test_alert_subject_uses_repo_name_for_mapped_tasks() -> None:
+    sent: list[tuple[str, str, str]] = []
+    ctx = _context()
+    ctx["ti"].rendered_map_index = "core"
+    alerts.notify_failure(ctx, sender=lambda to, s, b: sent.append((to, s, b)))
+    assert sent[0][1] == "[pr_compliance] FAILED extract[core] - ValueError"
+
+
 def test_notify_failure_swallows_delivery_errors(caplog: pytest.LogCaptureFixture) -> None:
     def broken(*_: str) -> None:
         raise OSError("smtp down")

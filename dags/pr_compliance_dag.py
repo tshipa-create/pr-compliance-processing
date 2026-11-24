@@ -31,7 +31,12 @@ from airflow.sdk.exceptions import AirflowFailException
 # pandas/pyarrow/pandera (via pr_compliance.pipeline) are imported inside the tasks.
 from pr_compliance.alerts import notify_failure, notify_retry
 from pr_compliance.config import Settings
-from pr_compliance.exceptions import ConfigurationError, GitHubAuthError, GitHubResourceError
+from pr_compliance.exceptions import (
+    ConfigurationError,
+    DataQualityError,
+    GitHubAuthError,
+    GitHubResourceError,
+)
 from pr_compliance.github.models import Window
 from pr_compliance.metrics import DbConnection, EtlRunRecorder, TaskIdentity
 
@@ -83,9 +88,10 @@ def _ident(ctx: Any, window: Window) -> TaskIdentity:
 
 RECORDER = EtlRunRecorder(_db)
 
-# Errors a retry cannot fix (bad token, missing repo, bad config): fail the task now
-# instead of burning Airflow retries. Transient errors were already retried in the client.
-PERMANENT_ERRORS = (ConfigurationError, GitHubAuthError, GitHubResourceError)
+# Errors a retry cannot fix (bad token, missing repo, bad config, failed data-quality
+# checks): fail the task now instead of burning Airflow retries. Transient errors were
+# already retried inside the GitHub client.
+PERMANENT_ERRORS = (ConfigurationError, GitHubAuthError, GitHubResourceError, DataQualityError)
 
 
 def _no_retry_on_permanent[T](call: Callable[[], T]) -> T:
@@ -172,8 +178,11 @@ def pr_compliance() -> None:
         ctx = get_current_context()
         settings = _settings()
         window = _window(ctx, settings)
-        return pipeline.data_quality_check(
-            settings, _ident(ctx, window), RECORDER, window.ds, repos, window.end, _db
+        ident = _ident(ctx, window)
+        return _no_retry_on_permanent(
+            lambda: pipeline.data_quality_check(
+                settings, ident, RECORDER, window.ds, repos, window.end, _db
+            )
         )
 
     repos = list_repos()

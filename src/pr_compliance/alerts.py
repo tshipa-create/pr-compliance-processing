@@ -63,10 +63,12 @@ def build_alert(context: Mapping[str, Any]) -> dict[str, Any]:
 
 
 def format_email(alert: Mapping[str, Any]) -> tuple[str, str]:
+    label = alert.get("map_label") or (
+        None if alert["map_index"] in (-1, None) else alert["map_index"]
+    )
     subject = (
         f"[pr_compliance] FAILED {alert['task_id']}"
-        f"{'' if alert['map_index'] in (-1, None) else f'[{alert["map_index"]}]'}"
-        f" - {alert['error_class']}"
+        f"{'' if label is None else f'[{label}]'} - {alert['error_class']}"
     )
     rows = "".join(
         f"<tr><th align='left'>{html.escape(k)}</th><td>{html.escape(str(v))}</td></tr>"
