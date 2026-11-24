@@ -20,15 +20,18 @@ DAGS = Path(__file__).parents[1] / "dags"
 def dag():  # type: ignore[no-untyped-def]
     from airflow.dag_processing.dagbag import DagBag
 
-    bag = DagBag(dag_folder=str(DAGS), include_examples=False)
+    bag = DagBag(dag_folder=str(DAGS))
     assert bag.import_errors == {}
     return bag.get_dag("pr_compliance")
 
 
 def test_schedule_is_daily_midnight_utc_with_intervals(dag) -> None:  # type: ignore[no-untyped-def]
     tt = dag.timetable
+    # Must be the *interval* timetable: Airflow 3's default for a cron string
+    # (CronTriggerTimetable) gives a zero-length data interval.
     assert type(tt).__name__ == "CronDataIntervalTimetable"
-    assert tt.summary == "0 0 * * *"
+    assert tt.expression == "0 0 * * *"
+    assert str(tt.timezone) == "UTC"
     assert dag.catchup is False
     assert dag.max_active_runs == 1
 

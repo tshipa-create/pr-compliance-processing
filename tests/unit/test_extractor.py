@@ -189,3 +189,16 @@ def test_list_repos_allowlist(settings: Settings, client: GitHubClient) -> None:
 def test_allowlist_parsed_from_env(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setenv("REPO_ALLOWLIST", "cli, version ,")
     assert Settings().repo_allowlist == ["cli", "version"]
+
+
+def test_window_for_manual_trigger_is_previous_utc_day() -> None:
+    from datetime import UTC, date, datetime
+
+    w = Window.previous_day(datetime(2026, 11, 24, 19, 22, tzinfo=UTC))
+    assert (w.start, w.end, w.ds) == (
+        datetime(2026, 11, 23, tzinfo=UTC),
+        datetime(2026, 11, 24, tzinfo=UTC),
+        date(2026, 11, 23),
+    )
+    wide = Window.previous_day(datetime(2026, 11, 24, 1, tzinfo=UTC), lookback_days=7)
+    assert wide.start == datetime(2026, 11, 17, tzinfo=UTC) and wide.ds == date(2026, 11, 23)

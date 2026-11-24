@@ -58,19 +58,23 @@ def _db() -> DbConnection:
     return conn
 
 
-def _ident(ctx: Any) -> TaskIdentity:
+def _window(ctx: Any, settings: Settings) -> Window:
+    """The run's merge window. Manual triggers have no data interval in Airflow 3, so
+    they fall back to the last full UTC day before the run was created."""
+    if ctx.get("data_interval_start") is None:
+        return Window.previous_day(ctx["dag_run"].run_after, settings.lookback_days)
+    return Window.for_interval(
+        ctx["data_interval_start"], ctx["data_interval_end"], settings.lookback_days
+    )
+
+
+def _ident(ctx: Any, window: Window) -> TaskIdentity:
     ti = ctx["ti"]
     return TaskIdentity(
         run_id=ctx["run_id"],
         task_id=ti.task_id,
         map_index=ti.map_index if ti.map_index is not None else -1,
-        run_date=ctx["data_interval_start"].date(),
-    )
-
-
-def _window(ctx: Any, settings: Settings) -> Window:
-    return Window.for_interval(
-        ctx["data_interval_start"], ctx["data_interval_end"], settings.lookback_days
+        run_date=window.ds,
     )
 
 
@@ -111,7 +115,8 @@ def pr_compliance() -> None:
         from pr_compliance import pipeline
 
         ctx = get_current_context()
-        return pipeline.list_repos(_settings(), _ident(ctx), RECORDER)
+        settings = _settings()
+        return pipeline.list_repos(settings, _ident(ctx, _window(ctx, settings)), RECORDER)
 
     @task(max_active_tis_per_dag=3, map_index_template="{{ task.op_kwargs['repo'] }}")
     def extract(repo: str) -> str:
@@ -119,7 +124,8 @@ def pr_compliance() -> None:
 
         ctx = get_current_context()
         settings = _settings()
-        return pipeline.extract(settings, _ident(ctx), RECORDER, repo, _window(ctx, settings))
+        window = _window(ctx, settings)
+        return pipeline.extract(settings, _ident(ctx, window), RECORDER, repo, window)
 
     @task(trigger_rule="all_done")
     def transform() -> dict[str, str]:
@@ -129,7 +135,8 @@ def pr_compliance() -> None:
 
         ctx = get_current_context()
         settings = _settings()
-        return pipeline.transform(settings, _ident(ctx), RECORDER, _window(ctx, settings).ds)
+        window = _window(ctx, settings)
+        return pipeline.transform(settings, _ident(ctx, window), RECORDER, window.ds)
 
     @task(outlets=[COMPLIANCE_TABLE])
     def load(gold_paths: dict[str, str]) -> dict[str, int]:
@@ -137,8 +144,8 @@ def pr_compliance() -> None:
 
         ctx = get_current_context()
         settings = _settings()
-        ds = _window(ctx, settings).ds
-        return pipeline.load(settings, _ident(ctx), RECORDER, gold_paths, ds, _db)
+        window = _window(ctx, settings)
+        return pipeline.load(settings, _ident(ctx, window), RECORDER, gold_paths, window.ds, _db)
 
     @task
     def data_quality_check(repos: list[str], _loaded: dict[str, int]) -> dict[str, bool]:
@@ -148,7 +155,7 @@ def pr_compliance() -> None:
         settings = _settings()
         window = _window(ctx, settings)
         return pipeline.data_quality_check(
-            settings, _ident(ctx), RECORDER, window.ds, repos, window.end, _db
+            settings, _ident(ctx, window), RECORDER, window.ds, repos, window.end, _db
         )
 
     repos = list_repos()

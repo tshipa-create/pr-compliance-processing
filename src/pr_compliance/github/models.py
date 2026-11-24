@@ -46,6 +46,16 @@ class Window:
             start = end - timedelta(days=lookback_days)
         return cls(start=start, end=end, ds=interval_start.astimezone(UTC).date())
 
+    @classmethod
+    def previous_day(cls, run_after: datetime, lookback_days: int | None = None) -> Window:
+        """The last full UTC day before ``run_after``.
+
+        Used for manual triggers: in Airflow 3 they have no logical date and no data
+        interval, so we process the same window a scheduled run at that time would.
+        """
+        end = run_after.astimezone(UTC).replace(hour=0, minute=0, second=0, microsecond=0)
+        return cls.for_interval(end - timedelta(days=1), end, lookback_days)
+
 
 class SkippedPR(TypedDict):
     number: int
