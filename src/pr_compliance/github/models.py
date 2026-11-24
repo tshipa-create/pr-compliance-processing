@@ -20,6 +20,16 @@ MANIFEST = "_manifest.json"
 COMMITS_LIST_CAP = 250
 
 
+def to_utc(value: datetime) -> datetime:
+    """Plain stdlib UTC datetime from any aware datetime (including pendulum's).
+
+    Airflow hands tasks ``pendulum.DateTime`` objects. After ``astimezone(UTC)`` they
+    stay pendulum objects, and subtracting a ``timedelta`` from one returns a *naive*
+    datetime, which then fails to compare with GitHub's aware timestamps.
+    """
+    return datetime.fromtimestamp(value.timestamp(), tz=UTC)
+
+
 @dataclass(frozen=True)
 class Window:
     """Half-open merge window ``[start, end)``; ``ds`` is the partition key."""
@@ -40,11 +50,10 @@ class Window:
         ``LOOKBACK_DAYS`` widens the start for demos/backfills; the partition key stays
         the same so reruns remain idempotent.
         """
-        start = interval_start.astimezone(UTC)
-        end = interval_end.astimezone(UTC)
+        start, end = to_utc(interval_start), to_utc(interval_end)
         if lookback_days:
             start = end - timedelta(days=lookback_days)
-        return cls(start=start, end=end, ds=interval_start.astimezone(UTC).date())
+        return cls(start=start, end=end, ds=to_utc(interval_start).date())
 
     @classmethod
     def previous_day(cls, run_after: datetime, lookback_days: int | None = None) -> Window:
@@ -53,7 +62,7 @@ class Window:
         Used for manual triggers: in Airflow 3 they have no logical date and no data
         interval, so we process the same window a scheduled run at that time would.
         """
-        end = run_after.astimezone(UTC).replace(hour=0, minute=0, second=0, microsecond=0)
+        end = to_utc(run_after).replace(hour=0, minute=0, second=0, microsecond=0)
         return cls.for_interval(end - timedelta(days=1), end, lookback_days)
 
 

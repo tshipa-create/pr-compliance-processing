@@ -35,6 +35,7 @@ dev = [
     "types-psycopg2",
     "pip-audit>=2.7",
     "structlog>=25.1",
+    "pendulum>=3.0",
 ]
 # Airflow itself is provided by the Docker image. It is only installed for the DAG
 # import test (Linux/CI); it is not a runtime dependency of the package.

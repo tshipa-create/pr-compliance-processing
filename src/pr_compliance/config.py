@@ -65,6 +65,11 @@ class Settings(BaseSettings):
             return [part.strip() for part in value.split(",") if part.strip()]
         return value
 
+    @field_validator("lookback_days", mode="before")
+    @classmethod
+    def _empty_is_none(cls, value: object) -> object:
+        return None if value == "" else value
+
     @property
     def bronze_dir(self) -> Path:
         return self.data_dir / "bronze"

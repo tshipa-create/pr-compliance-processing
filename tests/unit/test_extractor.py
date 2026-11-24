@@ -202,3 +202,22 @@ def test_window_for_manual_trigger_is_previous_utc_day() -> None:
     )
     wide = Window.previous_day(datetime(2026, 11, 24, 1, tzinfo=UTC), lookback_days=7)
     assert wide.start == datetime(2026, 11, 17, tzinfo=UTC) and wide.ds == date(2026, 11, 23)
+
+
+def test_empty_lookback_env_means_unset(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setenv("LOOKBACK_DAYS", "")
+    assert Settings().lookback_days is None
+
+
+def test_window_from_airflow_pendulum_datetimes_is_aware() -> None:
+    """Regression: pendulum DateTime - timedelta returned a naive datetime."""
+    pendulum = pytest.importorskip("pendulum")
+    from datetime import UTC, datetime
+
+    start = pendulum.datetime(2026, 11, 23, tz="UTC")
+    end = pendulum.datetime(2026, 11, 24, tz="UTC")
+    for lookback in (None, 14):
+        w = Window.for_interval(start, end, lookback)
+        assert w.start.tzinfo is not None and w.end.tzinfo is not None
+        assert w.contains(datetime(2026, 11, 23, 12, tzinfo=UTC))
+    assert Window.for_interval(start, end, 14).start == datetime(2026, 11, 10, tzinfo=UTC)
