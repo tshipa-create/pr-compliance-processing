@@ -19,7 +19,7 @@ from pr_compliance.logging_config import configure_logging
 from pr_compliance.metrics import ConnectionFactory, EtlRunRecorder, TaskIdentity, tracked_task
 from pr_compliance.quality.checks import DataQualityChecker
 from pr_compliance.storage import Storage
-from pr_compliance.transform.gold import GoldBuilder
+from pr_compliance.transform.gold import GoldBuilder, LoadScope
 from pr_compliance.transform.rules import RuleConfig
 from pr_compliance.transform.silver import SilverBuilder
 
@@ -46,14 +46,17 @@ def extract(
 
 
 def transform(
-    settings: Settings, ident: TaskIdentity, recorder: EtlRunRecorder, ds: date
+    settings: Settings, ident: TaskIdentity, recorder: EtlRunRecorder, window: Window
 ) -> dict[str, str]:
     configure_logging()
     with tracked_task(ident, recorder) as metrics:
         storage = Storage(settings.data_dir)
-        silver = SilverBuilder(storage, metrics).build(ds, ident.run_id)
+        silver = SilverBuilder(storage, metrics).build(window.ds, ident.run_id)
         cfg = RuleConfig(settings.min_approvals, settings.no_checks_passes)
-        gold = GoldBuilder(storage, cfg, settings.exclude_bots).build(silver.frames, ds)
+        scope = LoadScope(window.start, window.end, silver.stats["repos"])
+        gold = GoldBuilder(storage, cfg, settings.exclude_bots).build(
+            silver.frames, window.ds, scope
+        )
         return gold.as_xcom()
 
 
@@ -68,7 +71,12 @@ def load(
     configure_logging()
     with tracked_task(ident, recorder) as metrics:
         loader = PostgresLoader(connection_factory, metrics)
-        result = loader.load(Path(gold_paths["pr_compliance"]), Path(gold_paths["summary"]), ds)
+        result = loader.load(
+            Path(gold_paths["pr_compliance"]),
+            Path(gold_paths["summary"]),
+            ds,
+            LoadScope.read(Path(gold_paths["load_scope"])),
+        )
         return result.as_xcom()
 
 

@@ -13,6 +13,7 @@ from pr_compliance.config import Settings
 from pr_compliance.exceptions import DataQualityError
 from pr_compliance.metrics import ConnectionFactory
 from pr_compliance.storage import Storage
+from pr_compliance.transform.gold import LoadScope
 from pr_compliance.transform.silver import USABLE_MANIFEST_STATUSES
 
 logger = logging.getLogger(__name__)
@@ -117,8 +118,17 @@ class DataQualityChecker:
         )
 
     def check_integrity(self, ds: date, gold_rows: int) -> CheckResult:
-        """Rows loaded for this run date match the gold file (catches partial loads)."""
-        loaded = self._scalar("SELECT count(*) FROM pr_compliance WHERE run_date = %s", (ds,))
+        """Postgres holds exactly the gold rows for this run's scope (repos x merge
+        window): catches partial loads and orphans left behind by earlier runs."""
+        scope_path = self.storage.gold_ds(ds) / "load_scope.json"
+        if not scope_path.exists():
+            return CheckResult("integrity", False, "gold load_scope.json missing")
+        scope = LoadScope.read(scope_path)
+        loaded = self._scalar(
+            "SELECT count(*) FROM pr_compliance "
+            "WHERE repository = ANY(%s) AND merged_at >= %s AND merged_at < %s",
+            (scope.repos, scope.window_start, scope.window_end),
+        )
         ok = int(loaded or 0) == gold_rows
         return CheckResult("integrity", ok, f"{loaded} rows in Postgres vs {gold_rows} in gold")
 

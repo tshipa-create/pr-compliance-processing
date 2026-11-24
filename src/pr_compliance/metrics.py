@@ -35,6 +35,7 @@ class RunMetrics:
     records_quarantined: int = 0
     rows_inserted: int = 0
     rows_updated: int = 0
+    rows_deleted: int = 0
     duration_s: float = 0.0
     _lock: threading.Lock = field(default_factory=threading.Lock, repr=False, compare=False)
 

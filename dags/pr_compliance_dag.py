@@ -162,7 +162,7 @@ def pr_compliance() -> None:
         ctx = get_current_context()
         settings = _settings()
         window = _window(ctx, settings)
-        return pipeline.transform(settings, _ident(ctx, window), RECORDER, window.ds)
+        return pipeline.transform(settings, _ident(ctx, window), RECORDER, window)
 
     @task(outlets=[COMPLIANCE_TABLE])
     def load(gold_paths: dict[str, str]) -> dict[str, int]:

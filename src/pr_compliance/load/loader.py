@@ -13,6 +13,7 @@ import pandas as pd
 
 from pr_compliance.exceptions import LoadError
 from pr_compliance.metrics import ConnectionFactory, RunMetrics
+from pr_compliance.transform.gold import LoadScope
 
 logger = logging.getLogger(__name__)
 
@@ -61,16 +62,30 @@ SUMMARY_COLUMNS = [
 NULL = r"\N"
 
 
+# Rows this run owns (its repos x its merge window) that are no longer in gold.
+DELETE_ORPHANS_SQL = """
+    DELETE FROM pr_compliance p
+    WHERE p.repository = ANY(%s)
+      AND p.merged_at >= %s AND p.merged_at < %s
+      AND NOT EXISTS (
+          SELECT 1 FROM stg_pr_compliance s
+          WHERE s.repository = p.repository AND s.pr_number = p.pr_number
+      )
+"""
+
+
 @dataclass(frozen=True)
 class LoadResult:
     inserted: int
     updated: int
+    deleted: int
     summary_rows: int
 
     def as_xcom(self) -> dict[str, int]:
         return {
             "inserted": self.inserted,
             "updated": self.updated,
+            "deleted": self.deleted,
             "summary_rows": self.summary_rows,
         }
 
@@ -93,13 +108,20 @@ def gold_to_csv(df: pd.DataFrame) -> io.StringIO:
 
 
 class PostgresLoader:
-    """Idempotent loader: rerunning the same ``ds`` upserts the same rows."""
+    """Idempotent loader. One transaction: upsert gold, then (with a ``scope``) delete the
+    rows of that scope that are no longer in gold, then replace the day's summary."""
 
     def __init__(self, connection_factory: ConnectionFactory, metrics: RunMetrics | None = None):
         self._factory = connection_factory
         self.metrics = metrics or RunMetrics()
 
-    def load(self, gold_path: Path, summary_path: Path, run_date: date) -> LoadResult:
+    def load(
+        self,
+        gold_path: Path,
+        summary_path: Path,
+        run_date: date,
+        scope: LoadScope | None = None,
+    ) -> LoadResult:
         gold = pd.read_parquet(gold_path)
         summary = pd.read_parquet(summary_path)
         conn = self._factory()
@@ -120,6 +142,14 @@ class PostgresLoader:
                     flags = [row[0] for row in cur.fetchall()]
                     inserted = sum(flags)
                     updated = len(flags) - inserted
+
+                deleted = 0
+                if scope is not None and scope.repos:
+                    cur.execute(
+                        DELETE_ORPHANS_SQL,
+                        (scope.repos, scope.window_start, scope.window_end),
+                    )
+                    deleted = cur.rowcount
 
                 cur.execute("DELETE FROM compliance_summary WHERE run_date = %s", (run_date,))
                 for rec in summary.to_dict("records"):
@@ -148,7 +178,8 @@ class PostgresLoader:
 
         self.metrics.incr("rows_inserted", inserted)
         self.metrics.incr("rows_updated", updated)
-        result = LoadResult(inserted, updated, len(summary))
+        self.metrics.incr("rows_deleted", deleted)
+        result = LoadResult(inserted, updated, deleted, len(summary))
         logger.info("load_committed", extra=result.as_xcom())
         return result
 

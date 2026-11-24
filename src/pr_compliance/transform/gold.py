@@ -6,7 +6,7 @@ import json
 import logging
 from collections import Counter
 from dataclasses import dataclass
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 from typing import Any
 
@@ -95,11 +95,42 @@ GOLD_SCHEMA = pda.DataFrameSchema(
 )
 
 
+@dataclass(frozen=True)
+class LoadScope:
+    """What this run owns in the output table: PRs of ``repos`` merged in the window.
+
+    Load replaces exactly this slice (upsert, then delete rows no longer in gold), so a
+    rerun with a narrower window or fewer repos leaves no orphans, and repos that failed
+    extraction this run (absent from ``repos``) keep their previously loaded rows.
+    """
+
+    window_start: datetime
+    window_end: datetime
+    repos: list[str]
+
+    def to_json(self) -> dict[str, Any]:
+        return {
+            "window_start": self.window_start.isoformat(),
+            "window_end": self.window_end.isoformat(),
+            "repos": sorted(self.repos),
+        }
+
+    @classmethod
+    def read(cls, path: Path) -> LoadScope:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        return cls(
+            window_start=datetime.fromisoformat(data["window_start"]),
+            window_end=datetime.fromisoformat(data["window_end"]),
+            repos=list(data["repos"]),
+        )
+
+
 @dataclass
 class GoldResult:
     pr_compliance_path: Path
     summary_path: Path
     summary_json_path: Path
+    load_scope_path: Path
     rows: int
     summary: dict[str, Any]
 
@@ -108,6 +139,7 @@ class GoldResult:
             "pr_compliance": str(self.pr_compliance_path),
             "summary": str(self.summary_path),
             "summary_json": str(self.summary_json_path),
+            "load_scope": str(self.load_scope_path),
         }
 
 
@@ -192,13 +224,18 @@ class GoldBuilder:
         self.cfg = cfg
         self.exclude_bots = exclude_bots
 
-    def build(self, frames: dict[str, pd.DataFrame], ds: date) -> GoldResult:
+    def build(
+        self, frames: dict[str, pd.DataFrame], ds: date, scope: LoadScope | None = None
+    ) -> GoldResult:
         gold = build_gold_frame(frames, ds, self.cfg, self.exclude_bots)
         summary = build_summary(gold, ds)
         out = self.storage.reset_dir(self.storage.gold_ds(ds))
         prc = self.storage.write_parquet(out / "pr_compliance.parquet", gold, GOLD_ARROW_SCHEMA)
         summ = self.storage.write_parquet(out / "summary.parquet", summary_frame(summary))
         summ_json = self.storage.write_json(out / "summary.json", summary)
+        scope_path = out / "load_scope.json"
+        if scope is not None:
+            self.storage.write_json(scope_path, scope.to_json())
         org = summary[ALL_REPOS]
         logger.info(
             "gold_written",
@@ -209,4 +246,4 @@ class GoldBuilder:
                 "violations": org["violations"],
             },
         )
-        return GoldResult(prc, summ, summ_json, len(gold), summary)
+        return GoldResult(prc, summ, summ_json, scope_path, len(gold), summary)
