@@ -1,0 +1,16 @@
+{
+ "repo": "installer",
+ "organization": "home-assistant",
+ "ds": "2026-11-23",
+ "run_id": "scheduled__2026-11-24T00:00:00+00:00",
+ "status": "success",
+ "window_start": "2026-11-23T00:00:00+00:00",
+ "window_end": "2026-11-24T00:00:00+00:00",
+ "pr_count": 6,
+ "skipped_prs": [],
+ "commits_truncated": [],
+ "max_prs_hit": false,
+ "api_calls": 25,
+ "duration_s": 10.589,
+ "extracted_at": "2026-11-24T21:03:45.682219+00:00"
+}

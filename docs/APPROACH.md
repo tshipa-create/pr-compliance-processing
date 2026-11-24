@@ -29,9 +29,10 @@ count to the next one.
   that also defines the Pandas dtype of every silver column; invalid records go to
   quarantine with the error path. Compliance rules are pure functions over DataFrames;
   gold is validated with pandera before it is written.
-* **Load** — `COPY` into a temp staging table, then `INSERT … ON CONFLICT DO UPDATE` in
-  one transaction; returns inserted vs updated counts (`xmax = 0`). The summary table is
-  replaced per `run_date` in the same transaction.
+* **Load** — `COPY` into a temp staging table, `INSERT … ON CONFLICT DO UPDATE`, then
+  delete the rows of this run's scope (repos it extracted × its merge window) that are no
+  longer in gold — all in one transaction. Returns inserted / updated / deleted counts
+  (`xmax = 0` tells inserts from updates). The summary is replaced per `run_date`.
 * **Data quality** — completeness (every repo extracted *by this run*), quarantine rate,
   volume, compliance drift vs a 7-day average, freshness, and Postgres-vs-gold row
   counts. Any failure fails the run, which triggers the alert.
@@ -43,7 +44,8 @@ count to the next one.
 | Thin DAG, typed package | Logic testable without Airflow; DAG parses in ~50 ms | One extra module (`pipeline.py`) |
 | Data interval, not a watermark | Deterministic, idempotent reruns and backfills | Must use `CronDataIntervalTimetable` explicitly in Airflow 3 |
 | Dynamic task mapping per repo | Isolated retries, parallelism, readable UI | ~85 task instances per run |
-| `transform` with `trigger_rule=all_done` | One broken repo does not block 84 healthy ones | DQ task must (and does) fail the run |
+| `transform` with `all_done_min_one_success` | One broken repo does not block 84 healthy ones, but a run that extracted nothing loads nothing | DQ task must (and does) fail the run |
+| Each run owns a slice of the table (its repos × merge window) | Reruns leave no orphans; failed repos keep earlier rows | Delete-then-check logic in one transaction |
 | Medallion folders | Rebuild silver/gold from bronze when a rule changes | Local disk only |
 | REST, not GraphQL | The brief names the REST endpoints | ~4× more calls (ADR 0002) |
 | Pandas, LocalExecutor | Thousands of rows/day | Single node |
@@ -57,14 +59,15 @@ followed by missing approval (9). `android` stands out at 29% (bots and unapprov
 
 ## Verification
 
-* 89 unit tests on trimmed **real** payloads (pagination, rate limits, retries, window
+* 92 unit tests on trimmed **real** payloads (pagination, rate limits, retries, window
   edges, every rule edge case, schema failures, edge payloads such as deleted users).
-* 3 integration tests against Postgres 16 (idempotent upsert, rollback on a bad row,
-  data-quality checks).
+* 4 integration tests against Postgres 16 (idempotent upsert, orphan removal limited to
+  the run's scope, rollback on a bad row, data-quality checks).
 * DAG integrity test inside the `apache/airflow:3.3.0` image.
 * Full DAG runs in Docker against the live API, a spot-check of a non-compliant PR
   against GitHub, and a deliberate failure (non-existent repo) to exercise retries,
-  `all_done`, the DQ failure and e-mail alerts.
+  `all_done_min_one_success`, the DQ failure and e-mail alerts. The DQ integrity check
+  caught a real bug on the way (orphan rows after a narrower rerun), now fixed.
 
 ## With more time
 

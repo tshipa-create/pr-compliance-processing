@@ -1,0 +1,32 @@
+Message-ID: <6HU4UkqLEEkVpkS0XIt7iu@mailpit>
+Return-Path: <airflow@pr-compliance.local>
+Received: from [172.19.0.8] (pr-compliance-infra-airflow-scheduler-1.pr-compliance-infra_default. [172.19.0.8])
+        by 937a1b5bbdb1 (Mailpit) with SMTP
+        for <data-alerts@example.com>; Tue, 24 Nov 2026 20:13:37 +0000 (UTC)
+Content-Type: multipart/mixed; boundary="===============9151906325687442815=="
+MIME-Version: 1.0
+Subject: [pr_compliance] FAILED extract[1] - AirflowFailException
+From: airflow@pr-compliance.local
+To: data-alerts@example.com
+Date: Tue, 24 Nov 2026 20:13:37 +0000
+
+--===============9151906325687442815==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+
+PGgzPkFpcmZsb3cgdGFzayBmYWlsZWQ8L2gzPjx0YWJsZT48dHI+PHRoIGFsaWduPSdsZWZ0Jz5k
+YWdfaWQ8L3RoPjx0ZD5wcl9jb21wbGlhbmNlPC90ZD48L3RyPjx0cj48dGggYWxpZ249J2xlZnQn
+PnRhc2tfaWQ8L3RoPjx0ZD5leHRyYWN0PC90ZD48L3RyPjx0cj48dGggYWxpZ249J2xlZnQnPm1h
+cF9pbmRleDwvdGg+PHRkPjE8L3RkPjwvdHI+PHRyPjx0aCBhbGlnbj0nbGVmdCc+dHJ5X251bWJl
+cjwvdGg+PHRkPjU8L3RkPjwvdHI+PHRyPjx0aCBhbGlnbj0nbGVmdCc+cnVuX2lkPC90aD48dGQ+
+c2NoZWR1bGVkX18yMDI2LTExLTI0VDAwOjAwOjAwKzAwOjAwPC90ZD48L3RyPjx0cj48dGggYWxp
+Z249J2xlZnQnPmxvZ2ljYWxfZGF0ZTwvdGg+PHRkPjIwMjYtMTEtMjMgMDA6MDA6MDArMDA6MDA8
+L3RkPjwvdHI+PHRyPjx0aCBhbGlnbj0nbGVmdCc+ZXJyb3JfY2xhc3M8L3RoPjx0ZD5BaXJmbG93
+RmFpbEV4Y2VwdGlvbjwvdGQ+PC90cj48dHI+PHRoIGFsaWduPSdsZWZ0Jz5lcnJvcjwvdGg+PHRk
+PkdpdEh1YlJlc291cmNlRXJyb3I6IDQwNDogTm90IEZvdW5kPC90ZD48L3RyPjx0cj48dGggYWxp
+Z249J2xlZnQnPmxvZ191cmw8L3RoPjx0ZD5odHRwOi8vbG9jYWxob3N0OjE4MDgwL2RhZ3MvcHJf
+Y29tcGxpYW5jZS9ydW5zL3NjaGVkdWxlZF9fMjAyNi0xMS0yNFQwMCUzQTAwJTNBMDAlMkIwMCUz
+QTAwL3Rhc2tzL2V4dHJhY3QvbWFwcGVkLzE/dHJ5X251bWJlcj01PC90ZD48L3RyPjwvdGFibGU+
+
+--===============9151906325687442815==--

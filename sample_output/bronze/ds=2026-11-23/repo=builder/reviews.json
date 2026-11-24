@@ -1,0 +1,90 @@
+{
+ "374": [
+  {
+   "id": 6018387774,
+   "node_id": "PRR_kwDOCs-CX88AAAABZrlPPg",
+   "user": {
+    "login": "sairon",
+    "id": 211416,
+    "node_id": "MDQ6VXNlcjIxMTQxNg==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/211416?u=b381da7a0878655f117f0fa278fe83f55007d23f&v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sairon",
+    "html_url": "https://github.com/sairon",
+    "followers_url": "https://api.github.com/users/sairon/followers",
+    "following_url": "https://api.github.com/users/sairon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sairon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sairon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sairon/subscriptions",
+    "organizations_url": "https://api.github.com/users/sairon/orgs",
+    "repos_url": "https://api.github.com/users/sairon/repos",
+    "events_url": "https://api.github.com/users/sairon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sairon/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "",
+   "state": "APPROVED",
+   "html_url": "https://github.com/home-assistant/builder/pull/374#pullrequestreview-6018387774",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/builder/pulls/374",
+   "author_association": "MEMBER",
+   "is_copilot_code_review": false,
+   "copilot_code_review_effort": null,
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/builder/pull/374#pullrequestreview-6018387774"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/builder/pulls/374"
+    }
+   },
+   "submitted_at": "2026-11-23T08:16:20Z",
+   "commit_id": "293616c310636a9d5d69439c2c3ec256b63717b4"
+  }
+ ],
+ "375": [
+  {
+   "id": 6019476909,
+   "node_id": "PRR_kwDOCs-CX88AAAABZsntrQ",
+   "user": {
+    "login": "agners",
+    "id": 34061,
+    "node_id": "MDQ6VXNlcjM0MDYx",
+    "avatar_url": "https://avatars.githubusercontent.com/u/34061?u=08277b845f40247f6792ec9e66cb23976b0b7d4c&v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/agners",
+    "html_url": "https://github.com/agners",
+    "followers_url": "https://api.github.com/users/agners/followers",
+    "following_url": "https://api.github.com/users/agners/following{/other_user}",
+    "gists_url": "https://api.github.com/users/agners/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/agners/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/agners/subscriptions",
+    "organizations_url": "https://api.github.com/users/agners/orgs",
+    "repos_url": "https://api.github.com/users/agners/repos",
+    "events_url": "https://api.github.com/users/agners/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/agners/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "",
+   "state": "APPROVED",
+   "html_url": "https://github.com/home-assistant/builder/pull/375#pullrequestreview-6019476909",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/builder/pulls/375",
+   "author_association": "MEMBER",
+   "is_copilot_code_review": false,
+   "copilot_code_review_effort": null,
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/builder/pull/375#pullrequestreview-6019476909"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/builder/pulls/375"
+    }
+   },
+   "submitted_at": "2026-11-23T09:51:28Z",
+   "commit_id": "074441bbe1d7c1993920c0ecef5cb47589af476f"
+  }
+ ]
+}

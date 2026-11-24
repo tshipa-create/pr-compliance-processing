@@ -45,15 +45,18 @@ Every item below was caught by a test or by running the real stack, not by readi
 | DB password `compliance` → Airflow's secret masker turned `pr_compliance` into `pr_***` in logs | Read a real task log | Non-dictionary default password |
 | "Latest review per reviewer" would let a COMMENTED review cancel an APPROVED one (GitHub does not) | Rule test | Only decisive states count (ADR 0006) |
 | `DagBag(include_examples=…)` no longer exists in 3.3 | Ran the DAG test in the image | Removed |
-| Permanent errors (404 repo, 401) were still retried by Airflow | Failure-path run | `AirflowFailException` for permanent errors |
+| Permanent errors (404 repo, 401, failed DQ) were still retried by Airflow | Failure-path run | `AirflowFailException` for permanent errors |
+| `trigger_rule="all_done"` (from the guide) let `transform` load stale bronze when `list_repos` itself failed | Failure-path run | `all_done_min_one_success` + bronze filtered by `run_id` |
+| Upsert-only load left orphan rows after a narrower rerun of the same day (318 in Postgres vs 304 in gold) | The pipeline's own `integrity` DQ check | Run-owned load scope: upsert + delete within (repos × window) |
 
 Hallucinated GitHub fields: none survived — every schema field is backed by a trimmed
 real payload in `tests/fixtures/`, and the schema tests validate those payloads.
 
 ## How it was verified
 
-* `uv run pytest` — 89 unit + 3 Postgres integration tests; `ruff`, `mypy --strict`.
+* `uv run pytest` — 92 unit + 4 Postgres integration tests; `ruff`, `mypy --strict`.
 * DAG integrity test inside `apache/airflow:3.3.0`.
 * Full DAG runs in Docker against the live GitHub API (85 repos, 304 PRs), a manual
   spot-check of a non-compliant PR on GitHub, and a deliberate failure run to see the
-  retry → `all_done` → DQ failure → e-mail alert path.
+  fail-fast → healthy repos still loaded → DQ failure → e-mail alert path, and the
+  `make demo` manual-trigger path.

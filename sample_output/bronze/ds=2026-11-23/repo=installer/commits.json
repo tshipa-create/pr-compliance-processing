@@ -1,0 +1,2248 @@
+{
+ "686": [
+  {
+   "sha": "a5ddbfc159919366ac1e8f0dd2958a8a82cef9b2",
+   "node_id": "C_kwDOSQu-wdoAKGE1ZGRiZmMxNTk5MTkzNjZhYzFlOGYwZGQyOTU4YThhODJjZWY5YjI",
+   "commit": {
+    "author": {
+     "name": "Bram Kragten",
+     "email": "mail@bramkragten.nl",
+     "date": "2026-11-16T14:30:36Z"
+    },
+    "committer": {
+     "name": "Bram Kragten",
+     "email": "mail@bramkragten.nl",
+     "date": "2026-11-16T14:30:36Z"
+    },
+    "message": "Keep the focus in the update banner when its buttons change\n\nA failed update replaced the focused Update button with Try again and\nDownload, and the focus fell to the page. It now moves to the first\nbutton the banner shows. Not now hides the banner, and the welcome\nscreen then focuses its heading.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+    "tree": {
+     "sha": "e1d216211ef10d0566a4eb635ee5d4a3a6a69968",
+     "url": "https://api.github.com/repos/home-assistant/installer/git/trees/e1d216211ef10d0566a4eb635ee5d4a3a6a69968"
+    },
+    "url": "https://api.github.com/repos/home-assistant/installer/git/commits/a5ddbfc159919366ac1e8f0dd2958a8a82cef9b2",
+    "comment_count": 0,
+    "verification": {
+     "verified": false,
+     "reason": "unsigned",
+     "signature": null,
+     "payload": null,
+     "verified_at": null
+    }
+   },
+   "url": "https://api.github.com/repos/home-assistant/installer/commits/a5ddbfc159919366ac1e8f0dd2958a8a82cef9b2",
+   "html_url": "https://github.com/home-assistant/installer/commit/a5ddbfc159919366ac1e8f0dd2958a8a82cef9b2",
+   "comments_url": "https://api.github.com/repos/home-assistant/installer/commits/a5ddbfc159919366ac1e8f0dd2958a8a82cef9b2/comments",
+   "author": {
+    "login": "bramkragten",
+    "id": 5662298,
+    "node_id": "MDQ6VXNlcjU2NjIyOTg=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5662298?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bramkragten",
+    "html_url": "https://github.com/bramkragten",
+    "followers_url": "https://api.github.com/users/bramkragten/followers",
+    "following_url": "https://api.github.com/users/bramkragten/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bramkragten/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bramkragten/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bramkragten/subscriptions",
+    "organizations_url": "https://api.github.com/users/bramkragten/orgs",
+    "repos_url": "https://api.github.com/users/bramkragten/repos",
+    "events_url": "https://api.github.com/users/bramkragten/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bramkragten/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "committer": {
+    "login": "bramkragten",
+    "id": 5662298,
+    "node_id": "MDQ6VXNlcjU2NjIyOTg=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5662298?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bramkragten",
+    "html_url": "https://github.com/bramkragten",
+    "followers_url": "https://api.github.com/users/bramkragten/followers",
+    "following_url": "https://api.github.com/users/bramkragten/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bramkragten/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bramkragten/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bramkragten/subscriptions",
+    "organizations_url": "https://api.github.com/users/bramkragten/orgs",
+    "repos_url": "https://api.github.com/users/bramkragten/repos",
+    "events_url": "https://api.github.com/users/bramkragten/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bramkragten/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "parents": [
+    {
+     "sha": "85a3773abe66c1e301c5c9430afb82613e401901",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/85a3773abe66c1e301c5c9430afb82613e401901",
+     "html_url": "https://github.com/home-assistant/installer/commit/85a3773abe66c1e301c5c9430afb82613e401901"
+    }
+   ]
+  }
+ ],
+ "690": [
+  {
+   "sha": "fd350da17f0452d17238ba73df3a54bfbe895dba",
+   "node_id": "C_kwDOSQu-wdoAKGZkMzUwZGExN2YwNDUyZDE3MjM4YmE3M2RmM2E1NGJmYmU4OTVkYmE",
+   "commit": {
+    "author": {
+     "name": "Ariel Ebersberger",
+     "email": "ariel@ebersberger.io",
+     "date": "2026-11-17T09:23:40Z"
+    },
+    "committer": {
+     "name": "Ariel Ebersberger",
+     "email": "ariel@ebersberger.io",
+     "date": "2026-11-17T09:23:40Z"
+    },
+    "message": "Put the USB installer, the drive and the ISO file on one Mini PC screen",
+    "tree": {
+     "sha": "2c247efbb3cbb7fff3bbed9b165015b9bd5deb24",
+     "url": "https://api.github.com/repos/home-assistant/installer/git/trees/2c247efbb3cbb7fff3bbed9b165015b9bd5deb24"
+    },
+    "url": "https://api.github.com/repos/home-assistant/installer/git/commits/fd350da17f0452d17238ba73df3a54bfbe895dba",
+    "comment_count": 0,
+    "verification": {
+     "verified": true,
+     "reason": "valid",
+     "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEEXKy1PvQtfYDXpZbQDDDI9Tj/OwcFAmr8HRwACgkQDDDI9Tj/\nOwerbhAAosmDnRc8KuWLV4gSbDTrBiSNeuyH9LFV+ykRhe9l+MfC0JjwbeKF8z4n\nlWvdhmxc/vmkla1ms1NUbW4my2KkubTxx/fANRcj+tMSIGnXlgjCtSM/qBurVyLd\n7ZprRJSR9aDXsVJdgAW1BogE9OR7uu+BWP9wNY8LjLv/5o7UC6siKUlMXo9+uoVl\nv/dBmCKBVsd3KU0nMKINe0f8v/9aK7pkTHO8egGazeSHMzJvmNpEKxmv5YqfJE6P\nooMIsKsn/CBFdJE9wCrw1KcLquhPwbhdCcfxm3TSRgD9NrJHlbGfEEfOYZa+LkaQ\ne0D7dmGcL/n970IskN73zOEeIw3f3HLbsoaNaHD8uyqB0ThGZlrtMDPazpwKs/VE\nAzDhmHUAjhhiSK82doGgtSznkDln4oF5L9aVEXX8f4cv2HUbDmTnRKqpOkP6DmLZ\nEJKGBjeirbFO0zX9SRerdE4MYdg0MuSEjHqQQRhWlKuaKA+CPq5PSFDa1PFidxeI\nT+b45IDSclaIO6dJcSx12cdMD2nSsm47m3PdzSoWLDdDLFb6OJMCr97k3UQ+njSg\nXpK2qiYkBZ4jXg10B+Y3cq3A0KU3AdE0FVW143uaofWDhXaJQ/o/weN7q38CzxmE\nPBjFPR4nAzb5stcajlfWgC68GYPwTnTqkW1cSUO5b9du5OF9Ors=\n=3yVW\n-----END PGP SIGNATURE-----",
+     "payload": "tree 2c247efbb3cbb7fff3bbed9b165015b9bd5deb24\nparent 82f11e9335d224481325a269ff2f4559fb9f0306\nauthor Ariel Ebersberger <ariel@ebersberger.io> 1794907420 +0100\ncommitter Ariel Ebersberger <ariel@ebersberger.io> 1794907420 +0100\n\nPut the USB installer, the drive and the ISO file on one Mini PC screen\n",
+     "verified_at": "2026-11-17T09:32:06Z"
+    }
+   },
+   "url": "https://api.github.com/repos/home-assistant/installer/commits/fd350da17f0452d17238ba73df3a54bfbe895dba",
+   "html_url": "https://github.com/home-assistant/installer/commit/fd350da17f0452d17238ba73df3a54bfbe895dba",
+   "comments_url": "https://api.github.com/repos/home-assistant/installer/commits/fd350da17f0452d17238ba73df3a54bfbe895dba/comments",
+   "author": {
+    "login": "justanotherariel",
+    "id": 31776703,
+    "node_id": "MDQ6VXNlcjMxNzc2NzAz",
+    "avatar_url": "https://avatars.githubusercontent.com/u/31776703?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/justanotherariel",
+    "html_url": "https://github.com/justanotherariel",
+    "followers_url": "https://api.github.com/users/justanotherariel/followers",
+    "following_url": "https://api.github.com/users/justanotherariel/following{/other_user}",
+    "gists_url": "https://api.github.com/users/justanotherariel/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/justanotherariel/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/justanotherariel/subscriptions",
+    "organizations_url": "https://api.github.com/users/justanotherariel/orgs",
+    "repos_url": "https://api.github.com/users/justanotherariel/repos",
+    "events_url": "https://api.github.com/users/justanotherariel/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/justanotherariel/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "committer": {
+    "login": "justanotherariel",
+    "id": 31776703,
+    "node_id": "MDQ6VXNlcjMxNzc2NzAz",
+    "avatar_url": "https://avatars.githubusercontent.com/u/31776703?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/justanotherariel",
+    "html_url": "https://github.com/justanotherariel",
+    "followers_url": "https://api.github.com/users/justanotherariel/followers",
+    "following_url": "https://api.github.com/users/justanotherariel/following{/other_user}",
+    "gists_url": "https://api.github.com/users/justanotherariel/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/justanotherariel/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/justanotherariel/subscriptions",
+    "organizations_url": "https://api.github.com/users/justanotherariel/orgs",
+    "repos_url": "https://api.github.com/users/justanotherariel/repos",
+    "events_url": "https://api.github.com/users/justanotherariel/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/justanotherariel/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "parents": [
+    {
+     "sha": "82f11e9335d224481325a269ff2f4559fb9f0306",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/82f11e9335d224481325a269ff2f4559fb9f0306",
+     "html_url": "https://github.com/home-assistant/installer/commit/82f11e9335d224481325a269ff2f4559fb9f0306"
+    }
+   ]
+  },
+  {
+   "sha": "30911bc55a0e46d037cb732ed7230f71fddc85ae",
+   "node_id": "C_kwDOSQu-wdoAKDMwOTExYmM1NWEwZTQ2ZDAzN2NiNzMyZWQ3MjMwZjcxZmRkYzg1YWU",
+   "commit": {
+    "author": {
+     "name": "Ariel Ebersberger",
+     "email": "ariel@ebersberger.io",
+     "date": "2026-11-17T09:29:57Z"
+    },
+    "committer": {
+     "name": "Ariel Ebersberger",
+     "email": "ariel@ebersberger.io",
+     "date": "2026-11-17T09:29:57Z"
+    },
+    "message": "Mark the USB installer as recommended with a pill",
+    "tree": {
+     "sha": "2b3f8a92082c12c8f24d42b1290a138a7d2334c1",
+     "url": "https://api.github.com/repos/home-assistant/installer/git/trees/2b3f8a92082c12c8f24d42b1290a138a7d2334c1"
+    },
+    "url": "https://api.github.com/repos/home-assistant/installer/git/commits/30911bc55a0e46d037cb732ed7230f71fddc85ae",
+    "comment_count": 0,
+    "verification": {
+     "verified": true,
+     "reason": "valid",
+     "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEEXKy1PvQtfYDXpZbQDDDI9Tj/OwcFAmr8HpUACgkQDDDI9Tj/\nOwe6jQ//bWuoKW/69d80yAKveXGuJoGVqqTPtzl56QVfRNNKZ9fU2OZAhw7j9/jy\nSxAe9dnxuFOjFO/WOUQYaz4wI3HEpxMkgNdWSek2s9loQp7nUpPUtXOC9qKl+bgE\nXjwTC4zGrH1GbDIzSAALYa1r/BXgnXkGCWeMbSgQkiFLFy/Fu3EIQ76agpbg6dLj\n8rPmGe4cwHsucFjQWw//VLq/N5eBBqEZwTqXyinjxn9b6Y+TDY3kb2aqoTOPCcYJ\nuTQ7tmhGNEH8YCYUiaJqUeWrE5aPKeVjIRnptqwK9abe4MdJAslqQUM6xMw+MCax\nnJ9ag46ldsreNK5wbmPQLXmwDKaVRti8AtVWGsLW9Lz3bbZhLfPIxY3qj6p5StLw\ng/4uxZHpTimTjtpw8fiyG0HQR6dm3JC+dVkZWkunqS0qDv/VUJrhHM53GXEMi4Hw\n1izS3vDVR0zX9rhtKFuJ/45af94ak1FVfYo24DxFeYIWMb9BQa5sv4W4kJuXIaVQ\n4kG6gvyNfX8TQR7P+GtrglJ8ll824wMiWTkqCV+2PGPfhCK9libnTXKiQkk2+8Wn\nGNvG6oohnw3DZshTIc1dLtfSLVgNOfZpvuc/XMPuPxOgDDwMxRVS4lgzHz8k7IEd\n/o9LKBGXiZhKVwVB+FaEOIkozNDU7iM1EPax6Tz42Tzew6haiL8=\n=+lSi\n-----END PGP SIGNATURE-----",
+     "payload": "tree 2b3f8a92082c12c8f24d42b1290a138a7d2334c1\nparent fd350da17f0452d17238ba73df3a54bfbe895dba\nauthor Ariel Ebersberger <ariel@ebersberger.io> 1794907797 +0100\ncommitter Ariel Ebersberger <ariel@ebersberger.io> 1794907797 +0100\n\nMark the USB installer as recommended with a pill\n",
+     "verified_at": "2026-11-17T09:32:06Z"
+    }
+   },
+   "url": "https://api.github.com/repos/home-assistant/installer/commits/30911bc55a0e46d037cb732ed7230f71fddc85ae",
+   "html_url": "https://github.com/home-assistant/installer/commit/30911bc55a0e46d037cb732ed7230f71fddc85ae",
+   "comments_url": "https://api.github.com/repos/home-assistant/installer/commits/30911bc55a0e46d037cb732ed7230f71fddc85ae/comments",
+   "author": {
+    "login": "justanotherariel",
+    "id": 31776703,
+    "node_id": "MDQ6VXNlcjMxNzc2NzAz",
+    "avatar_url": "https://avatars.githubusercontent.com/u/31776703?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/justanotherariel",
+    "html_url": "https://github.com/justanotherariel",
+    "followers_url": "https://api.github.com/users/justanotherariel/followers",
+    "following_url": "https://api.github.com/users/justanotherariel/following{/other_user}",
+    "gists_url": "https://api.github.com/users/justanotherariel/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/justanotherariel/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/justanotherariel/subscriptions",
+    "organizations_url": "https://api.github.com/users/justanotherariel/orgs",
+    "repos_url": "https://api.github.com/users/justanotherariel/repos",
+    "events_url": "https://api.github.com/users/justanotherariel/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/justanotherariel/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "committer": {
+    "login": "justanotherariel",
+    "id": 31776703,
+    "node_id": "MDQ6VXNlcjMxNzc2NzAz",
+    "avatar_url": "https://avatars.githubusercontent.com/u/31776703?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/justanotherariel",
+    "html_url": "https://github.com/justanotherariel",
+    "followers_url": "https://api.github.com/users/justanotherariel/followers",
+    "following_url": "https://api.github.com/users/justanotherariel/following{/other_user}",
+    "gists_url": "https://api.github.com/users/justanotherariel/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/justanotherariel/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/justanotherariel/subscriptions",
+    "organizations_url": "https://api.github.com/users/justanotherariel/orgs",
+    "repos_url": "https://api.github.com/users/justanotherariel/repos",
+    "events_url": "https://api.github.com/users/justanotherariel/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/justanotherariel/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "parents": [
+    {
+     "sha": "fd350da17f0452d17238ba73df3a54bfbe895dba",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/fd350da17f0452d17238ba73df3a54bfbe895dba",
+     "html_url": "https://github.com/home-assistant/installer/commit/fd350da17f0452d17238ba73df3a54bfbe895dba"
+    }
+   ]
+  },
+  {
+   "sha": "4cb36ae03313f5a2337bbc2a5137c4c6816600ca",
+   "node_id": "C_kwDOSQu-wdoAKDRjYjM2YWUwMzMxM2Y1YTIzMzdiYmMyYTUxMzdjNGM2ODE2NjAwY2E",
+   "commit": {
+    "author": {
+     "name": "Ariel Ebersberger",
+     "email": "ariel@ebersberger.io",
+     "date": "2026-11-17T09:30:47Z"
+    },
+    "committer": {
+     "name": "Ariel Ebersberger",
+     "email": "ariel@ebersberger.io",
+     "date": "2026-11-17T09:30:47Z"
+    },
+    "message": "Don't show the Wi-Fi step before a mini PC processor is picked",
+    "tree": {
+     "sha": "0e81afb0a08a9e13258c6a31dbc284254ff8fc55",
+     "url": "https://api.github.com/repos/home-assistant/installer/git/trees/0e81afb0a08a9e13258c6a31dbc284254ff8fc55"
+    },
+    "url": "https://api.github.com/repos/home-assistant/installer/git/commits/4cb36ae03313f5a2337bbc2a5137c4c6816600ca",
+    "comment_count": 0,
+    "verification": {
+     "verified": true,
+     "reason": "valid",
+     "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEEXKy1PvQtfYDXpZbQDDDI9Tj/OwcFAmr8HscACgkQDDDI9Tj/\nOwe0zhAAwha1Fg2uvgWcPhzCxBnUmonpcy7jSxm9XFAjdC+dqjWisRvHjjKYep7K\nB2vTCKB601PEjb4mO5Z3KToukpZONuh53TWPrpU3m8Nrg8mASOTa2UM37BnwnTjK\ngvfhtD4Dvn4ldcuAXipPcqMqh3pBPDK3pRhR1hsIB0CkTdrQr9TiY85PYViyu20N\nWBmU3jwrKYtFlV58jmc+qhtxEN05c7//90udpw0gUapKwQBT0oF2A75TbV+8tSqa\ni0cLCqBitQG05Trl8j+66s+be6CN3MjiJe7aY0Ocq8TxBnmsjG5JhD4WXkZIquWQ\n7I72eZW5fKCN99Bk8qZXtzdbjljmC+htcoo3PGNtd6gvdb3jlRZgErOkplLX0RDR\nzg5tBdCmcY99bdL03m8C/dWSyW5GCID4+ct7mjs9P0ZB/zBkha+/r8SIfmt65LN1\nxSayFOTDLg2ckmgHDpvZrVBhOREOCkkXPbf4IG2SmKNTflA3m5InH1d9GOhIa5DK\n+PH+sskeE/8GJjvlSOD2o6sUenPii/FGtI8O/U/c8OYLFm1jMtLPs8TJlgyFVL8J\nzAeRG+p9dx332qBa8ZTrL3P6cNUVMa+aw3PUJAY8lQcWqWPnV+HQmkfC4FRQ8TQ8\nxoboCrR/wFz2CQWJlsxjTa3XXBD9yuW0YGu+ALkMnY1XRJLML8Y=\n=+2CQ\n-----END PGP SIGNATURE-----",
+     "payload": "tree 0e81afb0a08a9e13258c6a31dbc284254ff8fc55\nparent 30911bc55a0e46d037cb732ed7230f71fddc85ae\nauthor Ariel Ebersberger <ariel@ebersberger.io> 1794907847 +0100\ncommitter Ariel Ebersberger <ariel@ebersberger.io> 1794907847 +0100\n\nDon't show the Wi-Fi step before a mini PC processor is picked\n",
+     "verified_at": "2026-11-17T09:32:06Z"
+    }
+   },
+   "url": "https://api.github.com/repos/home-assistant/installer/commits/4cb36ae03313f5a2337bbc2a5137c4c6816600ca",
+   "html_url": "https://github.com/home-assistant/installer/commit/4cb36ae03313f5a2337bbc2a5137c4c6816600ca",
+   "comments_url": "https://api.github.com/repos/home-assistant/installer/commits/4cb36ae03313f5a2337bbc2a5137c4c6816600ca/comments",
+   "author": {
+    "login": "justanotherariel",
+    "id": 31776703,
+    "node_id": "MDQ6VXNlcjMxNzc2NzAz",
+    "avatar_url": "https://avatars.githubusercontent.com/u/31776703?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/justanotherariel",
+    "html_url": "https://github.com/justanotherariel",
+    "followers_url": "https://api.github.com/users/justanotherariel/followers",
+    "following_url": "https://api.github.com/users/justanotherariel/following{/other_user}",
+    "gists_url": "https://api.github.com/users/justanotherariel/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/justanotherariel/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/justanotherariel/subscriptions",
+    "organizations_url": "https://api.github.com/users/justanotherariel/orgs",
+    "repos_url": "https://api.github.com/users/justanotherariel/repos",
+    "events_url": "https://api.github.com/users/justanotherariel/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/justanotherariel/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "committer": {
+    "login": "justanotherariel",
+    "id": 31776703,
+    "node_id": "MDQ6VXNlcjMxNzc2NzAz",
+    "avatar_url": "https://avatars.githubusercontent.com/u/31776703?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/justanotherariel",
+    "html_url": "https://github.com/justanotherariel",
+    "followers_url": "https://api.github.com/users/justanotherariel/followers",
+    "following_url": "https://api.github.com/users/justanotherariel/following{/other_user}",
+    "gists_url": "https://api.github.com/users/justanotherariel/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/justanotherariel/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/justanotherariel/subscriptions",
+    "organizations_url": "https://api.github.com/users/justanotherariel/orgs",
+    "repos_url": "https://api.github.com/users/justanotherariel/repos",
+    "events_url": "https://api.github.com/users/justanotherariel/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/justanotherariel/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "parents": [
+    {
+     "sha": "30911bc55a0e46d037cb732ed7230f71fddc85ae",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/30911bc55a0e46d037cb732ed7230f71fddc85ae",
+     "html_url": "https://github.com/home-assistant/installer/commit/30911bc55a0e46d037cb732ed7230f71fddc85ae"
+    }
+   ]
+  },
+  {
+   "sha": "adc9d4b8656110f1d84bc6bd37eaf8d1b14dd7e3",
+   "node_id": "C_kwDOSQu-wdoAKGFkYzlkNGI4NjU2MTEwZjFkODRiYzZiZDM3ZWFmOGQxYjE0ZGQ3ZTM",
+   "commit": {
+    "author": {
+     "name": "Ariel Ebersberger",
+     "email": "ariel@ebersberger.io",
+     "date": "2026-11-17T09:31:36Z"
+    },
+    "committer": {
+     "name": "Ariel Ebersberger",
+     "email": "ariel@ebersberger.io",
+     "date": "2026-11-17T09:31:36Z"
+    },
+    "message": "Remove the unused setSteps",
+    "tree": {
+     "sha": "d9d4cf95b6c4b2ffba2a1d1d9bb3861b61a74384",
+     "url": "https://api.github.com/repos/home-assistant/installer/git/trees/d9d4cf95b6c4b2ffba2a1d1d9bb3861b61a74384"
+    },
+    "url": "https://api.github.com/repos/home-assistant/installer/git/commits/adc9d4b8656110f1d84bc6bd37eaf8d1b14dd7e3",
+    "comment_count": 0,
+    "verification": {
+     "verified": true,
+     "reason": "valid",
+     "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEEXKy1PvQtfYDXpZbQDDDI9Tj/OwcFAmr8HvgACgkQDDDI9Tj/\nOwdDJQ/+LrapbV9E3TCs5kpub4bGZtP+reJ4jdlkD8fWAEAxKR5fgLVBas3chgJn\n+DTIzAQET26KVFCoHJobsexSjBruH2cIIx2LoUjxDkZvH1j/8cc//gCp4xEo19o+\n0ZKD0tX1+3kXzMK7EA/+X2TDszcQFBqFTdisfKE0N6DZuaKs32o87RjQP9s0riSa\nsTVj+O9d837tLPFro4diSZwmH6ZyKAT+Cnf2PPStIvl+5lQ5cxKFPhmoKn32xlk/\nmfLocEqYtttvR9GxevTJit7zUJE0gOyFZxfV2PSgmai3qyyJPDqQYY1iDAASo+i9\n1WY2ShFZf9aAPeAThyiRUdYcXhUsRH2etHAxuJu5lhAXHzsNhcttIgJnSEX0LmbS\nbGKSLWBj/gtvY9Uuyam9+lrAOd5Cgx1cRwtQJVeGXrOhTMDtk7yD7TcjqdvNOiE2\ncBwYQBizihWV4hMdEVxQsALZDjpkvt+PDBfmbbbOvNRGfLzwp7AU6a6oVbPIJHp5\n49aDpyjeEabBr3C4iV4sW1aXl0tJ1TYZqmr2lK/ONFlbL6u0m5ZJ0L6ehukZwJZs\nwsM17BsLAEX8RWmy1ldOukgAfXJtv880AZW1euDqaUBqxKNdKKXa7X5gAAC9gOfs\n/21KR8ENYpiKuQdje4BzxQ4bb8/AiuLgRnuL7Zq6dkGK71tNABg=\n=GLMS\n-----END PGP SIGNATURE-----",
+     "payload": "tree d9d4cf95b6c4b2ffba2a1d1d9bb3861b61a74384\nparent 4cb36ae03313f5a2337bbc2a5137c4c6816600ca\nauthor Ariel Ebersberger <ariel@ebersberger.io> 1794907896 +0100\ncommitter Ariel Ebersberger <ariel@ebersberger.io> 1794907896 +0100\n\nRemove the unused setSteps\n",
+     "verified_at": "2026-11-17T09:32:06Z"
+    }
+   },
+   "url": "https://api.github.com/repos/home-assistant/installer/commits/adc9d4b8656110f1d84bc6bd37eaf8d1b14dd7e3",
+   "html_url": "https://github.com/home-assistant/installer/commit/adc9d4b8656110f1d84bc6bd37eaf8d1b14dd7e3",
+   "comments_url": "https://api.github.com/repos/home-assistant/installer/commits/adc9d4b8656110f1d84bc6bd37eaf8d1b14dd7e3/comments",
+   "author": {
+    "login": "justanotherariel",
+    "id": 31776703,
+    "node_id": "MDQ6VXNlcjMxNzc2NzAz",
+    "avatar_url": "https://avatars.githubusercontent.com/u/31776703?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/justanotherariel",
+    "html_url": "https://github.com/justanotherariel",
+    "followers_url": "https://api.github.com/users/justanotherariel/followers",
+    "following_url": "https://api.github.com/users/justanotherariel/following{/other_user}",
+    "gists_url": "https://api.github.com/users/justanotherariel/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/justanotherariel/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/justanotherariel/subscriptions",
+    "organizations_url": "https://api.github.com/users/justanotherariel/orgs",
+    "repos_url": "https://api.github.com/users/justanotherariel/repos",
+    "events_url": "https://api.github.com/users/justanotherariel/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/justanotherariel/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "committer": {
+    "login": "justanotherariel",
+    "id": 31776703,
+    "node_id": "MDQ6VXNlcjMxNzc2NzAz",
+    "avatar_url": "https://avatars.githubusercontent.com/u/31776703?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/justanotherariel",
+    "html_url": "https://github.com/justanotherariel",
+    "followers_url": "https://api.github.com/users/justanotherariel/followers",
+    "following_url": "https://api.github.com/users/justanotherariel/following{/other_user}",
+    "gists_url": "https://api.github.com/users/justanotherariel/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/justanotherariel/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/justanotherariel/subscriptions",
+    "organizations_url": "https://api.github.com/users/justanotherariel/orgs",
+    "repos_url": "https://api.github.com/users/justanotherariel/repos",
+    "events_url": "https://api.github.com/users/justanotherariel/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/justanotherariel/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "parents": [
+    {
+     "sha": "4cb36ae03313f5a2337bbc2a5137c4c6816600ca",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/4cb36ae03313f5a2337bbc2a5137c4c6816600ca",
+     "html_url": "https://github.com/home-assistant/installer/commit/4cb36ae03313f5a2337bbc2a5137c4c6816600ca"
+    }
+   ]
+  },
+  {
+   "sha": "724f6b999852eebc4ad01f17b160840cd40cd2d3",
+   "node_id": "C_kwDOSQu-wdoAKDcyNGY2Yjk5OTg1MmVlYmM0YWQwMWYxN2IxNjA4NDBjZDQwY2QyZDM",
+   "commit": {
+    "author": {
+     "name": "Ariel Ebersberger",
+     "email": "ariel@ebersberger.io",
+     "date": "2026-11-17T09:31:36Z"
+    },
+    "committer": {
+     "name": "Ariel Ebersberger",
+     "email": "ariel@ebersberger.io",
+     "date": "2026-11-17T09:31:36Z"
+    },
+    "message": "Describe the one Mini PC method screen in the user flow spec",
+    "tree": {
+     "sha": "7d9a314514b50fe54948e5cd124f92638c1288a0",
+     "url": "https://api.github.com/repos/home-assistant/installer/git/trees/7d9a314514b50fe54948e5cd124f92638c1288a0"
+    },
+    "url": "https://api.github.com/repos/home-assistant/installer/git/commits/724f6b999852eebc4ad01f17b160840cd40cd2d3",
+    "comment_count": 0,
+    "verification": {
+     "verified": true,
+     "reason": "valid",
+     "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEEXKy1PvQtfYDXpZbQDDDI9Tj/OwcFAmr8HvgACgkQDDDI9Tj/\nOweMCw//Ul2BSVnbwaMK3NBLVcCxLF7EHDxxf0d8SiIFieS4XbthAKrXiRCt5YL/\nfJkF7a5xmea7qUYzwsyZYtGF6PeDLttz/L3vSlURjrdvYd8NO8orsebs2JGj0Ejw\n78cT5srXaG2YCoYVc05Y8gpD8NrNeL+OvoaK3Q+zquxjQzHsGoUoNPh45gHXHFgm\n9JI8ocGSLh3pngwVJ8uHgI9gZPm6CbBO5NIRMbzTvgPqWhhAiLIociFrgbnJ09Hu\nm8ruVvboQc04+2IB32xB3TdxLJM0KHT7iaIjZa3osvee/7Rv5ZzAoWz1pPQhnYRK\nrmL7DDG6VMRldQFkNPW6ZIj+MoKpy39jua2TGFUj9NV7l3ELLubT4Wk/6xXWtq0y\nnnA/aLxlxhqyqYIxoavyfMTkyVK/Om0LgaBLLg4/YjTT/VbnAIvn8/vYD1CvJQsn\nirNtxNZh5CX6k+Hi5PZ8AaWjCeFrUBZkDJzURbeY03wi6DLx6Tgfnf7p3krpAxBO\nkfE/6oxwVgAxJLKYZAegIjCRjCH+nl0V+dqF8tRDfKctD1Qiw1NFJ4qN6F7OpGqR\nauAUO9J9xKTgs/F5/9v/AfJTeoyn/qvbPvX6wpTkQBpdxc3ON7PBwE85en/deGle\n7ezpfNPsMi6mndxOOsH5mGQR1uwnvRdJgvA33SLjaWni/gDWHfk=\n=sWLx\n-----END PGP SIGNATURE-----",
+     "payload": "tree 7d9a314514b50fe54948e5cd124f92638c1288a0\nparent adc9d4b8656110f1d84bc6bd37eaf8d1b14dd7e3\nauthor Ariel Ebersberger <ariel@ebersberger.io> 1794907896 +0100\ncommitter Ariel Ebersberger <ariel@ebersberger.io> 1794907896 +0100\n\nDescribe the one Mini PC method screen in the user flow spec\n",
+     "verified_at": "2026-11-17T09:32:06Z"
+    }
+   },
+   "url": "https://api.github.com/repos/home-assistant/installer/commits/724f6b999852eebc4ad01f17b160840cd40cd2d3",
+   "html_url": "https://github.com/home-assistant/installer/commit/724f6b999852eebc4ad01f17b160840cd40cd2d3",
+   "comments_url": "https://api.github.com/repos/home-assistant/installer/commits/724f6b999852eebc4ad01f17b160840cd40cd2d3/comments",
+   "author": {
+    "login": "justanotherariel",
+    "id": 31776703,
+    "node_id": "MDQ6VXNlcjMxNzc2NzAz",
+    "avatar_url": "https://avatars.githubusercontent.com/u/31776703?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/justanotherariel",
+    "html_url": "https://github.com/justanotherariel",
+    "followers_url": "https://api.github.com/users/justanotherariel/followers",
+    "following_url": "https://api.github.com/users/justanotherariel/following{/other_user}",
+    "gists_url": "https://api.github.com/users/justanotherariel/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/justanotherariel/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/justanotherariel/subscriptions",
+    "organizations_url": "https://api.github.com/users/justanotherariel/orgs",
+    "repos_url": "https://api.github.com/users/justanotherariel/repos",
+    "events_url": "https://api.github.com/users/justanotherariel/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/justanotherariel/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "committer": {
+    "login": "justanotherariel",
+    "id": 31776703,
+    "node_id": "MDQ6VXNlcjMxNzc2NzAz",
+    "avatar_url": "https://avatars.githubusercontent.com/u/31776703?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/justanotherariel",
+    "html_url": "https://github.com/justanotherariel",
+    "followers_url": "https://api.github.com/users/justanotherariel/followers",
+    "following_url": "https://api.github.com/users/justanotherariel/following{/other_user}",
+    "gists_url": "https://api.github.com/users/justanotherariel/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/justanotherariel/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/justanotherariel/subscriptions",
+    "organizations_url": "https://api.github.com/users/justanotherariel/orgs",
+    "repos_url": "https://api.github.com/users/justanotherariel/repos",
+    "events_url": "https://api.github.com/users/justanotherariel/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/justanotherariel/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "parents": [
+    {
+     "sha": "adc9d4b8656110f1d84bc6bd37eaf8d1b14dd7e3",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/adc9d4b8656110f1d84bc6bd37eaf8d1b14dd7e3",
+     "html_url": "https://github.com/home-assistant/installer/commit/adc9d4b8656110f1d84bc6bd37eaf8d1b14dd7e3"
+    }
+   ]
+  },
+  {
+   "sha": "9ad41e7f32b04648bab69cf03e34cb834125b78d",
+   "node_id": "C_kwDOSQu-wdoAKDlhZDQxZTdmMzJiMDQ2NDhiYWI2OWNmMDNlMzRjYjgzNDEyNWI3OGQ",
+   "commit": {
+    "author": {
+     "name": "Franck Nijhof",
+     "email": "frenck@frenck.nl",
+     "date": "2026-11-23T21:36:23Z"
+    },
+    "committer": {
+     "name": "GitHub",
+     "email": "noreply@github.com",
+     "date": "2026-11-23T21:36:23Z"
+    },
+    "message": "Merge branch 'main' into justanotherariel-minipc-one-screen",
+    "tree": {
+     "sha": "55dc1e5b02952c1a080c0d7487e0bd744d1e8938",
+     "url": "https://api.github.com/repos/home-assistant/installer/git/trees/55dc1e5b02952c1a080c0d7487e0bd744d1e8938"
+    },
+    "url": "https://api.github.com/repos/home-assistant/installer/git/commits/9ad41e7f32b04648bab69cf03e34cb834125b78d",
+    "comment_count": 0,
+    "verification": {
+     "verified": true,
+     "reason": "valid",
+     "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJrBLHXCRC1aQ7uu5UhlAAAje4QALA21WjRIjflzyKEJoSFeWCy\nD3cLb39rcwBV4bxfv74wHIBzRa8BNHL2jwGNq8rFbWru4E/fZkHtxyyw9mW1lCYA\nuigZMpj7/kmCqvKO8Kd8GjDMjKkdQa1jDAQsQumqgpVpSkP7CnZ9sbXRd4G3Gt/i\nQ7e5MA1hJiV29s1cA0BRAsxcuWqaRQ/Ra88kYWmSgNhuvFd+Itpk+74LNdDn0hsx\nJ6g90TLBWb9q4b7OOMv1IX4qpsxJmHQw13K/Bp9SDMxQkjloH4C4CgMDsx4QBf+M\nDL20eNF572aUxYmlufecj4OPfsmNrMT7PHuWz98aIoyoFpsQV5mMe9mg/OuEjzZ/\nBjkd0+z+2ZKobfPU7VoepabqJ01vMv0/DCfR6P7CsfxZDErev8ch+UxlE9AgoT1b\niGbyWbFXS1KsisfGRKdEILVuZCSn6KbDnZCthi0DOiD7Ea8aDehymXnUFxI9KDg5\naHZhXXyujo0gg+4CYC6hS6zuF6nmHFhTlq2TyROY5ZloRb+Qg/fqp3L6b92TbAdg\nvBpTIhQC+y6/DtnDv7wsfUTk0NR2LPdgahAav6kU/xDbayaXhmZFXSdQB+BNlXoq\n1eh+2Tv3VPDb5vWUwFYAOxB3PErafKnaz9g0q04jEIlBIzh6Ju/ZuJHKsL0RTpGw\n0NYpIU+CBixJlNMdFgwo\n=MLLi\n-----END PGP SIGNATURE-----\n",
+     "payload": "tree 55dc1e5b02952c1a080c0d7487e0bd744d1e8938\nparent 724f6b999852eebc4ad01f17b160840cd40cd2d3\nparent f19275b9c366dcabdee1651ab8bb0c3763b78c6d\nauthor Franck Nijhof <frenck@frenck.nl> 1795469783 +0100\ncommitter GitHub <noreply@github.com> 1795469783 +0100\n\nMerge branch 'main' into justanotherariel-minipc-one-screen",
+     "verified_at": "2026-11-23T21:36:24Z"
+    }
+   },
+   "url": "https://api.github.com/repos/home-assistant/installer/commits/9ad41e7f32b04648bab69cf03e34cb834125b78d",
+   "html_url": "https://github.com/home-assistant/installer/commit/9ad41e7f32b04648bab69cf03e34cb834125b78d",
+   "comments_url": "https://api.github.com/repos/home-assistant/installer/commits/9ad41e7f32b04648bab69cf03e34cb834125b78d/comments",
+   "author": {
+    "login": "frenck",
+    "id": 195327,
+    "node_id": "MDQ6VXNlcjE5NTMyNw==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/195327?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/frenck",
+    "html_url": "https://github.com/frenck",
+    "followers_url": "https://api.github.com/users/frenck/followers",
+    "following_url": "https://api.github.com/users/frenck/following{/other_user}",
+    "gists_url": "https://api.github.com/users/frenck/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/frenck/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/frenck/subscriptions",
+    "organizations_url": "https://api.github.com/users/frenck/orgs",
+    "repos_url": "https://api.github.com/users/frenck/repos",
+    "events_url": "https://api.github.com/users/frenck/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/frenck/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "parents": [
+    {
+     "sha": "724f6b999852eebc4ad01f17b160840cd40cd2d3",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/724f6b999852eebc4ad01f17b160840cd40cd2d3",
+     "html_url": "https://github.com/home-assistant/installer/commit/724f6b999852eebc4ad01f17b160840cd40cd2d3"
+    },
+    {
+     "sha": "f19275b9c366dcabdee1651ab8bb0c3763b78c6d",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/f19275b9c366dcabdee1651ab8bb0c3763b78c6d",
+     "html_url": "https://github.com/home-assistant/installer/commit/f19275b9c366dcabdee1651ab8bb0c3763b78c6d"
+    }
+   ]
+  }
+ ],
+ "694": [
+  {
+   "sha": "00efe745ce7c79bea42c0f066376246d14e09d2e",
+   "node_id": "C_kwDOSQu-wdoAKDAwZWZlNzQ1Y2U3Yzc5YmVhNDJjMGYwNjYzNzYyNDZkMTRlMDlkMmU",
+   "commit": {
+    "author": {
+     "name": "Claude",
+     "email": "noreply@anthropic.com",
+     "date": "2026-11-19T19:45:13Z"
+    },
+    "committer": {
+     "name": "Claude",
+     "email": "noreply@anthropic.com",
+     "date": "2026-11-19T19:45:13Z"
+    },
+    "message": "Show the Home Assistants on the network on the welcome screen\n\nThe welcome screen looks up Home Assistant over mDNS while it shows,\nevery 10 seconds, and lists each one it finds below Let's go with its\nname and address. Each opens in the browser. One that Home Assistant OS\nstill installs says Installing, and one whose owner has yet to onboard\nit says Not set up yet.\n\nThe new check_ha_onboarded command reads /api/onboarding, which the\nonboarding integration serves without authentication until every step\nis done. Announcements now carry the location_name they announce.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01JYKnLnxxYRaTX7zfUKL4Xy",
+    "tree": {
+     "sha": "4311377db9ed3cd7ed55441306006ac38981f8c3",
+     "url": "https://api.github.com/repos/home-assistant/installer/git/trees/4311377db9ed3cd7ed55441306006ac38981f8c3"
+    },
+    "url": "https://api.github.com/repos/home-assistant/installer/git/commits/00efe745ce7c79bea42c0f066376246d14e09d2e",
+    "comment_count": 0,
+    "verification": {
+     "verified": true,
+     "reason": "valid",
+     "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgrLzsfFISF4by8Q+FKz27YpkK1USsBB+m\namu1QkJnbDsAAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQOHnXIos\nS+8oRlac6q3YG4MM5az1N1ZfuQ/LqluWBt8zLVqoreVfgaZR+K9VYOGihFXgo9OD2Mujl3Y6ZI+K\nCAA=\n-----END SSH SIGNATURE-----",
+     "payload": "tree 4311377db9ed3cd7ed55441306006ac38981f8c3\nparent c8299f08e957e06e1de040fda6969568079e8c93\nauthor Claude <noreply@anthropic.com> 1795117513 +0000\ncommitter Claude <noreply@anthropic.com> 1795117513 +0000\n\nShow the Home Assistants on the network on the welcome screen\n\nThe welcome screen looks up Home Assistant over mDNS while it shows,\nevery 10 seconds, and lists each one it finds below Let's go with its\nname and address. Each opens in the browser. One that Home Assistant OS\nstill installs says Installing, and one whose owner has yet to onboard\nit says Not set up yet.\n\nThe new check_ha_onboarded command reads /api/onboarding, which the\nonboarding integration serves without authentication until every step\nis done. Announcements now carry the location_name they announce.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01JYKnLnxxYRaTX7zfUKL4Xy\n",
+     "verified_at": "2026-11-19T19:45:16Z"
+    }
+   },
+   "url": "https://api.github.com/repos/home-assistant/installer/commits/00efe745ce7c79bea42c0f066376246d14e09d2e",
+   "html_url": "https://github.com/home-assistant/installer/commit/00efe745ce7c79bea42c0f066376246d14e09d2e",
+   "comments_url": "https://api.github.com/repos/home-assistant/installer/commits/00efe745ce7c79bea42c0f066376246d14e09d2e/comments",
+   "author": {
+    "login": "claude",
+    "id": 81847,
+    "node_id": "MDQ6VXNlcjgxODQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/81847?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/claude",
+    "html_url": "https://github.com/claude",
+    "followers_url": "https://api.github.com/users/claude/followers",
+    "following_url": "https://api.github.com/users/claude/following{/other_user}",
+    "gists_url": "https://api.github.com/users/claude/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/claude/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/claude/subscriptions",
+    "organizations_url": "https://api.github.com/users/claude/orgs",
+    "repos_url": "https://api.github.com/users/claude/repos",
+    "events_url": "https://api.github.com/users/claude/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/claude/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "committer": {
+    "login": "claude",
+    "id": 81847,
+    "node_id": "MDQ6VXNlcjgxODQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/81847?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/claude",
+    "html_url": "https://github.com/claude",
+    "followers_url": "https://api.github.com/users/claude/followers",
+    "following_url": "https://api.github.com/users/claude/following{/other_user}",
+    "gists_url": "https://api.github.com/users/claude/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/claude/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/claude/subscriptions",
+    "organizations_url": "https://api.github.com/users/claude/orgs",
+    "repos_url": "https://api.github.com/users/claude/repos",
+    "events_url": "https://api.github.com/users/claude/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/claude/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "parents": [
+    {
+     "sha": "c8299f08e957e06e1de040fda6969568079e8c93",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/c8299f08e957e06e1de040fda6969568079e8c93",
+     "html_url": "https://github.com/home-assistant/installer/commit/c8299f08e957e06e1de040fda6969568079e8c93"
+    }
+   ]
+  },
+  {
+   "sha": "730d19e50a1d6e18414f3ef0ae0ae5a44faf429c",
+   "node_id": "C_kwDOSQu-wdoAKDczMGQxOWU1MGExZDZlMTg0MTRmM2VmMGFlMGFlNWE0NGZhZjQyOWM",
+   "commit": {
+    "author": {
+     "name": "Claude",
+     "email": "noreply@anthropic.com",
+     "date": "2026-11-19T20:14:27Z"
+    },
+    "committer": {
+     "name": "Claude",
+     "email": "noreply@anthropic.com",
+     "date": "2026-11-19T20:14:27Z"
+    },
+    "message": "Open each found Home Assistant where it says, in one row that scrolls\n\nA found Home Assistant now opens at the internal_url it announces, which\nsays whether it takes HTTPS and may name it as its certificate does. One\nthat names an address it is no longer at keeps only its scheme. The\nonboarding check asks over HTTPS when plain HTTP gets no answer, without\nchecking the certificate: it sends nothing and only picks a label.\n\nThe found ones stay in one row. One that doesn't fit scrolls sideways: the\nnext card shows in part, the row fades out toward each edge with more\nbeyond it, and a button there scrolls on. Names and addresses keep their\nown direction in a right-to-left page.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01JYKnLnxxYRaTX7zfUKL4Xy",
+    "tree": {
+     "sha": "b768eb2b4ef0040d72980c26c613de92544add75",
+     "url": "https://api.github.com/repos/home-assistant/installer/git/trees/b768eb2b4ef0040d72980c26c613de92544add75"
+    },
+    "url": "https://api.github.com/repos/home-assistant/installer/git/commits/730d19e50a1d6e18414f3ef0ae0ae5a44faf429c",
+    "comment_count": 0,
+    "verification": {
+     "verified": true,
+     "reason": "valid",
+     "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgrLzsfFISF4by8Q+FKz27YpkK1USsBB+m\namu1QkJnbDsAAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQBgoYKw4\nsKCbARTa7jZVhEM93StT1q36vsbiAzo3CPngeq3ccFp5WoWteVN7WdnXmn8w56N+WCxx42dYru0e\nTgA=\n-----END SSH SIGNATURE-----",
+     "payload": "tree b768eb2b4ef0040d72980c26c613de92544add75\nparent 00efe745ce7c79bea42c0f066376246d14e09d2e\nauthor Claude <noreply@anthropic.com> 1795119267 +0000\ncommitter Claude <noreply@anthropic.com> 1795119267 +0000\n\nOpen each found Home Assistant where it says, in one row that scrolls\n\nA found Home Assistant now opens at the internal_url it announces, which\nsays whether it takes HTTPS and may name it as its certificate does. One\nthat names an address it is no longer at keeps only its scheme. The\nonboarding check asks over HTTPS when plain HTTP gets no answer, without\nchecking the certificate: it sends nothing and only picks a label.\n\nThe found ones stay in one row. One that doesn't fit scrolls sideways: the\nnext card shows in part, the row fades out toward each edge with more\nbeyond it, and a button there scrolls on. Names and addresses keep their\nown direction in a right-to-left page.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01JYKnLnxxYRaTX7zfUKL4Xy\n",
+     "verified_at": "2026-11-19T20:14:31Z"
+    }
+   },
+   "url": "https://api.github.com/repos/home-assistant/installer/commits/730d19e50a1d6e18414f3ef0ae0ae5a44faf429c",
+   "html_url": "https://github.com/home-assistant/installer/commit/730d19e50a1d6e18414f3ef0ae0ae5a44faf429c",
+   "comments_url": "https://api.github.com/repos/home-assistant/installer/commits/730d19e50a1d6e18414f3ef0ae0ae5a44faf429c/comments",
+   "author": {
+    "login": "claude",
+    "id": 81847,
+    "node_id": "MDQ6VXNlcjgxODQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/81847?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/claude",
+    "html_url": "https://github.com/claude",
+    "followers_url": "https://api.github.com/users/claude/followers",
+    "following_url": "https://api.github.com/users/claude/following{/other_user}",
+    "gists_url": "https://api.github.com/users/claude/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/claude/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/claude/subscriptions",
+    "organizations_url": "https://api.github.com/users/claude/orgs",
+    "repos_url": "https://api.github.com/users/claude/repos",
+    "events_url": "https://api.github.com/users/claude/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/claude/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "committer": {
+    "login": "claude",
+    "id": 81847,
+    "node_id": "MDQ6VXNlcjgxODQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/81847?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/claude",
+    "html_url": "https://github.com/claude",
+    "followers_url": "https://api.github.com/users/claude/followers",
+    "following_url": "https://api.github.com/users/claude/following{/other_user}",
+    "gists_url": "https://api.github.com/users/claude/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/claude/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/claude/subscriptions",
+    "organizations_url": "https://api.github.com/users/claude/orgs",
+    "repos_url": "https://api.github.com/users/claude/repos",
+    "events_url": "https://api.github.com/users/claude/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/claude/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "parents": [
+    {
+     "sha": "00efe745ce7c79bea42c0f066376246d14e09d2e",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/00efe745ce7c79bea42c0f066376246d14e09d2e",
+     "html_url": "https://github.com/home-assistant/installer/commit/00efe745ce7c79bea42c0f066376246d14e09d2e"
+    }
+   ]
+  },
+  {
+   "sha": "9dae9a2539e99309e58e81ec19632dc824f77f6f",
+   "node_id": "C_kwDOSQu-wdoAKDlkYWU5YTI1MzllOTkzMDllNThlODFlYzE5NjMyZGM4MjRmNzdmNmY",
+   "commit": {
+    "author": {
+     "name": "Claude",
+     "email": "noreply@anthropic.com",
+     "date": "2026-11-20T13:29:34Z"
+    },
+    "committer": {
+     "name": "Claude",
+     "email": "noreply@anthropic.com",
+     "date": "2026-11-20T13:29:34Z"
+    },
+    "message": "Merge remote-tracking branch 'origin/main' into claude/sweet-knuth-v4xypm\n\n# Conflicts:\n#\tsrc/api/commands.ts",
+    "tree": {
+     "sha": "bb13e482e270dddadfdbc35459074e7adcb9f79e",
+     "url": "https://api.github.com/repos/home-assistant/installer/git/trees/bb13e482e270dddadfdbc35459074e7adcb9f79e"
+    },
+    "url": "https://api.github.com/repos/home-assistant/installer/git/commits/9dae9a2539e99309e58e81ec19632dc824f77f6f",
+    "comment_count": 0,
+    "verification": {
+     "verified": true,
+     "reason": "valid",
+     "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgrLzsfFISF4by8Q+FKz27YpkK1USsBB+m\namu1QkJnbDsAAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQDTru/z4\nVF40BWfmB+BOBovXNQYoOEoxprX9Q5A/lMm93yNV4yWmg1GHmLMNkkI9Rplz+b6x71d2aXqW/Dw6\nUQg=\n-----END SSH SIGNATURE-----",
+     "payload": "tree bb13e482e270dddadfdbc35459074e7adcb9f79e\nparent 730d19e50a1d6e18414f3ef0ae0ae5a44faf429c\nparent f82c6759cd08e1779af9d6531861bca59c2f4c31\nauthor Claude <noreply@anthropic.com> 1795181374 +0000\ncommitter Claude <noreply@anthropic.com> 1795181374 +0000\n\nMerge remote-tracking branch 'origin/main' into claude/sweet-knuth-v4xypm\n\n# Conflicts:\n#\tsrc/api/commands.ts\n",
+     "verified_at": "2026-11-20T13:36:51Z"
+    }
+   },
+   "url": "https://api.github.com/repos/home-assistant/installer/commits/9dae9a2539e99309e58e81ec19632dc824f77f6f",
+   "html_url": "https://github.com/home-assistant/installer/commit/9dae9a2539e99309e58e81ec19632dc824f77f6f",
+   "comments_url": "https://api.github.com/repos/home-assistant/installer/commits/9dae9a2539e99309e58e81ec19632dc824f77f6f/comments",
+   "author": {
+    "login": "claude",
+    "id": 81847,
+    "node_id": "MDQ6VXNlcjgxODQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/81847?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/claude",
+    "html_url": "https://github.com/claude",
+    "followers_url": "https://api.github.com/users/claude/followers",
+    "following_url": "https://api.github.com/users/claude/following{/other_user}",
+    "gists_url": "https://api.github.com/users/claude/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/claude/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/claude/subscriptions",
+    "organizations_url": "https://api.github.com/users/claude/orgs",
+    "repos_url": "https://api.github.com/users/claude/repos",
+    "events_url": "https://api.github.com/users/claude/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/claude/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "committer": {
+    "login": "claude",
+    "id": 81847,
+    "node_id": "MDQ6VXNlcjgxODQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/81847?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/claude",
+    "html_url": "https://github.com/claude",
+    "followers_url": "https://api.github.com/users/claude/followers",
+    "following_url": "https://api.github.com/users/claude/following{/other_user}",
+    "gists_url": "https://api.github.com/users/claude/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/claude/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/claude/subscriptions",
+    "organizations_url": "https://api.github.com/users/claude/orgs",
+    "repos_url": "https://api.github.com/users/claude/repos",
+    "events_url": "https://api.github.com/users/claude/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/claude/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "parents": [
+    {
+     "sha": "730d19e50a1d6e18414f3ef0ae0ae5a44faf429c",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/730d19e50a1d6e18414f3ef0ae0ae5a44faf429c",
+     "html_url": "https://github.com/home-assistant/installer/commit/730d19e50a1d6e18414f3ef0ae0ae5a44faf429c"
+    },
+    {
+     "sha": "f82c6759cd08e1779af9d6531861bca59c2f4c31",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/f82c6759cd08e1779af9d6531861bca59c2f4c31",
+     "html_url": "https://github.com/home-assistant/installer/commit/f82c6759cd08e1779af9d6531861bca59c2f4c31"
+    }
+   ]
+  },
+  {
+   "sha": "64806e9b13a724b8ed89621431d1b0d1f32e29a9",
+   "node_id": "C_kwDOSQu-wdoAKDY0ODA2ZTliMTNhNzI0YjhlZDg5NjIxNDMxZDFiMGQxZjMyZTI5YTk",
+   "commit": {
+    "author": {
+     "name": "Claude",
+     "email": "noreply@anthropic.com",
+     "date": "2026-11-20T13:36:48Z"
+    },
+    "committer": {
+     "name": "Claude",
+     "email": "noreply@anthropic.com",
+     "date": "2026-11-20T13:36:48Z"
+    },
+    "message": "Keep focused cards, drop replaced landing pages, fade both RTL edges\n\nThe found cards are keyed by address, so a card keeps its element, and\nwith it the focus and where it opens, when another one sorts before it.\n\nA landing page is forgotten once Home Assistant answers on the same\ndevice, on whatever port: newer landing pages answer on port 80, Home\nAssistant on 8123, and the landing page's announcement can linger.\n\nMidway along a right-to-left row both edges fade: the rule for both\nedges now comes last and is as specific as the right-to-left ones.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01JYKnLnxxYRaTX7zfUKL4Xy",
+    "tree": {
+     "sha": "72e8ad1f083689e26e6fcce9d30fd01bba85adb8",
+     "url": "https://api.github.com/repos/home-assistant/installer/git/trees/72e8ad1f083689e26e6fcce9d30fd01bba85adb8"
+    },
+    "url": "https://api.github.com/repos/home-assistant/installer/git/commits/64806e9b13a724b8ed89621431d1b0d1f32e29a9",
+    "comment_count": 0,
+    "verification": {
+     "verified": true,
+     "reason": "valid",
+     "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgrLzsfFISF4by8Q+FKz27YpkK1USsBB+m\namu1QkJnbDsAAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQMWlzEtC\nBW9w7revWj/sVppcIuaXJud0/FtU3gn1RXoQukixBWXNzl4RcPBdDpiojq0hWzATmhFkryGz4I/W\n5Qg=\n-----END SSH SIGNATURE-----",
+     "payload": "tree 72e8ad1f083689e26e6fcce9d30fd01bba85adb8\nparent 9dae9a2539e99309e58e81ec19632dc824f77f6f\nauthor Claude <noreply@anthropic.com> 1795181808 +0000\ncommitter Claude <noreply@anthropic.com> 1795181808 +0000\n\nKeep focused cards, drop replaced landing pages, fade both RTL edges\n\nThe found cards are keyed by address, so a card keeps its element, and\nwith it the focus and where it opens, when another one sorts before it.\n\nA landing page is forgotten once Home Assistant answers on the same\ndevice, on whatever port: newer landing pages answer on port 80, Home\nAssistant on 8123, and the landing page's announcement can linger.\n\nMidway along a right-to-left row both edges fade: the rule for both\nedges now comes last and is as specific as the right-to-left ones.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01JYKnLnxxYRaTX7zfUKL4Xy\n",
+     "verified_at": "2026-11-20T13:36:51Z"
+    }
+   },
+   "url": "https://api.github.com/repos/home-assistant/installer/commits/64806e9b13a724b8ed89621431d1b0d1f32e29a9",
+   "html_url": "https://github.com/home-assistant/installer/commit/64806e9b13a724b8ed89621431d1b0d1f32e29a9",
+   "comments_url": "https://api.github.com/repos/home-assistant/installer/commits/64806e9b13a724b8ed89621431d1b0d1f32e29a9/comments",
+   "author": {
+    "login": "claude",
+    "id": 81847,
+    "node_id": "MDQ6VXNlcjgxODQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/81847?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/claude",
+    "html_url": "https://github.com/claude",
+    "followers_url": "https://api.github.com/users/claude/followers",
+    "following_url": "https://api.github.com/users/claude/following{/other_user}",
+    "gists_url": "https://api.github.com/users/claude/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/claude/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/claude/subscriptions",
+    "organizations_url": "https://api.github.com/users/claude/orgs",
+    "repos_url": "https://api.github.com/users/claude/repos",
+    "events_url": "https://api.github.com/users/claude/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/claude/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "committer": {
+    "login": "claude",
+    "id": 81847,
+    "node_id": "MDQ6VXNlcjgxODQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/81847?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/claude",
+    "html_url": "https://github.com/claude",
+    "followers_url": "https://api.github.com/users/claude/followers",
+    "following_url": "https://api.github.com/users/claude/following{/other_user}",
+    "gists_url": "https://api.github.com/users/claude/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/claude/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/claude/subscriptions",
+    "organizations_url": "https://api.github.com/users/claude/orgs",
+    "repos_url": "https://api.github.com/users/claude/repos",
+    "events_url": "https://api.github.com/users/claude/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/claude/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "parents": [
+    {
+     "sha": "9dae9a2539e99309e58e81ec19632dc824f77f6f",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/9dae9a2539e99309e58e81ec19632dc824f77f6f",
+     "html_url": "https://github.com/home-assistant/installer/commit/9dae9a2539e99309e58e81ec19632dc824f77f6f"
+    }
+   ]
+  },
+  {
+   "sha": "83d74bcc119dd94b9ad41b3068c97f566da84fbd",
+   "node_id": "C_kwDOSQu-wdoAKDgzZDc0YmNjMTE5ZGQ5NGI5YWQ0MWIzMDY4Yzk3ZjU2NmRhODRmYmQ",
+   "commit": {
+    "author": {
+     "name": "Claude",
+     "email": "noreply@anthropic.com",
+     "date": "2026-11-20T13:48:21Z"
+    },
+    "committer": {
+     "name": "Claude",
+     "email": "noreply@anthropic.com",
+     "date": "2026-11-20T13:48:21Z"
+    },
+    "message": "Open a proxied Home Assistant at its proxy, and wrap long addresses\n\nAn internal_url on another IP address than Home Assistant's own can be a\nproxy in front of it, so it is opened as announced. Only one this\ncomputer can't reach, like Home Assistant OS's own networks, gives way to\nplain HTTP at the address Home Assistant answers at.\n\nA long name a card opens at breaks within the card, rather than running\nover its icon and out of it.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01JYKnLnxxYRaTX7zfUKL4Xy",
+    "tree": {
+     "sha": "9ebc146372274f849e41c68de854269827642a3f",
+     "url": "https://api.github.com/repos/home-assistant/installer/git/trees/9ebc146372274f849e41c68de854269827642a3f"
+    },
+    "url": "https://api.github.com/repos/home-assistant/installer/git/commits/83d74bcc119dd94b9ad41b3068c97f566da84fbd",
+    "comment_count": 0,
+    "verification": {
+     "verified": true,
+     "reason": "valid",
+     "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgrLzsfFISF4by8Q+FKz27YpkK1USsBB+m\namu1QkJnbDsAAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQL1zS09U\nxLk5ga1eW9x/EBtLlLOFzCM0ryG7zFTWeLp1A7JVqiB9UV5xUJoHUI1uEAGftIHJRD/nmP/ePmsi\nlAQ=\n-----END SSH SIGNATURE-----",
+     "payload": "tree 9ebc146372274f849e41c68de854269827642a3f\nparent 64806e9b13a724b8ed89621431d1b0d1f32e29a9\nauthor Claude <noreply@anthropic.com> 1795182501 +0000\ncommitter Claude <noreply@anthropic.com> 1795182501 +0000\n\nOpen a proxied Home Assistant at its proxy, and wrap long addresses\n\nAn internal_url on another IP address than Home Assistant's own can be a\nproxy in front of it, so it is opened as announced. Only one this\ncomputer can't reach, like Home Assistant OS's own networks, gives way to\nplain HTTP at the address Home Assistant answers at.\n\nA long name a card opens at breaks within the card, rather than running\nover its icon and out of it.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01JYKnLnxxYRaTX7zfUKL4Xy\n",
+     "verified_at": "2026-11-20T13:48:24Z"
+    }
+   },
+   "url": "https://api.github.com/repos/home-assistant/installer/commits/83d74bcc119dd94b9ad41b3068c97f566da84fbd",
+   "html_url": "https://github.com/home-assistant/installer/commit/83d74bcc119dd94b9ad41b3068c97f566da84fbd",
+   "comments_url": "https://api.github.com/repos/home-assistant/installer/commits/83d74bcc119dd94b9ad41b3068c97f566da84fbd/comments",
+   "author": {
+    "login": "claude",
+    "id": 81847,
+    "node_id": "MDQ6VXNlcjgxODQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/81847?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/claude",
+    "html_url": "https://github.com/claude",
+    "followers_url": "https://api.github.com/users/claude/followers",
+    "following_url": "https://api.github.com/users/claude/following{/other_user}",
+    "gists_url": "https://api.github.com/users/claude/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/claude/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/claude/subscriptions",
+    "organizations_url": "https://api.github.com/users/claude/orgs",
+    "repos_url": "https://api.github.com/users/claude/repos",
+    "events_url": "https://api.github.com/users/claude/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/claude/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "committer": {
+    "login": "claude",
+    "id": 81847,
+    "node_id": "MDQ6VXNlcjgxODQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/81847?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/claude",
+    "html_url": "https://github.com/claude",
+    "followers_url": "https://api.github.com/users/claude/followers",
+    "following_url": "https://api.github.com/users/claude/following{/other_user}",
+    "gists_url": "https://api.github.com/users/claude/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/claude/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/claude/subscriptions",
+    "organizations_url": "https://api.github.com/users/claude/orgs",
+    "repos_url": "https://api.github.com/users/claude/repos",
+    "events_url": "https://api.github.com/users/claude/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/claude/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "parents": [
+    {
+     "sha": "64806e9b13a724b8ed89621431d1b0d1f32e29a9",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/64806e9b13a724b8ed89621431d1b0d1f32e29a9",
+     "html_url": "https://github.com/home-assistant/installer/commit/64806e9b13a724b8ed89621431d1b0d1f32e29a9"
+    }
+   ]
+  },
+  {
+   "sha": "267c68e9e4c488b366a06d2256bfdbde6d4dcf78",
+   "node_id": "C_kwDOSQu-wdoAKDI2N2M2OGU5ZTRjNDg4YjM2NmEwNmQyMjU2YmZkYmRlNmQ0ZGNmNzg",
+   "commit": {
+    "author": {
+     "name": "Claude",
+     "email": "noreply@anthropic.com",
+     "date": "2026-11-20T14:02:45Z"
+    },
+    "committer": {
+     "name": "Claude",
+     "email": "noreply@anthropic.com",
+     "date": "2026-11-20T14:02:45Z"
+    },
+    "message": "Open no IPv6 internal_url this computer can't reach\n\nAn IPv6 literal in internal_url passed as a name. Loopback, unspecified,\nmulticast and link-local IPv6 addresses, and IPv4-mapped ones only Home\nAssistant OS can reach, now give way to plain HTTP at the address Home\nAssistant answers at, as their IPv4 kin do.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01JYKnLnxxYRaTX7zfUKL4Xy",
+    "tree": {
+     "sha": "55eecbbd2aaa2fc487ba465709f0a3cbd15963cd",
+     "url": "https://api.github.com/repos/home-assistant/installer/git/trees/55eecbbd2aaa2fc487ba465709f0a3cbd15963cd"
+    },
+    "url": "https://api.github.com/repos/home-assistant/installer/git/commits/267c68e9e4c488b366a06d2256bfdbde6d4dcf78",
+    "comment_count": 0,
+    "verification": {
+     "verified": true,
+     "reason": "valid",
+     "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgrLzsfFISF4by8Q+FKz27YpkK1USsBB+m\namu1QkJnbDsAAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQCi9aGTI\nBjroEe2j35s5YUurVzmKJn5PvI4yGWbKVes791Ls5fgM/FS3pUgIn/JUJVMWc8cGtR+V+2Y3hur2\nMQs=\n-----END SSH SIGNATURE-----",
+     "payload": "tree 55eecbbd2aaa2fc487ba465709f0a3cbd15963cd\nparent 83d74bcc119dd94b9ad41b3068c97f566da84fbd\nauthor Claude <noreply@anthropic.com> 1795183365 +0000\ncommitter Claude <noreply@anthropic.com> 1795183365 +0000\n\nOpen no IPv6 internal_url this computer can't reach\n\nAn IPv6 literal in internal_url passed as a name. Loopback, unspecified,\nmulticast and link-local IPv6 addresses, and IPv4-mapped ones only Home\nAssistant OS can reach, now give way to plain HTTP at the address Home\nAssistant answers at, as their IPv4 kin do.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01JYKnLnxxYRaTX7zfUKL4Xy\n",
+     "verified_at": "2026-11-20T14:02:48Z"
+    }
+   },
+   "url": "https://api.github.com/repos/home-assistant/installer/commits/267c68e9e4c488b366a06d2256bfdbde6d4dcf78",
+   "html_url": "https://github.com/home-assistant/installer/commit/267c68e9e4c488b366a06d2256bfdbde6d4dcf78",
+   "comments_url": "https://api.github.com/repos/home-assistant/installer/commits/267c68e9e4c488b366a06d2256bfdbde6d4dcf78/comments",
+   "author": {
+    "login": "claude",
+    "id": 81847,
+    "node_id": "MDQ6VXNlcjgxODQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/81847?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/claude",
+    "html_url": "https://github.com/claude",
+    "followers_url": "https://api.github.com/users/claude/followers",
+    "following_url": "https://api.github.com/users/claude/following{/other_user}",
+    "gists_url": "https://api.github.com/users/claude/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/claude/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/claude/subscriptions",
+    "organizations_url": "https://api.github.com/users/claude/orgs",
+    "repos_url": "https://api.github.com/users/claude/repos",
+    "events_url": "https://api.github.com/users/claude/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/claude/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "committer": {
+    "login": "claude",
+    "id": 81847,
+    "node_id": "MDQ6VXNlcjgxODQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/81847?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/claude",
+    "html_url": "https://github.com/claude",
+    "followers_url": "https://api.github.com/users/claude/followers",
+    "following_url": "https://api.github.com/users/claude/following{/other_user}",
+    "gists_url": "https://api.github.com/users/claude/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/claude/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/claude/subscriptions",
+    "organizations_url": "https://api.github.com/users/claude/orgs",
+    "repos_url": "https://api.github.com/users/claude/repos",
+    "events_url": "https://api.github.com/users/claude/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/claude/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "parents": [
+    {
+     "sha": "83d74bcc119dd94b9ad41b3068c97f566da84fbd",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/83d74bcc119dd94b9ad41b3068c97f566da84fbd",
+     "html_url": "https://github.com/home-assistant/installer/commit/83d74bcc119dd94b9ad41b3068c97f566da84fbd"
+    }
+   ]
+  },
+  {
+   "sha": "3e4690888c013c03dd7e9fe98a933af7ae143f7e",
+   "node_id": "C_kwDOSQu-wdoAKDNlNDY5MDg4OGMwMTNjMDNkZDdlOWZlOThhOTMzYWY3YWUxNDNmN2U",
+   "commit": {
+    "author": {
+     "name": "Claude",
+     "email": "noreply@anthropic.com",
+     "date": "2026-11-23T10:35:43Z"
+    },
+    "committer": {
+     "name": "Claude",
+     "email": "noreply@anthropic.com",
+     "date": "2026-11-23T10:35:43Z"
+    },
+    "message": "Look Home Assistant up through macOS's own Bonjour\n\nOn macOS the lookup sent mDNS queries of its own beside mDNSResponder,\nwhich owns the mDNS port there, and got no answers, while `dns-sd -B\n_home-assistant._tcp` listed Home Assistant on the same Mac. It now\nbrowses, resolves and looks up addresses through the DNS-SD API in\nlibSystem, as Windows does through its own. The app's Info.plist names\nthe service type in NSBonjourServices, which macOS requires to browse\nfor it. Linux keeps mdns-sd.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01JYKnLnxxYRaTX7zfUKL4Xy",
+    "tree": {
+     "sha": "14a67d0626424cb8846d6d8692b06375ce191bb8",
+     "url": "https://api.github.com/repos/home-assistant/installer/git/trees/14a67d0626424cb8846d6d8692b06375ce191bb8"
+    },
+    "url": "https://api.github.com/repos/home-assistant/installer/git/commits/3e4690888c013c03dd7e9fe98a933af7ae143f7e",
+    "comment_count": 0,
+    "verification": {
+     "verified": true,
+     "reason": "valid",
+     "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgrLzsfFISF4by8Q+FKz27YpkK1USsBB+m\namu1QkJnbDsAAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQAitGUTZ\nJJLEmkqgJO8c+RjB7uLo6niGcPCMTndpfqCIOBd8XWTeyfV3wKzQcUGnEEXyZwkNUs9rVqGlwtMC\nLQY=\n-----END SSH SIGNATURE-----",
+     "payload": "tree 14a67d0626424cb8846d6d8692b06375ce191bb8\nparent 267c68e9e4c488b366a06d2256bfdbde6d4dcf78\nauthor Claude <noreply@anthropic.com> 1795430143 +0000\ncommitter Claude <noreply@anthropic.com> 1795430143 +0000\n\nLook Home Assistant up through macOS's own Bonjour\n\nOn macOS the lookup sent mDNS queries of its own beside mDNSResponder,\nwhich owns the mDNS port there, and got no answers, while `dns-sd -B\n_home-assistant._tcp` listed Home Assistant on the same Mac. It now\nbrowses, resolves and looks up addresses through the DNS-SD API in\nlibSystem, as Windows does through its own. The app's Info.plist names\nthe service type in NSBonjourServices, which macOS requires to browse\nfor it. Linux keeps mdns-sd.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01JYKnLnxxYRaTX7zfUKL4Xy\n",
+     "verified_at": "2026-11-23T10:35:46Z"
+    }
+   },
+   "url": "https://api.github.com/repos/home-assistant/installer/commits/3e4690888c013c03dd7e9fe98a933af7ae143f7e",
+   "html_url": "https://github.com/home-assistant/installer/commit/3e4690888c013c03dd7e9fe98a933af7ae143f7e",
+   "comments_url": "https://api.github.com/repos/home-assistant/installer/commits/3e4690888c013c03dd7e9fe98a933af7ae143f7e/comments",
+   "author": {
+    "login": "claude",
+    "id": 81847,
+    "node_id": "MDQ6VXNlcjgxODQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/81847?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/claude",
+    "html_url": "https://github.com/claude",
+    "followers_url": "https://api.github.com/users/claude/followers",
+    "following_url": "https://api.github.com/users/claude/following{/other_user}",
+    "gists_url": "https://api.github.com/users/claude/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/claude/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/claude/subscriptions",
+    "organizations_url": "https://api.github.com/users/claude/orgs",
+    "repos_url": "https://api.github.com/users/claude/repos",
+    "events_url": "https://api.github.com/users/claude/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/claude/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "committer": {
+    "login": "claude",
+    "id": 81847,
+    "node_id": "MDQ6VXNlcjgxODQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/81847?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/claude",
+    "html_url": "https://github.com/claude",
+    "followers_url": "https://api.github.com/users/claude/followers",
+    "following_url": "https://api.github.com/users/claude/following{/other_user}",
+    "gists_url": "https://api.github.com/users/claude/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/claude/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/claude/subscriptions",
+    "organizations_url": "https://api.github.com/users/claude/orgs",
+    "repos_url": "https://api.github.com/users/claude/repos",
+    "events_url": "https://api.github.com/users/claude/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/claude/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "parents": [
+    {
+     "sha": "267c68e9e4c488b366a06d2256bfdbde6d4dcf78",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/267c68e9e4c488b366a06d2256bfdbde6d4dcf78",
+     "html_url": "https://github.com/home-assistant/installer/commit/267c68e9e4c488b366a06d2256bfdbde6d4dcf78"
+    }
+   ]
+  },
+  {
+   "sha": "681f68632d2d89631146ba0714ed518c36ffb63c",
+   "node_id": "C_kwDOSQu-wdoAKDY4MWY2ODYzMmQyZDg5NjMxMTQ2YmEwNzE0ZWQ1MThjMzZmZmI2M2M",
+   "commit": {
+    "author": {
+     "name": "Claude",
+     "email": "noreply@anthropic.com",
+     "date": "2026-11-23T10:43:43Z"
+    },
+    "committer": {
+     "name": "Claude",
+     "email": "noreply@anthropic.com",
+     "date": "2026-11-23T10:43:43Z"
+    },
+    "message": "Report a macOS browse that fails, rather than finding nothing\n\nA browse that mDNSResponder ends, or that reports an error, now fails the\nlookup, so the welcome screen keeps what it found instead of counting a\nmiss. A resolve that fails still leaves out only its own instance.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01JYKnLnxxYRaTX7zfUKL4Xy",
+    "tree": {
+     "sha": "09a87a6030fad003d42f5bc45852bebdc8334e7d",
+     "url": "https://api.github.com/repos/home-assistant/installer/git/trees/09a87a6030fad003d42f5bc45852bebdc8334e7d"
+    },
+    "url": "https://api.github.com/repos/home-assistant/installer/git/commits/681f68632d2d89631146ba0714ed518c36ffb63c",
+    "comment_count": 0,
+    "verification": {
+     "verified": true,
+     "reason": "valid",
+     "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgrLzsfFISF4by8Q+FKz27YpkK1USsBB+m\namu1QkJnbDsAAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQDwpBbcF\n3BEUc5hhGAlwNPOJX087vFl+nNeXcoq7e9YKQjeJJaCMllZQjZghbj59l5i2/DGMU6pGyj03Ukka\nxAo=\n-----END SSH SIGNATURE-----",
+     "payload": "tree 09a87a6030fad003d42f5bc45852bebdc8334e7d\nparent 3e4690888c013c03dd7e9fe98a933af7ae143f7e\nauthor Claude <noreply@anthropic.com> 1795430623 +0000\ncommitter Claude <noreply@anthropic.com> 1795430623 +0000\n\nReport a macOS browse that fails, rather than finding nothing\n\nA browse that mDNSResponder ends, or that reports an error, now fails the\nlookup, so the welcome screen keeps what it found instead of counting a\nmiss. A resolve that fails still leaves out only its own instance.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01JYKnLnxxYRaTX7zfUKL4Xy\n",
+     "verified_at": "2026-11-23T10:45:06Z"
+    }
+   },
+   "url": "https://api.github.com/repos/home-assistant/installer/commits/681f68632d2d89631146ba0714ed518c36ffb63c",
+   "html_url": "https://github.com/home-assistant/installer/commit/681f68632d2d89631146ba0714ed518c36ffb63c",
+   "comments_url": "https://api.github.com/repos/home-assistant/installer/commits/681f68632d2d89631146ba0714ed518c36ffb63c/comments",
+   "author": {
+    "login": "claude",
+    "id": 81847,
+    "node_id": "MDQ6VXNlcjgxODQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/81847?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/claude",
+    "html_url": "https://github.com/claude",
+    "followers_url": "https://api.github.com/users/claude/followers",
+    "following_url": "https://api.github.com/users/claude/following{/other_user}",
+    "gists_url": "https://api.github.com/users/claude/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/claude/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/claude/subscriptions",
+    "organizations_url": "https://api.github.com/users/claude/orgs",
+    "repos_url": "https://api.github.com/users/claude/repos",
+    "events_url": "https://api.github.com/users/claude/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/claude/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "committer": {
+    "login": "claude",
+    "id": 81847,
+    "node_id": "MDQ6VXNlcjgxODQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/81847?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/claude",
+    "html_url": "https://github.com/claude",
+    "followers_url": "https://api.github.com/users/claude/followers",
+    "following_url": "https://api.github.com/users/claude/following{/other_user}",
+    "gists_url": "https://api.github.com/users/claude/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/claude/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/claude/subscriptions",
+    "organizations_url": "https://api.github.com/users/claude/orgs",
+    "repos_url": "https://api.github.com/users/claude/repos",
+    "events_url": "https://api.github.com/users/claude/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/claude/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "parents": [
+    {
+     "sha": "3e4690888c013c03dd7e9fe98a933af7ae143f7e",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/3e4690888c013c03dd7e9fe98a933af7ae143f7e",
+     "html_url": "https://github.com/home-assistant/installer/commit/3e4690888c013c03dd7e9fe98a933af7ae143f7e"
+    }
+   ]
+  },
+  {
+   "sha": "45eca9a7f59b9e2e304963d1f5477a682a5b9358",
+   "node_id": "C_kwDOSQu-wdoAKDQ1ZWNhOWE3ZjU5YjllMmUzMDQ5NjNkMWY1NDc3YTY4MmE1YjkzNTg",
+   "commit": {
+    "author": {
+     "name": "Bram Kragten",
+     "email": "mail@bramkragten.nl",
+     "date": "2026-11-23T10:52:11Z"
+    },
+    "committer": {
+     "name": "Bram Kragten",
+     "email": "mail@bramkragten.nl",
+     "date": "2026-11-23T10:52:11Z"
+    },
+    "message": "Merge remote-tracking branch 'origin/main' into claude/sweet-knuth-v4xypm\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+    "tree": {
+     "sha": "b1724c30edf2baf2c0b9c29c6ccf05acda1da5a2",
+     "url": "https://api.github.com/repos/home-assistant/installer/git/trees/b1724c30edf2baf2c0b9c29c6ccf05acda1da5a2"
+    },
+    "url": "https://api.github.com/repos/home-assistant/installer/git/commits/45eca9a7f59b9e2e304963d1f5477a682a5b9358",
+    "comment_count": 0,
+    "verification": {
+     "verified": false,
+     "reason": "unsigned",
+     "signature": null,
+     "payload": null,
+     "verified_at": null
+    }
+   },
+   "url": "https://api.github.com/repos/home-assistant/installer/commits/45eca9a7f59b9e2e304963d1f5477a682a5b9358",
+   "html_url": "https://github.com/home-assistant/installer/commit/45eca9a7f59b9e2e304963d1f5477a682a5b9358",
+   "comments_url": "https://api.github.com/repos/home-assistant/installer/commits/45eca9a7f59b9e2e304963d1f5477a682a5b9358/comments",
+   "author": {
+    "login": "bramkragten",
+    "id": 5662298,
+    "node_id": "MDQ6VXNlcjU2NjIyOTg=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5662298?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bramkragten",
+    "html_url": "https://github.com/bramkragten",
+    "followers_url": "https://api.github.com/users/bramkragten/followers",
+    "following_url": "https://api.github.com/users/bramkragten/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bramkragten/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bramkragten/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bramkragten/subscriptions",
+    "organizations_url": "https://api.github.com/users/bramkragten/orgs",
+    "repos_url": "https://api.github.com/users/bramkragten/repos",
+    "events_url": "https://api.github.com/users/bramkragten/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bramkragten/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "committer": {
+    "login": "bramkragten",
+    "id": 5662298,
+    "node_id": "MDQ6VXNlcjU2NjIyOTg=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5662298?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bramkragten",
+    "html_url": "https://github.com/bramkragten",
+    "followers_url": "https://api.github.com/users/bramkragten/followers",
+    "following_url": "https://api.github.com/users/bramkragten/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bramkragten/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bramkragten/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bramkragten/subscriptions",
+    "organizations_url": "https://api.github.com/users/bramkragten/orgs",
+    "repos_url": "https://api.github.com/users/bramkragten/repos",
+    "events_url": "https://api.github.com/users/bramkragten/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bramkragten/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "parents": [
+    {
+     "sha": "681f68632d2d89631146ba0714ed518c36ffb63c",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/681f68632d2d89631146ba0714ed518c36ffb63c",
+     "html_url": "https://github.com/home-assistant/installer/commit/681f68632d2d89631146ba0714ed518c36ffb63c"
+    },
+    {
+     "sha": "6e38b8898aa27208e8e32ec19aac7c5f31c2fdf6",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/6e38b8898aa27208e8e32ec19aac7c5f31c2fdf6",
+     "html_url": "https://github.com/home-assistant/installer/commit/6e38b8898aa27208e8e32ec19aac7c5f31c2fdf6"
+    }
+   ]
+  },
+  {
+   "sha": "7b8ef9403a8878873cb2b94e7e0ecf8844ed38b3",
+   "node_id": "C_kwDOSQu-wdoAKDdiOGVmOTQwM2E4ODc4ODczY2IyYjk0ZTdlMGVjZjg4NDRlZDM4YjM",
+   "commit": {
+    "author": {
+     "name": "Bram Kragten",
+     "email": "mail@bramkragten.nl",
+     "date": "2026-11-23T10:52:26Z"
+    },
+    "committer": {
+     "name": "Bram Kragten",
+     "email": "mail@bramkragten.nl",
+     "date": "2026-11-23T10:52:34Z"
+    },
+    "message": "Look Home Assistant up with mdns-sd on macOS again\n\nThis reverts 3e46908 and 681f686. mdns-sd finds Home Assistant on macOS\nbeside mDNSResponder, in an app bundle as from a shell, once the app has\nlocal network access. The lookup found nothing in pull request builds\nbecause Tauri leaves those signed by the linker alone, as hai_desktop,\nand macOS then applies no local network access the user gave Home\nAssistant Installer to them.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+    "tree": {
+     "sha": "9faca4892556a54277dba1bf0bf221b1dc0dc88e",
+     "url": "https://api.github.com/repos/home-assistant/installer/git/trees/9faca4892556a54277dba1bf0bf221b1dc0dc88e"
+    },
+    "url": "https://api.github.com/repos/home-assistant/installer/git/commits/7b8ef9403a8878873cb2b94e7e0ecf8844ed38b3",
+    "comment_count": 0,
+    "verification": {
+     "verified": false,
+     "reason": "unsigned",
+     "signature": null,
+     "payload": null,
+     "verified_at": null
+    }
+   },
+   "url": "https://api.github.com/repos/home-assistant/installer/commits/7b8ef9403a8878873cb2b94e7e0ecf8844ed38b3",
+   "html_url": "https://github.com/home-assistant/installer/commit/7b8ef9403a8878873cb2b94e7e0ecf8844ed38b3",
+   "comments_url": "https://api.github.com/repos/home-assistant/installer/commits/7b8ef9403a8878873cb2b94e7e0ecf8844ed38b3/comments",
+   "author": {
+    "login": "bramkragten",
+    "id": 5662298,
+    "node_id": "MDQ6VXNlcjU2NjIyOTg=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5662298?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bramkragten",
+    "html_url": "https://github.com/bramkragten",
+    "followers_url": "https://api.github.com/users/bramkragten/followers",
+    "following_url": "https://api.github.com/users/bramkragten/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bramkragten/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bramkragten/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bramkragten/subscriptions",
+    "organizations_url": "https://api.github.com/users/bramkragten/orgs",
+    "repos_url": "https://api.github.com/users/bramkragten/repos",
+    "events_url": "https://api.github.com/users/bramkragten/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bramkragten/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "committer": {
+    "login": "bramkragten",
+    "id": 5662298,
+    "node_id": "MDQ6VXNlcjU2NjIyOTg=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5662298?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bramkragten",
+    "html_url": "https://github.com/bramkragten",
+    "followers_url": "https://api.github.com/users/bramkragten/followers",
+    "following_url": "https://api.github.com/users/bramkragten/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bramkragten/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bramkragten/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bramkragten/subscriptions",
+    "organizations_url": "https://api.github.com/users/bramkragten/orgs",
+    "repos_url": "https://api.github.com/users/bramkragten/repos",
+    "events_url": "https://api.github.com/users/bramkragten/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bramkragten/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "parents": [
+    {
+     "sha": "45eca9a7f59b9e2e304963d1f5477a682a5b9358",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/45eca9a7f59b9e2e304963d1f5477a682a5b9358",
+     "html_url": "https://github.com/home-assistant/installer/commit/45eca9a7f59b9e2e304963d1f5477a682a5b9358"
+    }
+   ]
+  },
+  {
+   "sha": "bff48a990e70e6c7b32c8bb7ad4f82bf8338bf11",
+   "node_id": "C_kwDOSQu-wdoAKGJmZjQ4YTk5MGU3MGU2YzdiMzJjOGJiN2FkNGY4MmJmODMzOGJmMTE",
+   "commit": {
+    "author": {
+     "name": "Bram Kragten",
+     "email": "mail@bramkragten.nl",
+     "date": "2026-11-23T10:55:22Z"
+    },
+    "committer": {
+     "name": "Bram Kragten",
+     "email": "mail@bramkragten.nl",
+     "date": "2026-11-23T10:55:22Z"
+    },
+    "message": "Sign pull request builds for macOS ad hoc\n\nWithout a certificate, Tauri left the app signed by the linker alone, as\nhai_desktop, with its Info.plist unbound. macOS then applied no local\nnetwork access given to Home Assistant Installer to it: its mDNS queries\nnever left the Mac, and the welcome screen found no Home Assistant. Signed\nad hoc, as Tauri does with the identity \"-\", the app is\nio.home-assistant.installer and finds Home Assistant once allowed.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+    "tree": {
+     "sha": "62d0758c9a36f88b7291b078c3237b4c993272fb",
+     "url": "https://api.github.com/repos/home-assistant/installer/git/trees/62d0758c9a36f88b7291b078c3237b4c993272fb"
+    },
+    "url": "https://api.github.com/repos/home-assistant/installer/git/commits/bff48a990e70e6c7b32c8bb7ad4f82bf8338bf11",
+    "comment_count": 0,
+    "verification": {
+     "verified": false,
+     "reason": "unsigned",
+     "signature": null,
+     "payload": null,
+     "verified_at": null
+    }
+   },
+   "url": "https://api.github.com/repos/home-assistant/installer/commits/bff48a990e70e6c7b32c8bb7ad4f82bf8338bf11",
+   "html_url": "https://github.com/home-assistant/installer/commit/bff48a990e70e6c7b32c8bb7ad4f82bf8338bf11",
+   "comments_url": "https://api.github.com/repos/home-assistant/installer/commits/bff48a990e70e6c7b32c8bb7ad4f82bf8338bf11/comments",
+   "author": {
+    "login": "bramkragten",
+    "id": 5662298,
+    "node_id": "MDQ6VXNlcjU2NjIyOTg=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5662298?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bramkragten",
+    "html_url": "https://github.com/bramkragten",
+    "followers_url": "https://api.github.com/users/bramkragten/followers",
+    "following_url": "https://api.github.com/users/bramkragten/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bramkragten/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bramkragten/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bramkragten/subscriptions",
+    "organizations_url": "https://api.github.com/users/bramkragten/orgs",
+    "repos_url": "https://api.github.com/users/bramkragten/repos",
+    "events_url": "https://api.github.com/users/bramkragten/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bramkragten/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "committer": {
+    "login": "bramkragten",
+    "id": 5662298,
+    "node_id": "MDQ6VXNlcjU2NjIyOTg=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5662298?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bramkragten",
+    "html_url": "https://github.com/bramkragten",
+    "followers_url": "https://api.github.com/users/bramkragten/followers",
+    "following_url": "https://api.github.com/users/bramkragten/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bramkragten/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bramkragten/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bramkragten/subscriptions",
+    "organizations_url": "https://api.github.com/users/bramkragten/orgs",
+    "repos_url": "https://api.github.com/users/bramkragten/repos",
+    "events_url": "https://api.github.com/users/bramkragten/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bramkragten/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "parents": [
+    {
+     "sha": "7b8ef9403a8878873cb2b94e7e0ecf8844ed38b3",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/7b8ef9403a8878873cb2b94e7e0ecf8844ed38b3",
+     "html_url": "https://github.com/home-assistant/installer/commit/7b8ef9403a8878873cb2b94e7e0ecf8844ed38b3"
+    }
+   ]
+  },
+  {
+   "sha": "e9abf639cdced5de3df08d26dbe44c78da02b151",
+   "node_id": "C_kwDOSQu-wdoAKGU5YWJmNjM5Y2RjZWQ1ZGUzZGYwOGQyNmRiZTQ0Yzc4ZGEwMmIxNTE",
+   "commit": {
+    "author": {
+     "name": "Bram Kragten",
+     "email": "mail@bramkragten.nl",
+     "date": "2026-11-23T11:14:27Z"
+    },
+    "committer": {
+     "name": "Bram Kragten",
+     "email": "mail@bramkragten.nl",
+     "date": "2026-11-23T11:14:27Z"
+    },
+    "message": "Keep no onboarding state another Home Assistant at the address told\n\nA check that doesn't tell kept what the last one told at the address,\neven when another Home Assistant now answers there, as one can once DHCP\nhands its address out again. It now keeps that only for the same Home\nAssistant, by the id it announces.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+    "tree": {
+     "sha": "4148424d7f2a63b2eae0516e265834215126e2fb",
+     "url": "https://api.github.com/repos/home-assistant/installer/git/trees/4148424d7f2a63b2eae0516e265834215126e2fb"
+    },
+    "url": "https://api.github.com/repos/home-assistant/installer/git/commits/e9abf639cdced5de3df08d26dbe44c78da02b151",
+    "comment_count": 0,
+    "verification": {
+     "verified": false,
+     "reason": "unsigned",
+     "signature": null,
+     "payload": null,
+     "verified_at": null
+    }
+   },
+   "url": "https://api.github.com/repos/home-assistant/installer/commits/e9abf639cdced5de3df08d26dbe44c78da02b151",
+   "html_url": "https://github.com/home-assistant/installer/commit/e9abf639cdced5de3df08d26dbe44c78da02b151",
+   "comments_url": "https://api.github.com/repos/home-assistant/installer/commits/e9abf639cdced5de3df08d26dbe44c78da02b151/comments",
+   "author": {
+    "login": "bramkragten",
+    "id": 5662298,
+    "node_id": "MDQ6VXNlcjU2NjIyOTg=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5662298?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bramkragten",
+    "html_url": "https://github.com/bramkragten",
+    "followers_url": "https://api.github.com/users/bramkragten/followers",
+    "following_url": "https://api.github.com/users/bramkragten/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bramkragten/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bramkragten/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bramkragten/subscriptions",
+    "organizations_url": "https://api.github.com/users/bramkragten/orgs",
+    "repos_url": "https://api.github.com/users/bramkragten/repos",
+    "events_url": "https://api.github.com/users/bramkragten/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bramkragten/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "committer": {
+    "login": "bramkragten",
+    "id": 5662298,
+    "node_id": "MDQ6VXNlcjU2NjIyOTg=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5662298?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bramkragten",
+    "html_url": "https://github.com/bramkragten",
+    "followers_url": "https://api.github.com/users/bramkragten/followers",
+    "following_url": "https://api.github.com/users/bramkragten/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bramkragten/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bramkragten/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bramkragten/subscriptions",
+    "organizations_url": "https://api.github.com/users/bramkragten/orgs",
+    "repos_url": "https://api.github.com/users/bramkragten/repos",
+    "events_url": "https://api.github.com/users/bramkragten/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bramkragten/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "parents": [
+    {
+     "sha": "bff48a990e70e6c7b32c8bb7ad4f82bf8338bf11",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/bff48a990e70e6c7b32c8bb7ad4f82bf8338bf11",
+     "html_url": "https://github.com/home-assistant/installer/commit/bff48a990e70e6c7b32c8bb7ad4f82bf8338bf11"
+    }
+   ]
+  },
+  {
+   "sha": "4e5b9db472560e0363d76b5846e7aae8edda4266",
+   "node_id": "C_kwDOSQu-wdoAKDRlNWI5ZGI0NzI1NjBlMDM2M2Q3NmI1ODQ2ZTdhYWU4ZWRkYTQyNjY",
+   "commit": {
+    "author": {
+     "name": "Bram Kragten",
+     "email": "mail@bramkragten.nl",
+     "date": "2026-11-23T11:21:38Z"
+    },
+    "committer": {
+     "name": "Bram Kragten",
+     "email": "mail@bramkragten.nl",
+     "date": "2026-11-23T11:21:38Z"
+    },
+    "message": "Test that check_ha_onboarded asks the address it is given\n\nThe command forwards to the backend, whose own tests read the onboarding\nsteps. These check that it asks the address the frontend gives, says\nwhether Home Assistant there is onboarded or can't tell, and that the\nmock leaves only the device it installs to onboard.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+    "tree": {
+     "sha": "f65bbf6ae962adf27e620136138ccb514585c9be",
+     "url": "https://api.github.com/repos/home-assistant/installer/git/trees/f65bbf6ae962adf27e620136138ccb514585c9be"
+    },
+    "url": "https://api.github.com/repos/home-assistant/installer/git/commits/4e5b9db472560e0363d76b5846e7aae8edda4266",
+    "comment_count": 0,
+    "verification": {
+     "verified": false,
+     "reason": "unsigned",
+     "signature": null,
+     "payload": null,
+     "verified_at": null
+    }
+   },
+   "url": "https://api.github.com/repos/home-assistant/installer/commits/4e5b9db472560e0363d76b5846e7aae8edda4266",
+   "html_url": "https://github.com/home-assistant/installer/commit/4e5b9db472560e0363d76b5846e7aae8edda4266",
+   "comments_url": "https://api.github.com/repos/home-assistant/installer/commits/4e5b9db472560e0363d76b5846e7aae8edda4266/comments",
+   "author": {
+    "login": "bramkragten",
+    "id": 5662298,
+    "node_id": "MDQ6VXNlcjU2NjIyOTg=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5662298?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bramkragten",
+    "html_url": "https://github.com/bramkragten",
+    "followers_url": "https://api.github.com/users/bramkragten/followers",
+    "following_url": "https://api.github.com/users/bramkragten/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bramkragten/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bramkragten/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bramkragten/subscriptions",
+    "organizations_url": "https://api.github.com/users/bramkragten/orgs",
+    "repos_url": "https://api.github.com/users/bramkragten/repos",
+    "events_url": "https://api.github.com/users/bramkragten/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bramkragten/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "committer": {
+    "login": "bramkragten",
+    "id": 5662298,
+    "node_id": "MDQ6VXNlcjU2NjIyOTg=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5662298?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bramkragten",
+    "html_url": "https://github.com/bramkragten",
+    "followers_url": "https://api.github.com/users/bramkragten/followers",
+    "following_url": "https://api.github.com/users/bramkragten/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bramkragten/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bramkragten/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bramkragten/subscriptions",
+    "organizations_url": "https://api.github.com/users/bramkragten/orgs",
+    "repos_url": "https://api.github.com/users/bramkragten/repos",
+    "events_url": "https://api.github.com/users/bramkragten/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bramkragten/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "parents": [
+    {
+     "sha": "e9abf639cdced5de3df08d26dbe44c78da02b151",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/e9abf639cdced5de3df08d26dbe44c78da02b151",
+     "html_url": "https://github.com/home-assistant/installer/commit/e9abf639cdced5de3df08d26dbe44c78da02b151"
+    }
+   ]
+  },
+  {
+   "sha": "0ea7f3a7ab3f90be5b6cedfcd9c903ae15ee062b",
+   "node_id": "C_kwDOSQu-wdoAKDBlYTdmM2E3YWIzZjkwYmU1YjZjZWRmY2Q5YzkwM2FlMTVlZTA2MmI",
+   "commit": {
+    "author": {
+     "name": "Bram Kragten",
+     "email": "mail@bramkragten.nl",
+     "date": "2026-11-23T11:30:40Z"
+    },
+    "committer": {
+     "name": "Bram Kragten",
+     "email": "mail@bramkragten.nl",
+     "date": "2026-11-23T11:30:40Z"
+    },
+    "message": "Follow no redirect from the onboarding check\n\nThe welcome screen asks each Home Assistant the lookup finds whether it\nis onboarded, without the user asking. Over plain HTTP that check\nfollowed redirects, so anything on the network that announced itself\ncould send it on to this computer itself or elsewhere. It now has a\nclient of its own that follows none, as the one for HTTPS already did,\nand a redirect tells nothing. /api/onboarding never answers with one.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+    "tree": {
+     "sha": "7e8c1e4b6c348974459cbf84398ca5aa355c1489",
+     "url": "https://api.github.com/repos/home-assistant/installer/git/trees/7e8c1e4b6c348974459cbf84398ca5aa355c1489"
+    },
+    "url": "https://api.github.com/repos/home-assistant/installer/git/commits/0ea7f3a7ab3f90be5b6cedfcd9c903ae15ee062b",
+    "comment_count": 0,
+    "verification": {
+     "verified": false,
+     "reason": "unsigned",
+     "signature": null,
+     "payload": null,
+     "verified_at": null
+    }
+   },
+   "url": "https://api.github.com/repos/home-assistant/installer/commits/0ea7f3a7ab3f90be5b6cedfcd9c903ae15ee062b",
+   "html_url": "https://github.com/home-assistant/installer/commit/0ea7f3a7ab3f90be5b6cedfcd9c903ae15ee062b",
+   "comments_url": "https://api.github.com/repos/home-assistant/installer/commits/0ea7f3a7ab3f90be5b6cedfcd9c903ae15ee062b/comments",
+   "author": {
+    "login": "bramkragten",
+    "id": 5662298,
+    "node_id": "MDQ6VXNlcjU2NjIyOTg=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5662298?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bramkragten",
+    "html_url": "https://github.com/bramkragten",
+    "followers_url": "https://api.github.com/users/bramkragten/followers",
+    "following_url": "https://api.github.com/users/bramkragten/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bramkragten/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bramkragten/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bramkragten/subscriptions",
+    "organizations_url": "https://api.github.com/users/bramkragten/orgs",
+    "repos_url": "https://api.github.com/users/bramkragten/repos",
+    "events_url": "https://api.github.com/users/bramkragten/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bramkragten/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "committer": {
+    "login": "bramkragten",
+    "id": 5662298,
+    "node_id": "MDQ6VXNlcjU2NjIyOTg=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5662298?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bramkragten",
+    "html_url": "https://github.com/bramkragten",
+    "followers_url": "https://api.github.com/users/bramkragten/followers",
+    "following_url": "https://api.github.com/users/bramkragten/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bramkragten/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bramkragten/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bramkragten/subscriptions",
+    "organizations_url": "https://api.github.com/users/bramkragten/orgs",
+    "repos_url": "https://api.github.com/users/bramkragten/repos",
+    "events_url": "https://api.github.com/users/bramkragten/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bramkragten/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "parents": [
+    {
+     "sha": "4e5b9db472560e0363d76b5846e7aae8edda4266",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/4e5b9db472560e0363d76b5846e7aae8edda4266",
+     "html_url": "https://github.com/home-assistant/installer/commit/4e5b9db472560e0363d76b5846e7aae8edda4266"
+    }
+   ]
+  },
+  {
+   "sha": "2bd444c2f83338435e69fbe5ae22f4da71474e19",
+   "node_id": "C_kwDOSQu-wdoAKDJiZDQ0NGMyZjgzMzM4NDM1ZTY5ZmJlNWFlMjJmNGRhNzE0NzRlMTk",
+   "commit": {
+    "author": {
+     "name": "Bram Kragten",
+     "email": "mail@bramkragten.nl",
+     "date": "2026-11-23T11:40:57Z"
+    },
+    "committer": {
+     "name": "Bram Kragten",
+     "email": "mail@bramkragten.nl",
+     "date": "2026-11-23T11:40:57Z"
+    },
+    "message": "Read no more of an onboarding answer than its steps can take\n\nThe onboarding check read all a device answered, and any device on the\nnetwork can announce itself as Home Assistant and answer at any length\nfor the 5 seconds the check waits. It now reads at most 64 KiB, far more\nthan the few steps Home Assistant lists, and a longer answer tells\nnothing, whether it says how long it is or not.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+    "tree": {
+     "sha": "4cd48e41e020bd5e5d2201f1101568237a6ed4ba",
+     "url": "https://api.github.com/repos/home-assistant/installer/git/trees/4cd48e41e020bd5e5d2201f1101568237a6ed4ba"
+    },
+    "url": "https://api.github.com/repos/home-assistant/installer/git/commits/2bd444c2f83338435e69fbe5ae22f4da71474e19",
+    "comment_count": 0,
+    "verification": {
+     "verified": false,
+     "reason": "unsigned",
+     "signature": null,
+     "payload": null,
+     "verified_at": null
+    }
+   },
+   "url": "https://api.github.com/repos/home-assistant/installer/commits/2bd444c2f83338435e69fbe5ae22f4da71474e19",
+   "html_url": "https://github.com/home-assistant/installer/commit/2bd444c2f83338435e69fbe5ae22f4da71474e19",
+   "comments_url": "https://api.github.com/repos/home-assistant/installer/commits/2bd444c2f83338435e69fbe5ae22f4da71474e19/comments",
+   "author": {
+    "login": "bramkragten",
+    "id": 5662298,
+    "node_id": "MDQ6VXNlcjU2NjIyOTg=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5662298?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bramkragten",
+    "html_url": "https://github.com/bramkragten",
+    "followers_url": "https://api.github.com/users/bramkragten/followers",
+    "following_url": "https://api.github.com/users/bramkragten/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bramkragten/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bramkragten/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bramkragten/subscriptions",
+    "organizations_url": "https://api.github.com/users/bramkragten/orgs",
+    "repos_url": "https://api.github.com/users/bramkragten/repos",
+    "events_url": "https://api.github.com/users/bramkragten/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bramkragten/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "committer": {
+    "login": "bramkragten",
+    "id": 5662298,
+    "node_id": "MDQ6VXNlcjU2NjIyOTg=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5662298?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bramkragten",
+    "html_url": "https://github.com/bramkragten",
+    "followers_url": "https://api.github.com/users/bramkragten/followers",
+    "following_url": "https://api.github.com/users/bramkragten/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bramkragten/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bramkragten/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bramkragten/subscriptions",
+    "organizations_url": "https://api.github.com/users/bramkragten/orgs",
+    "repos_url": "https://api.github.com/users/bramkragten/repos",
+    "events_url": "https://api.github.com/users/bramkragten/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bramkragten/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "parents": [
+    {
+     "sha": "0ea7f3a7ab3f90be5b6cedfcd9c903ae15ee062b",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/0ea7f3a7ab3f90be5b6cedfcd9c903ae15ee062b",
+     "html_url": "https://github.com/home-assistant/installer/commit/0ea7f3a7ab3f90be5b6cedfcd9c903ae15ee062b"
+    }
+   ]
+  },
+  {
+   "sha": "6ca62afb62542bf7edc5bb935fbf776560926ffa",
+   "node_id": "C_kwDOSQu-wdoAKDZjYTYyYWZiNjI1NDJiZjdlZGM1YmI5MzVmYmY3NzY1NjA5MjZmZmE",
+   "commit": {
+    "author": {
+     "name": "Bram Kragten",
+     "email": "mail@bramkragten.nl",
+     "date": "2026-11-23T14:49:10Z"
+    },
+    "committer": {
+     "name": "Bram Kragten",
+     "email": "mail@bramkragten.nl",
+     "date": "2026-11-23T14:49:10Z"
+    },
+    "message": "Merge remote-tracking branch 'origin/main' into claude/sweet-knuth-v4xypm\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+    "tree": {
+     "sha": "58e21c7270a7c3489953e0747d6092d1d2a2fe4a",
+     "url": "https://api.github.com/repos/home-assistant/installer/git/trees/58e21c7270a7c3489953e0747d6092d1d2a2fe4a"
+    },
+    "url": "https://api.github.com/repos/home-assistant/installer/git/commits/6ca62afb62542bf7edc5bb935fbf776560926ffa",
+    "comment_count": 0,
+    "verification": {
+     "verified": false,
+     "reason": "unsigned",
+     "signature": null,
+     "payload": null,
+     "verified_at": null
+    }
+   },
+   "url": "https://api.github.com/repos/home-assistant/installer/commits/6ca62afb62542bf7edc5bb935fbf776560926ffa",
+   "html_url": "https://github.com/home-assistant/installer/commit/6ca62afb62542bf7edc5bb935fbf776560926ffa",
+   "comments_url": "https://api.github.com/repos/home-assistant/installer/commits/6ca62afb62542bf7edc5bb935fbf776560926ffa/comments",
+   "author": {
+    "login": "bramkragten",
+    "id": 5662298,
+    "node_id": "MDQ6VXNlcjU2NjIyOTg=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5662298?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bramkragten",
+    "html_url": "https://github.com/bramkragten",
+    "followers_url": "https://api.github.com/users/bramkragten/followers",
+    "following_url": "https://api.github.com/users/bramkragten/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bramkragten/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bramkragten/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bramkragten/subscriptions",
+    "organizations_url": "https://api.github.com/users/bramkragten/orgs",
+    "repos_url": "https://api.github.com/users/bramkragten/repos",
+    "events_url": "https://api.github.com/users/bramkragten/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bramkragten/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "committer": {
+    "login": "bramkragten",
+    "id": 5662298,
+    "node_id": "MDQ6VXNlcjU2NjIyOTg=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5662298?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bramkragten",
+    "html_url": "https://github.com/bramkragten",
+    "followers_url": "https://api.github.com/users/bramkragten/followers",
+    "following_url": "https://api.github.com/users/bramkragten/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bramkragten/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bramkragten/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bramkragten/subscriptions",
+    "organizations_url": "https://api.github.com/users/bramkragten/orgs",
+    "repos_url": "https://api.github.com/users/bramkragten/repos",
+    "events_url": "https://api.github.com/users/bramkragten/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bramkragten/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "parents": [
+    {
+     "sha": "2bd444c2f83338435e69fbe5ae22f4da71474e19",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/2bd444c2f83338435e69fbe5ae22f4da71474e19",
+     "html_url": "https://github.com/home-assistant/installer/commit/2bd444c2f83338435e69fbe5ae22f4da71474e19"
+    },
+    {
+     "sha": "4cf88f3c213285c1bf183a9db7e1eef955aaeb01",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/4cf88f3c213285c1bf183a9db7e1eef955aaeb01",
+     "html_url": "https://github.com/home-assistant/installer/commit/4cf88f3c213285c1bf183a9db7e1eef955aaeb01"
+    }
+   ]
+  },
+  {
+   "sha": "c0af80bb346ee42a8d47ab2d57b91f84101a678f",
+   "node_id": "C_kwDOSQu-wdoAKGMwYWY4MGJiMzQ2ZWU0MmE4ZDQ3YWIyZDU3YjkxZjg0MTAxYTY3OGY",
+   "commit": {
+    "author": {
+     "name": "Bram Kragten",
+     "email": "mail@bramkragten.nl",
+     "date": "2026-11-23T14:56:11Z"
+    },
+    "committer": {
+     "name": "Bram Kragten",
+     "email": "mail@bramkragten.nl",
+     "date": "2026-11-23T14:56:11Z"
+    },
+    "message": "Hide a landing page only for Home Assistant that answered this lookup\n\nA device written again at the same address starts over with the landing\npage, while Home Assistant from before is kept through the one lookup\nthat misses it. That kept one hid the new landing page, so the welcome\nscreen showed only Home Assistant that was gone. Now only Home Assistant\nthat answered the lookup hides a landing page on its device.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+    "tree": {
+     "sha": "3bcfcd061923ab5a8df9bdda7eb754e22d3691dc",
+     "url": "https://api.github.com/repos/home-assistant/installer/git/trees/3bcfcd061923ab5a8df9bdda7eb754e22d3691dc"
+    },
+    "url": "https://api.github.com/repos/home-assistant/installer/git/commits/c0af80bb346ee42a8d47ab2d57b91f84101a678f",
+    "comment_count": 0,
+    "verification": {
+     "verified": false,
+     "reason": "unsigned",
+     "signature": null,
+     "payload": null,
+     "verified_at": null
+    }
+   },
+   "url": "https://api.github.com/repos/home-assistant/installer/commits/c0af80bb346ee42a8d47ab2d57b91f84101a678f",
+   "html_url": "https://github.com/home-assistant/installer/commit/c0af80bb346ee42a8d47ab2d57b91f84101a678f",
+   "comments_url": "https://api.github.com/repos/home-assistant/installer/commits/c0af80bb346ee42a8d47ab2d57b91f84101a678f/comments",
+   "author": {
+    "login": "bramkragten",
+    "id": 5662298,
+    "node_id": "MDQ6VXNlcjU2NjIyOTg=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5662298?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bramkragten",
+    "html_url": "https://github.com/bramkragten",
+    "followers_url": "https://api.github.com/users/bramkragten/followers",
+    "following_url": "https://api.github.com/users/bramkragten/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bramkragten/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bramkragten/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bramkragten/subscriptions",
+    "organizations_url": "https://api.github.com/users/bramkragten/orgs",
+    "repos_url": "https://api.github.com/users/bramkragten/repos",
+    "events_url": "https://api.github.com/users/bramkragten/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bramkragten/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "committer": {
+    "login": "bramkragten",
+    "id": 5662298,
+    "node_id": "MDQ6VXNlcjU2NjIyOTg=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5662298?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bramkragten",
+    "html_url": "https://github.com/bramkragten",
+    "followers_url": "https://api.github.com/users/bramkragten/followers",
+    "following_url": "https://api.github.com/users/bramkragten/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bramkragten/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bramkragten/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bramkragten/subscriptions",
+    "organizations_url": "https://api.github.com/users/bramkragten/orgs",
+    "repos_url": "https://api.github.com/users/bramkragten/repos",
+    "events_url": "https://api.github.com/users/bramkragten/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bramkragten/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "parents": [
+    {
+     "sha": "6ca62afb62542bf7edc5bb935fbf776560926ffa",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/6ca62afb62542bf7edc5bb935fbf776560926ffa",
+     "html_url": "https://github.com/home-assistant/installer/commit/6ca62afb62542bf7edc5bb935fbf776560926ffa"
+    }
+   ]
+  }
+ ],
+ "696": [
+  {
+   "sha": "20f4eb1e0748b2df1a85b672eef04de778612d25",
+   "node_id": "C_kwDOSQu-wdoAKDIwZjRlYjFlMDc0OGIyZGYxYTg1YjY3MmVlZjA0ZGU3Nzg2MTJkMjU",
+   "commit": {
+    "author": {
+     "name": "renovate[bot]",
+     "email": "29139614+renovate[bot]@users.noreply.github.com",
+     "date": "2026-11-23T03:59:28Z"
+    },
+    "committer": {
+     "name": "GitHub",
+     "email": "noreply@github.com",
+     "date": "2026-11-23T03:59:28Z"
+    },
+    "message": "chore(deps): update github-actions",
+    "tree": {
+     "sha": "3664da7df71d7176200d92e5486c84ac4627bb27",
+     "url": "https://api.github.com/repos/home-assistant/installer/git/trees/3664da7df71d7176200d92e5486c84ac4627bb27"
+    },
+    "url": "https://api.github.com/repos/home-assistant/installer/git/commits/20f4eb1e0748b2df1a85b672eef04de778612d25",
+    "comment_count": 0,
+    "verification": {
+     "verified": true,
+     "reason": "valid",
+     "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJrA7ogCRC1aQ7uu5UhlAAAkUMQAALzbdyxUTIdrpiJR48APesH\nWyuK58sgeHpIm2uUEOsd7jGxZH7tpbfUKPC+XjTXk5jI3AiZzsA+hA76AyWx5wUu\nlTREkmTmzZV12HM4QMLnvMcdbiukp9zq0TOLHpiN162RBh0v8TqMiRJJAghZw0bS\nLB1IJW8nQMpfBqUe/mAkOKNrZuO7dHegUjL08yKuEz3m1feQFZrinN417xww/Cq8\ncrtxfqm3p5jA+nYfYADcrEmZ8WhdLwGeAUNJj63s2WOB3JT6utgSrshlTXv4l8Vh\nmnXOxXwHZ/7k6MymDz4wKCi1MIky19b/GWZ/rDlU+mI0x0WVOBqU4riQjty/3pKM\nb7IgTM8ek0ngFgqwvq+st2GAOq9HDJ4IapT69hoyEkbnkw/EJSAK0pEdW7AwM5Ym\nxdgfWv+GV60768xxYt/wXN02VrkI2/1QQAriWLQ6ZdXzSYBCvjzOjCUCnK2MTRRM\nT4SIyhP0oPcsYem6o0mTWI183ExtHkFBN8wAbxVIMrP0QlUAL77sEiNLJ9Njpr75\n6Gu36TGL07RHOrdl6mfAupz4vcZNCkye4YMmfnVfN0ozhwM9bJ1u6promHKOXd4i\nWkPmgXLueLo92c3C5Coz6W6H4w6DDjRxkj4uOFu+l7gUqzpdzXhBGMPWIwmILAQW\n/xBey6kqEWvc+wQcyBD4\n=SMMN\n-----END PGP SIGNATURE-----\n",
+     "payload": "tree 3664da7df71d7176200d92e5486c84ac4627bb27\nparent f82c6759cd08e1779af9d6531861bca59c2f4c31\nauthor renovate[bot] <29139614+renovate[bot]@users.noreply.github.com> 1795406368 +0000\ncommitter GitHub <noreply@github.com> 1795406368 +0000\n\nchore(deps): update github-actions",
+     "verified_at": "2026-11-23T03:59:29Z"
+    }
+   },
+   "url": "https://api.github.com/repos/home-assistant/installer/commits/20f4eb1e0748b2df1a85b672eef04de778612d25",
+   "html_url": "https://github.com/home-assistant/installer/commit/20f4eb1e0748b2df1a85b672eef04de778612d25",
+   "comments_url": "https://api.github.com/repos/home-assistant/installer/commits/20f4eb1e0748b2df1a85b672eef04de778612d25/comments",
+   "author": {
+    "login": "renovate[bot]",
+    "id": 29139614,
+    "node_id": "MDM6Qm90MjkxMzk2MTQ=",
+    "avatar_url": "https://avatars.githubusercontent.com/in/2740?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/renovate%5Bbot%5D",
+    "html_url": "https://github.com/apps/renovate",
+    "followers_url": "https://api.github.com/users/renovate%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/renovate%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/renovate%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/renovate%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/renovate%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/renovate%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/renovate%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/renovate%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/renovate%5Bbot%5D/received_events",
+    "type": "Bot",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "parents": [
+    {
+     "sha": "f82c6759cd08e1779af9d6531861bca59c2f4c31",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/f82c6759cd08e1779af9d6531861bca59c2f4c31",
+     "html_url": "https://github.com/home-assistant/installer/commit/f82c6759cd08e1779af9d6531861bca59c2f4c31"
+    }
+   ]
+  }
+ ],
+ "697": [
+  {
+   "sha": "bcdd5d297e631d2fa1dbcf90538ed1087251eb4d",
+   "node_id": "C_kwDOSQu-wdoAKGJjZGQ1ZDI5N2U2MzFkMmZhMWRiY2Y5MDUzOGVkMTA4NzI1MWViNGQ",
+   "commit": {
+    "author": {
+     "name": "renovate[bot]",
+     "email": "29139614+renovate[bot]@users.noreply.github.com",
+     "date": "2026-11-23T04:00:27Z"
+    },
+    "committer": {
+     "name": "GitHub",
+     "email": "noreply@github.com",
+     "date": "2026-11-23T04:00:27Z"
+    },
+    "message": "chore(deps): update rust-dependencies",
+    "tree": {
+     "sha": "df77413af8314d414ce9c59fe97d197501f01525",
+     "url": "https://api.github.com/repos/home-assistant/installer/git/trees/df77413af8314d414ce9c59fe97d197501f01525"
+    },
+    "url": "https://api.github.com/repos/home-assistant/installer/git/commits/bcdd5d297e631d2fa1dbcf90538ed1087251eb4d",
+    "comment_count": 0,
+    "verification": {
+     "verified": true,
+     "reason": "valid",
+     "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJrA7pbCRC1aQ7uu5UhlAAAc7cQADVt2276GMiqZZ9Rs/aO//gY\nitOu4LnmhMgSHy4hpV8StFWIDznkneo4ds95U5WKb/iVHIc+hVc1dDpGYUPz7myd\nXzifJqg2PsLY7YocIFY5IuGlKkluSc0swArP17pJNzU+89hz6Ckl0kOGkfvMg/hG\nW2QadK3KXawpz370X5lrORjEy+oe3YXWbPleOoUEsnQryU8RTwSJs5mdxb3a8OPu\n3Y3iJHBr+A7vAU+3HY2Cu9/lYrr7HPiBlk5LcP1CuRWRxOnMLhAdXNnCMf44R0Mo\nyxaDuLuhks93kcmSpkDtRIt4RvUHiwuVMP6RPxJFUeS7OAWZhVhdQo77LUOl/F65\nAsyybLc88Ovj0StRQRx6aHugI4gVTtEeBCCZzoZLLGumto9wsPZnSUkffXwObUuQ\nL6rWJPgl0ybHNXowX9GvLoWaRYxhmWJRb0GONI9F2c0F9Z9OkFw6SXVmAmjEeG12\nw4GP+SeHU5OTA+Xe+MApAj2U/rpng1Q5+3uXYZN3g8o7DvjTnVZXEGmXG8B55yyF\nILeSBqrqB05K9kWiyugd98YgPq6fAOQ2NLDhf9lGMCJg8ZfOGIZBEVxjD3moUhj1\nexPxOwk9dpI/NsWqomnBagjksCglbvEkJZQG7SPlk6pnuTJt4Q3wChHnJTXFFfnB\nIZiOnsLaSI9/mJqzPAnJ\n=ngHJ\n-----END PGP SIGNATURE-----\n",
+     "payload": "tree df77413af8314d414ce9c59fe97d197501f01525\nparent f82c6759cd08e1779af9d6531861bca59c2f4c31\nauthor renovate[bot] <29139614+renovate[bot]@users.noreply.github.com> 1795406427 +0000\ncommitter GitHub <noreply@github.com> 1795406427 +0000\n\nchore(deps): update rust-dependencies",
+     "verified_at": "2026-11-23T04:00:27Z"
+    }
+   },
+   "url": "https://api.github.com/repos/home-assistant/installer/commits/bcdd5d297e631d2fa1dbcf90538ed1087251eb4d",
+   "html_url": "https://github.com/home-assistant/installer/commit/bcdd5d297e631d2fa1dbcf90538ed1087251eb4d",
+   "comments_url": "https://api.github.com/repos/home-assistant/installer/commits/bcdd5d297e631d2fa1dbcf90538ed1087251eb4d/comments",
+   "author": {
+    "login": "renovate[bot]",
+    "id": 29139614,
+    "node_id": "MDM6Qm90MjkxMzk2MTQ=",
+    "avatar_url": "https://avatars.githubusercontent.com/in/2740?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/renovate%5Bbot%5D",
+    "html_url": "https://github.com/apps/renovate",
+    "followers_url": "https://api.github.com/users/renovate%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/renovate%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/renovate%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/renovate%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/renovate%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/renovate%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/renovate%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/renovate%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/renovate%5Bbot%5D/received_events",
+    "type": "Bot",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "parents": [
+    {
+     "sha": "f82c6759cd08e1779af9d6531861bca59c2f4c31",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/f82c6759cd08e1779af9d6531861bca59c2f4c31",
+     "html_url": "https://github.com/home-assistant/installer/commit/f82c6759cd08e1779af9d6531861bca59c2f4c31"
+    }
+   ]
+  }
+ ],
+ "698": [
+  {
+   "sha": "7b8944a7d109986769ab3298a631ca38484b6363",
+   "node_id": "C_kwDOSQu-wdoAKDdiODk0NGE3ZDEwOTk4Njc2OWFiMzI5OGE2MzFjYTM4NDg0YjYzNjM",
+   "commit": {
+    "author": {
+     "name": "Robert Resch",
+     "email": "robert@resch.dev",
+     "date": "2026-11-23T14:59:22Z"
+    },
+    "committer": {
+     "name": "Robert Resch",
+     "email": "robert@resch.dev",
+     "date": "2026-11-23T14:59:22Z"
+    },
+    "message": "Update cookie and url for the latest Rust advisories\n\nRUSTSEC-2026-0594 is fixed in cookie 0.18.3 and RUSTSEC-2026-0592 in url 2.5.9. Both failed the Rust audit of the release run on main.",
+    "tree": {
+     "sha": "7d43a5258ec10e254c8b47c59412f4ea80f858d5",
+     "url": "https://api.github.com/repos/home-assistant/installer/git/trees/7d43a5258ec10e254c8b47c59412f4ea80f858d5"
+    },
+    "url": "https://api.github.com/repos/home-assistant/installer/git/commits/7b8944a7d109986769ab3298a631ca38484b6363",
+    "comment_count": 0,
+    "verification": {
+     "verified": true,
+     "reason": "valid",
+     "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgrKElNMXgtWqnrVZJ57oByiHlao\nj0a4i80lkjzEvrNBIAAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5\nAAAAQFiogmDfu5EG6PWZ65CaF1ggkt6yIQq62eCN3EeUhXWjb/xNKzdMkoJsn9q7hvpVG8\nEzLBOc0f44IDhmJV4A2wc=\n-----END SSH SIGNATURE-----",
+     "payload": "tree 7d43a5258ec10e254c8b47c59412f4ea80f858d5\nparent 4cf88f3c213285c1bf183a9db7e1eef955aaeb01\nauthor Robert Resch <robert@resch.dev> 1795445962 +0100\ncommitter Robert Resch <robert@resch.dev> 1795445962 +0100\n\nUpdate cookie and url for the latest Rust advisories\n\nRUSTSEC-2026-0594 is fixed in cookie 0.18.3 and RUSTSEC-2026-0592 in url 2.5.9. Both failed the Rust audit of the release run on main.\n",
+     "verified_at": "2026-11-23T15:14:35Z"
+    }
+   },
+   "url": "https://api.github.com/repos/home-assistant/installer/commits/7b8944a7d109986769ab3298a631ca38484b6363",
+   "html_url": "https://github.com/home-assistant/installer/commit/7b8944a7d109986769ab3298a631ca38484b6363",
+   "comments_url": "https://api.github.com/repos/home-assistant/installer/commits/7b8944a7d109986769ab3298a631ca38484b6363/comments",
+   "author": {
+    "login": "edenhaus",
+    "id": 26537646,
+    "node_id": "MDQ6VXNlcjI2NTM3NjQ2",
+    "avatar_url": "https://avatars.githubusercontent.com/u/26537646?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/edenhaus",
+    "html_url": "https://github.com/edenhaus",
+    "followers_url": "https://api.github.com/users/edenhaus/followers",
+    "following_url": "https://api.github.com/users/edenhaus/following{/other_user}",
+    "gists_url": "https://api.github.com/users/edenhaus/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/edenhaus/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/edenhaus/subscriptions",
+    "organizations_url": "https://api.github.com/users/edenhaus/orgs",
+    "repos_url": "https://api.github.com/users/edenhaus/repos",
+    "events_url": "https://api.github.com/users/edenhaus/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/edenhaus/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "committer": {
+    "login": "edenhaus",
+    "id": 26537646,
+    "node_id": "MDQ6VXNlcjI2NTM3NjQ2",
+    "avatar_url": "https://avatars.githubusercontent.com/u/26537646?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/edenhaus",
+    "html_url": "https://github.com/edenhaus",
+    "followers_url": "https://api.github.com/users/edenhaus/followers",
+    "following_url": "https://api.github.com/users/edenhaus/following{/other_user}",
+    "gists_url": "https://api.github.com/users/edenhaus/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/edenhaus/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/edenhaus/subscriptions",
+    "organizations_url": "https://api.github.com/users/edenhaus/orgs",
+    "repos_url": "https://api.github.com/users/edenhaus/repos",
+    "events_url": "https://api.github.com/users/edenhaus/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/edenhaus/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "parents": [
+    {
+     "sha": "4cf88f3c213285c1bf183a9db7e1eef955aaeb01",
+     "url": "https://api.github.com/repos/home-assistant/installer/commits/4cf88f3c213285c1bf183a9db7e1eef955aaeb01",
+     "html_url": "https://github.com/home-assistant/installer/commit/4cf88f3c213285c1bf183a9db7e1eef955aaeb01"
+    }
+   ]
+  }
+ ]
+}

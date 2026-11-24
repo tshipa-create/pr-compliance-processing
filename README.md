@@ -47,7 +47,7 @@ constraints file (`[tool.uv] constraint-dependencies`).
 
 ```bash
 uv sync                                    # venv + dev tools
-uv run pytest -m "not integration"         # 92 unit tests, ~20 s
+uv run pytest -m "not integration"         # 92 unit tests, ~20 s (4 integration tests below)
 docker run -d --name pg -e POSTGRES_PASSWORD=test -e POSTGRES_DB=compliance -p 55432:5432 postgres:16.16
 COMPLIANCE_DB_URL=postgresql://postgres:test@localhost:55432/compliance uv run pytest -m integration
 uv run ruff check . && uv run ruff format --check . && uv run mypy   # mypy --strict

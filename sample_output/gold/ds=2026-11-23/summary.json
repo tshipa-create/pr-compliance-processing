@@ -1,0 +1,578 @@
+{
+ "run_date": "2026-11-23",
+ "__all__": {
+  "total_prs": 304,
+  "compliant_prs": 278,
+  "non_compliant_prs": 26,
+  "compliance_rate": 0.9145,
+  "violations": {
+   "failed_checks": 21,
+   "no_approval": 9
+  },
+  "human_prs": 233,
+  "human_compliant_prs": 214,
+  "human_compliance_rate": 0.9185,
+  "bot_prs": 71
+ },
+ "repositories": {
+  "actions": {
+   "total_prs": 1,
+   "compliant_prs": 1,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 0,
+   "human_compliant_prs": 0,
+   "human_compliance_rate": null,
+   "bot_prs": 1
+  },
+  "analytics.home-assistant.io": {
+   "total_prs": 2,
+   "compliant_prs": 2,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 0,
+   "human_compliant_prs": 0,
+   "human_compliance_rate": null,
+   "bot_prs": 2
+  },
+  "android": {
+   "total_prs": 14,
+   "compliant_prs": 4,
+   "non_compliant_prs": 10,
+   "compliance_rate": 0.2857,
+   "violations": {
+    "failed_checks": 6,
+    "no_approval": 8
+   },
+   "human_prs": 8,
+   "human_compliant_prs": 4,
+   "human_compliance_rate": 0.5,
+   "bot_prs": 6
+  },
+  "app-cec-scan": {
+   "total_prs": 1,
+   "compliant_prs": 1,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 0,
+   "human_compliant_prs": 0,
+   "human_compliance_rate": null,
+   "bot_prs": 1
+  },
+  "app-configurator": {
+   "total_prs": 1,
+   "compliant_prs": 1,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 0,
+   "human_compliant_prs": 0,
+   "human_compliance_rate": null,
+   "bot_prs": 1
+  },
+  "app-deconz": {
+   "total_prs": 1,
+   "compliant_prs": 1,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 0,
+   "human_compliant_prs": 0,
+   "human_compliance_rate": null,
+   "bot_prs": 1
+  },
+  "app-dnsmasq": {
+   "total_prs": 1,
+   "compliant_prs": 1,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 0,
+   "human_compliant_prs": 0,
+   "human_compliance_rate": null,
+   "bot_prs": 1
+  },
+  "app-duckdns": {
+   "total_prs": 1,
+   "compliant_prs": 1,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 0,
+   "human_compliant_prs": 0,
+   "human_compliance_rate": null,
+   "bot_prs": 1
+  },
+  "app-git-pull": {
+   "total_prs": 1,
+   "compliant_prs": 1,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 0,
+   "human_compliant_prs": 0,
+   "human_compliance_rate": null,
+   "bot_prs": 1
+  },
+  "app-mariadb": {
+   "total_prs": 1,
+   "compliant_prs": 1,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 0,
+   "human_compliant_prs": 0,
+   "human_compliance_rate": null,
+   "bot_prs": 1
+  },
+  "app-matter-server": {
+   "total_prs": 1,
+   "compliant_prs": 1,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 0,
+   "human_compliant_prs": 0,
+   "human_compliance_rate": null,
+   "bot_prs": 1
+  },
+  "app-mosquitto": {
+   "total_prs": 2,
+   "compliant_prs": 2,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 0,
+   "human_compliant_prs": 0,
+   "human_compliance_rate": null,
+   "bot_prs": 2
+  },
+  "app-nginx-proxy": {
+   "total_prs": 1,
+   "compliant_prs": 1,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 1,
+   "human_compliant_prs": 1,
+   "human_compliance_rate": 1.0,
+   "bot_prs": 0
+  },
+  "app-openwakeword": {
+   "total_prs": 1,
+   "compliant_prs": 1,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 0,
+   "human_compliant_prs": 0,
+   "human_compliance_rate": null,
+   "bot_prs": 1
+  },
+  "app-piper": {
+   "total_prs": 1,
+   "compliant_prs": 1,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 0,
+   "human_compliant_prs": 0,
+   "human_compliance_rate": null,
+   "bot_prs": 1
+  },
+  "app-silabs-flasher": {
+   "total_prs": 1,
+   "compliant_prs": 1,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 0,
+   "human_compliant_prs": 0,
+   "human_compliance_rate": null,
+   "bot_prs": 1
+  },
+  "app-speech-to-phrase": {
+   "total_prs": 1,
+   "compliant_prs": 1,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 0,
+   "human_compliant_prs": 0,
+   "human_compliance_rate": null,
+   "bot_prs": 1
+  },
+  "app-ssh": {
+   "total_prs": 1,
+   "compliant_prs": 1,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 0,
+   "human_compliant_prs": 0,
+   "human_compliance_rate": null,
+   "bot_prs": 1
+  },
+  "app-vlc": {
+   "total_prs": 1,
+   "compliant_prs": 1,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 0,
+   "human_compliant_prs": 0,
+   "human_compliance_rate": null,
+   "bot_prs": 1
+  },
+  "app-whisper": {
+   "total_prs": 4,
+   "compliant_prs": 4,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 0,
+   "human_compliant_prs": 0,
+   "human_compliance_rate": null,
+   "bot_prs": 4
+  },
+  "app-zwave-js": {
+   "total_prs": 2,
+   "compliant_prs": 2,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 0,
+   "human_compliant_prs": 0,
+   "human_compliance_rate": null,
+   "bot_prs": 2
+  },
+  "apps": {
+   "total_prs": 3,
+   "compliant_prs": 3,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 2,
+   "human_compliant_prs": 2,
+   "human_compliance_rate": 1.0,
+   "bot_prs": 1
+  },
+  "apps-development": {
+   "total_prs": 1,
+   "compliant_prs": 1,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 1,
+   "human_compliant_prs": 1,
+   "human_compliance_rate": 1.0,
+   "bot_prs": 0
+  },
+  "apps-example": {
+   "total_prs": 1,
+   "compliant_prs": 1,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 1,
+   "human_compliant_prs": 1,
+   "human_compliance_rate": 1.0,
+   "bot_prs": 0
+  },
+  "builder": {
+   "total_prs": 2,
+   "compliant_prs": 2,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 1,
+   "human_compliant_prs": 1,
+   "human_compliance_rate": 1.0,
+   "bot_prs": 1
+  },
+  "contributors.home-assistant.io": {
+   "total_prs": 1,
+   "compliant_prs": 1,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 0,
+   "human_compliant_prs": 0,
+   "human_compliance_rate": null,
+   "bot_prs": 1
+  },
+  "core": {
+   "total_prs": 126,
+   "compliant_prs": 112,
+   "non_compliant_prs": 14,
+   "compliance_rate": 0.8889,
+   "violations": {
+    "failed_checks": 14
+   },
+   "human_prs": 126,
+   "human_compliant_prs": 112,
+   "human_compliance_rate": 0.8889,
+   "bot_prs": 0
+  },
+  "docker": {
+   "total_prs": 3,
+   "compliant_prs": 3,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 1,
+   "human_compliant_prs": 1,
+   "human_compliance_rate": 1.0,
+   "bot_prs": 2
+  },
+  "docker-base": {
+   "total_prs": 2,
+   "compliant_prs": 2,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 0,
+   "human_compliant_prs": 0,
+   "human_compliance_rate": null,
+   "bot_prs": 2
+  },
+  "frontend": {
+   "total_prs": 31,
+   "compliant_prs": 31,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 23,
+   "human_compliant_prs": 23,
+   "human_compliance_rate": 1.0,
+   "bot_prs": 8
+  },
+  "home-assistant-js-websocket": {
+   "total_prs": 1,
+   "compliant_prs": 1,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 0,
+   "human_compliant_prs": 0,
+   "human_compliance_rate": null,
+   "bot_prs": 1
+  },
+  "home-assistant.io": {
+   "total_prs": 50,
+   "compliant_prs": 49,
+   "non_compliant_prs": 1,
+   "compliance_rate": 0.98,
+   "violations": {
+    "no_approval": 1
+   },
+   "human_prs": 48,
+   "human_compliant_prs": 47,
+   "human_compliance_rate": 0.9792,
+   "bot_prs": 2
+  },
+  "iOS": {
+   "total_prs": 2,
+   "compliant_prs": 2,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 0,
+   "human_compliant_prs": 0,
+   "human_compliance_rate": null,
+   "bot_prs": 2
+  },
+  "installer": {
+   "total_prs": 6,
+   "compliant_prs": 5,
+   "non_compliant_prs": 1,
+   "compliance_rate": 0.8333,
+   "violations": {
+    "failed_checks": 1
+   },
+   "human_prs": 4,
+   "human_compliant_prs": 4,
+   "human_compliance_rate": 1.0,
+   "bot_prs": 2
+  },
+  "landingpage": {
+   "total_prs": 1,
+   "compliant_prs": 1,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 1,
+   "human_compliant_prs": 1,
+   "human_compliance_rate": 1.0,
+   "bot_prs": 0
+  },
+  "my.home-assistant.io": {
+   "total_prs": 1,
+   "compliant_prs": 1,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 0,
+   "human_compliant_prs": 0,
+   "human_compliance_rate": null,
+   "bot_prs": 1
+  },
+  "operating-system": {
+   "total_prs": 5,
+   "compliant_prs": 5,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 4,
+   "human_compliant_prs": 4,
+   "human_compliance_rate": 1.0,
+   "bot_prs": 1
+  },
+  "operating-system-full-images": {
+   "total_prs": 1,
+   "compliant_prs": 1,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 1,
+   "human_compliant_prs": 1,
+   "human_compliance_rate": 1.0,
+   "bot_prs": 0
+  },
+  "os-agent": {
+   "total_prs": 1,
+   "compliant_prs": 1,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 1,
+   "human_compliant_prs": 1,
+   "human_compliance_rate": 1.0,
+   "bot_prs": 0
+  },
+  "plugin-audio": {
+   "total_prs": 2,
+   "compliant_prs": 2,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 1,
+   "human_compliant_prs": 1,
+   "human_compliance_rate": 1.0,
+   "bot_prs": 1
+  },
+  "plugin-cli": {
+   "total_prs": 2,
+   "compliant_prs": 2,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 1,
+   "human_compliant_prs": 1,
+   "human_compliance_rate": 1.0,
+   "bot_prs": 1
+  },
+  "plugin-dns": {
+   "total_prs": 2,
+   "compliant_prs": 2,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 1,
+   "human_compliant_prs": 1,
+   "human_compliance_rate": 1.0,
+   "bot_prs": 1
+  },
+  "plugin-multicast": {
+   "total_prs": 2,
+   "compliant_prs": 2,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 1,
+   "human_compliant_prs": 1,
+   "human_compliance_rate": 1.0,
+   "bot_prs": 1
+  },
+  "plugin-observer": {
+   "total_prs": 1,
+   "compliant_prs": 1,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 1,
+   "human_compliant_prs": 1,
+   "human_compliance_rate": 1.0,
+   "bot_prs": 0
+  },
+  "supervisor": {
+   "total_prs": 7,
+   "compliant_prs": 7,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 2,
+   "human_compliant_prs": 2,
+   "human_compliance_rate": 1.0,
+   "bot_prs": 5
+  },
+  "tempio": {
+   "total_prs": 1,
+   "compliant_prs": 1,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 1,
+   "human_compliant_prs": 1,
+   "human_compliance_rate": 1.0,
+   "bot_prs": 0
+  },
+  "version": {
+   "total_prs": 1,
+   "compliant_prs": 1,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 1,
+   "human_compliant_prs": 1,
+   "human_compliance_rate": 1.0,
+   "bot_prs": 0
+  },
+  "workflows": {
+   "total_prs": 5,
+   "compliant_prs": 5,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 1,
+   "human_compliant_prs": 1,
+   "human_compliance_rate": 1.0,
+   "bot_prs": 4
+  },
+  "works-with.home-assistant.io": {
+   "total_prs": 2,
+   "compliant_prs": 2,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 0,
+   "human_compliant_prs": 0,
+   "human_compliance_rate": null,
+   "bot_prs": 2
+  },
+  "zwa2-toolbox": {
+   "total_prs": 1,
+   "compliant_prs": 1,
+   "non_compliant_prs": 0,
+   "compliance_rate": 1.0,
+   "violations": {},
+   "human_prs": 0,
+   "human_compliant_prs": 0,
+   "human_compliance_rate": null,
+   "bot_prs": 1
+  }
+ }
+}

@@ -1,0 +1,170 @@
+{
+ "374": [
+  {
+   "sha": "293616c310636a9d5d69439c2c3ec256b63717b4",
+   "node_id": "C_kwDOCs-CX9oAKDI5MzYxNmMzMTA2MzZhOWQ1ZDY5NDM5YzJjM2VjMjU2YjYzNzE3YjQ",
+   "commit": {
+    "author": {
+     "name": "renovate[bot]",
+     "email": "29139614+renovate[bot]@users.noreply.github.com",
+     "date": "2026-11-20T07:00:43Z"
+    },
+    "committer": {
+     "name": "GitHub",
+     "email": "noreply@github.com",
+     "date": "2026-11-20T07:00:43Z"
+    },
+    "message": "Update dependency github/gh-actions-lock to v0.5.1",
+    "tree": {
+     "sha": "3b7674ca598a0ddd89560900bda7c3be6e29e74a",
+     "url": "https://api.github.com/repos/home-assistant/builder/git/trees/3b7674ca598a0ddd89560900bda7c3be6e29e74a"
+    },
+    "url": "https://api.github.com/repos/home-assistant/builder/git/commits/293616c310636a9d5d69439c2c3ec256b63717b4",
+    "comment_count": 0,
+    "verification": {
+     "verified": true,
+     "reason": "valid",
+     "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJq//AbCRC1aQ7uu5UhlAAAYeMQABfSWGW0MJU/6EoM+hvTXBhx\n/lYpviD92gmY9XNfwWKW2/O55pkDhzXwSSNqUHuhBrLVshbXo/8+G1in0KU78ede\n5WIMp6xZKKdDjsLtTavVboKLh6rNyopZLY9Qbc78Ss2frGnRETqTjjNiTmn91c6k\nD6yxKkmbsw5pJ4pKz55Q1QOYEXrj0D7p88Fidwk9foGUMu3Bcx+LhpeQb+oJi+6F\nHXjsUpUw5yi0hvYGVtQuhwafBSlyxEUlH71j7cC9SxVOhPeJJ/J6pO8NdKkICO20\nT+OFIEq7ar4aHWk9pnN+FBQhnMBkoD3Y7UOKr4HN+xtQhXJsWuvXKN+7dXEJgJkb\nBXgAQH82CmAYx05OoykBEoTVtVZY3wvcgArZSxEN4oJ5JK7sIUm6r4kfz1I9yjjw\n3alHG6axDujXK+ZL285MI6GvFGX7pJnMdgDCB3MAaxa8CTgu4iyvEM8VoXRLQ6NO\n7g8KsniXBIDAMNyd9QGqM6u+hPml7w7LpddOg47OQGqFABLTJumlfEYF0XaywtOe\nQqx9Pu3RYEfd8viwcwycVv/M5fyHqTajJw1rB2FS0QW5a0NW/qNS2rIunB7I6Fnx\nugR+Ef8/SuJwMm5TpursGgNmOOItl1vykCT61xyVRa2HvPhxizYHI6eSwPa7F1BN\nvKmXzPLWfKJKdOSJDNE5\n=0TSE\n-----END PGP SIGNATURE-----\n",
+     "payload": "tree 3b7674ca598a0ddd89560900bda7c3be6e29e74a\nparent 0ecd16ab09f4d6c7b7b2d0439f7c8c3c52956e37\nauthor renovate[bot] <29139614+renovate[bot]@users.noreply.github.com> 1795158043 +0000\ncommitter GitHub <noreply@github.com> 1795158043 +0000\n\nUpdate dependency github/gh-actions-lock to v0.5.1",
+     "verified_at": "2026-11-20T07:00:43Z"
+    }
+   },
+   "url": "https://api.github.com/repos/home-assistant/builder/commits/293616c310636a9d5d69439c2c3ec256b63717b4",
+   "html_url": "https://github.com/home-assistant/builder/commit/293616c310636a9d5d69439c2c3ec256b63717b4",
+   "comments_url": "https://api.github.com/repos/home-assistant/builder/commits/293616c310636a9d5d69439c2c3ec256b63717b4/comments",
+   "author": {
+    "login": "renovate[bot]",
+    "id": 29139614,
+    "node_id": "MDM6Qm90MjkxMzk2MTQ=",
+    "avatar_url": "https://avatars.githubusercontent.com/in/2740?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/renovate%5Bbot%5D",
+    "html_url": "https://github.com/apps/renovate",
+    "followers_url": "https://api.github.com/users/renovate%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/renovate%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/renovate%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/renovate%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/renovate%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/renovate%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/renovate%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/renovate%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/renovate%5Bbot%5D/received_events",
+    "type": "Bot",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "parents": [
+    {
+     "sha": "0ecd16ab09f4d6c7b7b2d0439f7c8c3c52956e37",
+     "url": "https://api.github.com/repos/home-assistant/builder/commits/0ecd16ab09f4d6c7b7b2d0439f7c8c3c52956e37",
+     "html_url": "https://github.com/home-assistant/builder/commit/0ecd16ab09f4d6c7b7b2d0439f7c8c3c52956e37"
+    }
+   ]
+  }
+ ],
+ "375": [
+  {
+   "sha": "074441bbe1d7c1993920c0ecef5cb47589af476f",
+   "node_id": "C_kwDOCs-CX9oAKDA3NDQ0MWJiZTFkN2MxOTkzOTIwYzBlY2VmNWNiNDc1ODlhZjQ3NmY",
+   "commit": {
+    "author": {
+     "name": "Jan Čermák",
+     "email": "sairon@sairon.cz",
+     "date": "2026-11-23T09:29:32Z"
+    },
+    "committer": {
+     "name": "Jan Čermák",
+     "email": "sairon@sairon.cz",
+     "date": "2026-11-23T09:29:32Z"
+    },
+    "message": "Pin home-assistant/actions to the 2026.11.0 tag\n\nSwitch the home-assistant/actions steps in test-build-app.yml from the\nmaster SHA pin (86d4564) to the 2026.11.0 release tag. actions.lock\npins the tag to 07f46fd.",
+    "tree": {
+     "sha": "716dd99341fd34ed0d18a7ea2bcacc197b6c0c7b",
+     "url": "https://api.github.com/repos/home-assistant/builder/git/trees/716dd99341fd34ed0d18a7ea2bcacc197b6c0c7b"
+    },
+    "url": "https://api.github.com/repos/home-assistant/builder/git/commits/074441bbe1d7c1993920c0ecef5cb47589af476f",
+    "comment_count": 0,
+    "verification": {
+     "verified": false,
+     "reason": "unsigned",
+     "signature": null,
+     "payload": null,
+     "verified_at": null
+    }
+   },
+   "url": "https://api.github.com/repos/home-assistant/builder/commits/074441bbe1d7c1993920c0ecef5cb47589af476f",
+   "html_url": "https://github.com/home-assistant/builder/commit/074441bbe1d7c1993920c0ecef5cb47589af476f",
+   "comments_url": "https://api.github.com/repos/home-assistant/builder/commits/074441bbe1d7c1993920c0ecef5cb47589af476f/comments",
+   "author": {
+    "login": "sairon",
+    "id": 211416,
+    "node_id": "MDQ6VXNlcjIxMTQxNg==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/211416?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sairon",
+    "html_url": "https://github.com/sairon",
+    "followers_url": "https://api.github.com/users/sairon/followers",
+    "following_url": "https://api.github.com/users/sairon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sairon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sairon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sairon/subscriptions",
+    "organizations_url": "https://api.github.com/users/sairon/orgs",
+    "repos_url": "https://api.github.com/users/sairon/repos",
+    "events_url": "https://api.github.com/users/sairon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sairon/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "committer": {
+    "login": "sairon",
+    "id": 211416,
+    "node_id": "MDQ6VXNlcjIxMTQxNg==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/211416?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sairon",
+    "html_url": "https://github.com/sairon",
+    "followers_url": "https://api.github.com/users/sairon/followers",
+    "following_url": "https://api.github.com/users/sairon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sairon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sairon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sairon/subscriptions",
+    "organizations_url": "https://api.github.com/users/sairon/orgs",
+    "repos_url": "https://api.github.com/users/sairon/repos",
+    "events_url": "https://api.github.com/users/sairon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sairon/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "parents": [
+    {
+     "sha": "5e45d988661f6dd767cd1b2548885c13cfff8217",
+     "url": "https://api.github.com/repos/home-assistant/builder/commits/5e45d988661f6dd767cd1b2548885c13cfff8217",
+     "html_url": "https://github.com/home-assistant/builder/commit/5e45d988661f6dd767cd1b2548885c13cfff8217"
+    }
+   ]
+  }
+ ]
+}

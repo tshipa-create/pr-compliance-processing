@@ -1,0 +1,1190 @@
+{
+ "686": [
+  {
+   "id": 5921925014,
+   "node_id": "PRR_kwDOSQu-wc8AAAABYPlnlg",
+   "user": {
+    "login": "copilot-pull-request-reviewer[bot]",
+    "id": 175728472,
+    "node_id": "BOT_kgDOCnlnWA",
+    "avatar_url": "https://avatars.githubusercontent.com/in/946600?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D",
+    "html_url": "https://github.com/apps/copilot-pull-request-reviewer",
+    "followers_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/received_events",
+    "type": "Bot",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "<!-- ccr-overview-v2 -->\n\n### 🟢 Approval recommended\n\nNo active review issues remain for the update-banner focus-preservation changes.\n\n**No open issues** 🎉\n\n<details>\n<summary><strong>What changed in this PR</strong></summary>\n\nThis PR preserves keyboard focus as the welcome screen’s update banner changes buttons or closes, helping users continue without losing their place.\n\n**Changes:**\n- Move focus to the first remaining banner button when the focused control disappears.\n- Restore focus to the welcome heading when the banner closes with focus inside it.\n- Add unit tests for failure recovery, dismissal events, and heading focus restoration.\n\n| File | Description |\r\n| ---- | ----------- |\r\n| `test/​unit/​views/​welcome-view.test.ts` | Tests heading focus after dismissing the banner. |\r\n| `test/​unit/​components/​update-banner.test.ts` | Tests focus recovery and the banner-closed event. |\r\n| `src/​views/​welcome-view.ts` | Handles banner closure by restoring heading focus. |\r\n| `src/​components/​update-banner.ts` | Tracks focus across updates and restores it or signals closure. |\n</details>\n\n<sub>Review effort: Balanced</sub>",
+   "state": "COMMENTED",
+   "html_url": "https://github.com/home-assistant/installer/pull/686#pullrequestreview-5921925014",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/installer/pulls/686",
+   "author_association": "CONTRIBUTOR",
+   "is_copilot_code_review": true,
+   "copilot_code_review_effort": "balanced",
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/installer/pull/686#pullrequestreview-5921925014"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/installer/pulls/686"
+    }
+   },
+   "submitted_at": "2026-11-16T14:47:20Z",
+   "commit_id": "a5ddbfc159919366ac1e8f0dd2958a8a82cef9b2"
+  },
+  {
+   "id": 6023642268,
+   "node_id": "PRR_kwDOSQu-wc8AAAABZwl8nA",
+   "user": {
+    "login": "edenhaus",
+    "id": 26537646,
+    "node_id": "MDQ6VXNlcjI2NTM3NjQ2",
+    "avatar_url": "https://avatars.githubusercontent.com/u/26537646?u=f01341a111865cba4bb11714b25d33b24162de15&v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/edenhaus",
+    "html_url": "https://github.com/edenhaus",
+    "followers_url": "https://api.github.com/users/edenhaus/followers",
+    "following_url": "https://api.github.com/users/edenhaus/following{/other_user}",
+    "gists_url": "https://api.github.com/users/edenhaus/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/edenhaus/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/edenhaus/subscriptions",
+    "organizations_url": "https://api.github.com/users/edenhaus/orgs",
+    "repos_url": "https://api.github.com/users/edenhaus/repos",
+    "events_url": "https://api.github.com/users/edenhaus/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/edenhaus/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "",
+   "state": "APPROVED",
+   "html_url": "https://github.com/home-assistant/installer/pull/686#pullrequestreview-6023642268",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/installer/pulls/686",
+   "author_association": "MEMBER",
+   "is_copilot_code_review": false,
+   "copilot_code_review_effort": null,
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/installer/pull/686#pullrequestreview-6023642268"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/installer/pulls/686"
+    }
+   },
+   "submitted_at": "2026-11-23T14:44:25Z",
+   "commit_id": "a5ddbfc159919366ac1e8f0dd2958a8a82cef9b2"
+  }
+ ],
+ "690": [
+  {
+   "id": 5936008739,
+   "node_id": "PRR_kwDOSQu-wc8AAAABYdBOIw",
+   "user": {
+    "login": "copilot-pull-request-reviewer[bot]",
+    "id": 175728472,
+    "node_id": "BOT_kgDOCnlnWA",
+    "avatar_url": "https://avatars.githubusercontent.com/in/946600?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D",
+    "html_url": "https://github.com/apps/copilot-pull-request-reviewer",
+    "followers_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/received_events",
+    "type": "Bot",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "<!-- ccr-overview-v2 -->\n\n### 🟢 Approval recommended\n\nNo active review issues require resolution before approval.\n\n**No open issues** 🎉\n\n<details>\n<summary><strong>What changed in this PR</strong></summary>\n\nThis PR simplifies the installer’s Mini PC flow by putting USB installer creation, direct drive writing, and ISO saving on one screen.\n\n**Changes:**\n- Removes the separate media-choice step and derives navigation from selections.\n- Adds an accessible “Recommended” tag and clears stale USB board settings when switching to direct installation.\n- Updates unit tests, end-to-end coverage, and flow documentation.\n\n| File | Description |\r\n| ---- | ----------- |\r\n| `test/​unit/​views/​minipc/​setup-method-view.test.ts` | Tests all three choices and switching paths. |\r\n| `test/​unit/​views/​minipc/​media-view.test.ts` | Removes tests for the deleted media view. |\r\n| `test/​unit/​utils/​step-styles.test.ts` | Removes the deleted view from style coverage. |\r\n| `test/​unit/​state/​wizard-state.test.ts` | Tests selection-driven step changes. |\r\n| `test/​unit/​localization-at-render.test.ts` | Removes coverage for the deleted step helper. |\r\n| `test/​unit/​components/​wizard-steps.test.ts` | Updates expected pick-to-continue steps. |\r\n| `test/​unit/​components/​option-card.test.ts` | Tests optional tags and description references. |\r\n| `test/​e2e/​minipc-pick-continues.spec.ts` | Updates immediate navigation and Back checks. |\r\n| `test/​e2e/​minipc-flow.spec.ts` | Updates Mini PC navigation and path switching. |\r\n| `test/​e2e/​live-usb-flow.spec.ts` | Starts USB and ISO flows from the combined screen. |\r\n| `test/​e2e/​enter-goes-on.spec.ts` | Shortens navigation to ISO location entry. |\r\n| `test/​e2e/​controls-keyboard.spec.ts` | Updates keyboard navigation for the combined choices. |\r\n| `test/​e2e/​accessibility.spec.ts` | Updates labels and scroll coverage. |\r\n| `test/​e2e/​accessibility-audit.spec.ts` | Adapts audits to the shorter flow. |\r\n| `src/​views/​minipc/​setup-method-view.ts` | Combines installation choices and manages selections. |\r\n| `src/​views/​minipc/​media-view.ts` | Deletes the separate media-choice view. |\r\n| `src/​state/​wizard-state.ts` | Removes the media step and manual step-setting helpers. |\r\n| `src/​localization/​en.json` | Adds combined-screen copy and removes obsolete labels. |\r\n| `src/​components/​wizard-steps.ts` | Removes media-view registration and routing. |\r\n| `src/​components/​option-card.ts` | Adds styled tags to accessible card descriptions. |\r\n| `docs/​spec/​user-flows.md` | Documents the combined installation-method screen. |\n</details>\n\n<sub>Review effort: Balanced</sub>",
+   "state": "COMMENTED",
+   "html_url": "https://github.com/home-assistant/installer/pull/690#pullrequestreview-5936008739",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/installer/pulls/690",
+   "author_association": "CONTRIBUTOR",
+   "is_copilot_code_review": true,
+   "copilot_code_review_effort": "balanced",
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/installer/pull/690#pullrequestreview-5936008739"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/installer/pulls/690"
+    }
+   },
+   "submitted_at": "2026-11-17T09:34:46Z",
+   "commit_id": "724f6b999852eebc4ad01f17b160840cd40cd2d3"
+  },
+  {
+   "id": 6029943898,
+   "node_id": "PRR_kwDOSQu-wc8AAAABZ2mkWg",
+   "user": {
+    "login": "copilot-pull-request-reviewer[bot]",
+    "id": 175728472,
+    "node_id": "BOT_kgDOCnlnWA",
+    "avatar_url": "https://avatars.githubusercontent.com/in/946600?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D",
+    "html_url": "https://github.com/apps/copilot-pull-request-reviewer",
+    "followers_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/received_events",
+    "type": "Bot",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "<!-- ccr-overview-v2 -->\n\n### 🟢 Approval recommended\n\nNo active review issues are recorded for the consolidated Mini PC installation flow.\n\n**No open issues** 🎉\n\n<sub>Review effort: Balanced</sub>",
+   "state": "COMMENTED",
+   "html_url": "https://github.com/home-assistant/installer/pull/690#pullrequestreview-6029943898",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/installer/pulls/690",
+   "author_association": "CONTRIBUTOR",
+   "is_copilot_code_review": true,
+   "copilot_code_review_effort": "balanced",
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/installer/pull/690#pullrequestreview-6029943898"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/installer/pulls/690"
+    }
+   },
+   "submitted_at": "2026-11-23T21:38:51Z",
+   "commit_id": "9ad41e7f32b04648bab69cf03e34cb834125b78d"
+  },
+  {
+   "id": 6030236075,
+   "node_id": "PRR_kwDOSQu-wc8AAAABZ24Zqw",
+   "user": {
+    "login": "frenck",
+    "id": 195327,
+    "node_id": "MDQ6VXNlcjE5NTMyNw==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/195327?u=c0f88e376380f7a811559aa54d5096a66f6d3488&v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/frenck",
+    "html_url": "https://github.com/frenck",
+    "followers_url": "https://api.github.com/users/frenck/followers",
+    "following_url": "https://api.github.com/users/frenck/following{/other_user}",
+    "gists_url": "https://api.github.com/users/frenck/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/frenck/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/frenck/subscriptions",
+    "organizations_url": "https://api.github.com/users/frenck/orgs",
+    "repos_url": "https://api.github.com/users/frenck/repos",
+    "events_url": "https://api.github.com/users/frenck/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/frenck/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "",
+   "state": "APPROVED",
+   "html_url": "https://github.com/home-assistant/installer/pull/690#pullrequestreview-6030236075",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/installer/pulls/690",
+   "author_association": "MEMBER",
+   "is_copilot_code_review": false,
+   "copilot_code_review_effort": null,
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/installer/pull/690#pullrequestreview-6030236075"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/installer/pulls/690"
+    }
+   },
+   "submitted_at": "2026-11-23T22:02:56Z",
+   "commit_id": "9ad41e7f32b04648bab69cf03e34cb834125b78d"
+  }
+ ],
+ "694": [
+  {
+   "id": 5982783267,
+   "node_id": "PRR_kwDOSQu-wc8AAAABZJoHIw",
+   "user": {
+    "login": "copilot-pull-request-reviewer[bot]",
+    "id": 175728472,
+    "node_id": "BOT_kgDOCnlnWA",
+    "avatar_url": "https://avatars.githubusercontent.com/in/946600?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D",
+    "html_url": "https://github.com/apps/copilot-pull-request-reviewer",
+    "followers_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/received_events",
+    "type": "Bot",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "<!-- ccr-overview-v2 -->\n\n### 🟡 Changes recommended\n\nUnresolved issues can leave stale installation cards beside working instances, change focused cards’ destinations when discovery results reorder, and hide one required scroll-edge fade in RTL layouts.\n\n<details open>\n<summary><strong>3 open issues</strong></summary>\n\n- <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.svg\"><img src=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.png\" alt=\"Medium severity\" width=\"62\" height=\"18\" align=\"texttop\"></picture> [Include RTL combined state in two-edge mask rule](https://github.com/home-assistant/installer/pull/694#discussion_r4634651911) · New\n- <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.svg\"><img src=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.png\" alt=\"Medium severity\" width=\"62\" height=\"18\" align=\"texttop\"></picture> [Match landing-page replacements by host IP](https://github.com/home-assistant/installer/pull/694#discussion_r4634651975) · New\n- <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.svg\"><img src=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.png\" alt=\"Medium severity\" width=\"62\" height=\"18\" align=\"texttop\"></picture> [Key cards by address to preserve identity](https://github.com/home-assistant/installer/pull/694#discussion_r4634652034) · New\n</details>\n\n<details>\n<summary><strong>What changed in this PR</strong></summary>\n\nAdds network discovery to the installer’s welcome screen so users can open existing Home Assistant instances and see whether they are installing or awaiting setup.\n\n**Changes:**\n- Adds periodic discovery and onboarding-status checks, including announced names and browser URLs.\n- Displays discovered instances in a horizontally scrolling row with status labels.\n- Expands backend, component, and end-to-end coverage and updates documentation.\n\n| File | Description |\r\n| ---- | ----------- |\r\n| test/​unit/​views/​welcome-view.test.ts | Tests discovered cards, links, layout, and text direction. |\r\n| test/​unit/​views/​device-setup-view.test.ts | Updates announcement fixtures. |\r\n| test/​unit/​utils/​home-assistant-scan.test.ts | Tests polling, retained results, status changes, and cancellation. |\r\n| test/​unit/​utils/​device-discovery.test.ts | Adds names and URLs to fixtures. |\r\n| test/​unit/​components/​scroll-row.test.ts | Tests scrolling, overflow, and RTL behavior. |\r\n| test/​e2e/​welcome-network.spec.ts | Covers network cards, browser opening, and scrolling. |\r\n| test/​e2e/​casita-artwork.spec.ts | Uses an empty network for footer-layout checks. |\r\n| test/​e2e/​accessibility-audit.spec.ts | Audits overflowing network cards. |\r\n| src/​views/​welcome-view.ts | Renders discovered instances below “Let’s go.” |\r\n| src/​utils/​icons.ts | Adds navigation and external-link icons. |\r\n| src/​utils/​home-assistant-scan.ts | Manages discovery polling and instance status. |\r\n| src/​utils/​breakpoints.ts | Removes the obsolete welcome scrolling breakpoint. |\r\n| src/​localization/​en.json | Adds network-section and status labels. |\r\n| src/​components/​scroll-row.ts | Adds a reusable horizontal scrolling component. |\r\n| src/​api/​types.ts | Extends announcements with names and URLs. |\r\n| src/​api/​commands.ts | Adds onboarding checks and network mock scenarios. |\r\n| docs/​spec/​ui-design.md | Documents the discovered-instance row. |\r\n| docs/​spec/​backend.md | Documents discovery and onboarding-status behavior. |\r\n| crates/​hai-desktop/​src/​lib.rs | Registers the onboarding-check command. |\r\n| crates/​hai-desktop/​src/​diagnostics.rs | Updates announcement fixtures in privacy tests. |\r\n| crates/​hai-desktop/​src/​commands.rs | Exposes onboarding checks through Tauri. |\r\n| crates/​hai-desktop/​macos/​Info.plist | Updates local-network permission wording. |\r\n| crates/​hai-core/​src/​types.rs | Adds announcement name and browser URL fields. |\r\n| crates/​hai-core/​src/​mock/​host.rs | Supplies mock onboarding status and announcement metadata. |\r\n| crates/​hai-core/​src/​lib.rs | Extends the host backend interface. |\r\n| crates/​hai-core/​src/​host.rs | Implements and tests HTTP/HTTPS onboarding checks. |\r\n| crates/​hai-core/​src/​discovery.rs | Extracts announced names and selects browser URLs. |\n</details>\n\n<sub>Review effort: Balanced</sub>",
+   "state": "COMMENTED",
+   "html_url": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-5982783267",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/installer/pulls/694",
+   "author_association": "CONTRIBUTOR",
+   "is_copilot_code_review": true,
+   "copilot_code_review_effort": "balanced",
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-5982783267"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/installer/pulls/694"
+    }
+   },
+   "submitted_at": "2026-11-19T20:25:58Z",
+   "commit_id": "730d19e50a1d6e18414f3ef0ae0ae5a44faf429c"
+  },
+  {
+   "id": 5993613177,
+   "node_id": "PRR_kwDOSQu-wc8AAAABZT9HeQ",
+   "user": {
+    "login": "copilot-pull-request-reviewer[bot]",
+    "id": 175728472,
+    "node_id": "BOT_kgDOCnlnWA",
+    "avatar_url": "https://avatars.githubusercontent.com/in/946600?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D",
+    "html_url": "https://github.com/apps/copilot-pull-request-reviewer",
+    "followers_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/received_events",
+    "type": "Bot",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "<!-- ccr-overview-v2 -->\n\n### 🟡 Changes recommended\n\nLong hostnames can overflow discovery cards, and rewriting advertised URLs with differing IPv4 hosts can break valid reverse-proxy connections.\n\n<details open>\n<summary><strong>2 open issues</strong></summary>\n\n- <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.svg\"><img src=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.png\" alt=\"Medium severity\" width=\"62\" height=\"18\" align=\"texttop\"></picture> [Preserve valid reverse-proxy URLs](https://github.com/home-assistant/installer/pull/694#discussion_r4643139716) · New\n- <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.svg\"><img src=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.png\" alt=\"Medium severity\" width=\"62\" height=\"18\" align=\"texttop\"></picture> [Long hostnames overflow card boundaries](https://github.com/home-assistant/installer/pull/694#discussion_r4643139792) · New\n</details>\n\n<details>\n<summary><strong>3 resolved since last review</strong></summary>\n\n- <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.svg\"><img src=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.png\" alt=\"Medium severity\" width=\"62\" height=\"18\" align=\"texttop\"></picture> [Key cards by address to preserve identity](https://github.com/home-assistant/installer/pull/694#discussion_r4634652034)\n- <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.svg\"><img src=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.png\" alt=\"Medium severity\" width=\"62\" height=\"18\" align=\"texttop\"></picture> [Match landing-page replacements by host IP](https://github.com/home-assistant/installer/pull/694#discussion_r4634651975)\n- <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.svg\"><img src=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.png\" alt=\"Medium severity\" width=\"62\" height=\"18\" align=\"texttop\"></picture> [Include RTL combined state in two-edge mask rule](https://github.com/home-assistant/installer/pull/694#discussion_r4634651911)\n</details>\n\n<sub>Review effort: Balanced</sub>",
+   "state": "COMMENTED",
+   "html_url": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-5993613177",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/installer/pulls/694",
+   "author_association": "CONTRIBUTOR",
+   "is_copilot_code_review": true,
+   "copilot_code_review_effort": "balanced",
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-5993613177"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/installer/pulls/694"
+    }
+   },
+   "submitted_at": "2026-11-20T13:43:38Z",
+   "commit_id": "64806e9b13a724b8ed89621431d1b0d1f32e29a9"
+  },
+  {
+   "id": 5993755600,
+   "node_id": "PRR_kwDOSQu-wc8AAAABZUFz0A",
+   "user": {
+    "login": "copilot-pull-request-reviewer[bot]",
+    "id": 175728472,
+    "node_id": "BOT_kgDOCnlnWA",
+    "avatar_url": "https://avatars.githubusercontent.com/in/946600?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D",
+    "html_url": "https://github.com/apps/copilot-pull-request-reviewer",
+    "followers_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/received_events",
+    "type": "Bot",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "<!-- ccr-overview-v2 -->\n\n### 🔵 Needs a closer look\n\nThe URL filter accepts unusable IPv6 destinations such as `::1`, causing the installer to open its own computer instead of falling back to the discovered device’s LAN address.\n\n**No open issues** 🎉\n\n<details>\n<summary><strong>1 previously missed issue</strong></summary>\n\nIn code that hasn't changed since last review\n\n<details>\n<summary><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.svg\"><img src=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.png\" alt=\"Medium severity\" width=\"62\" height=\"18\" align=\"texttop\"></picture> Reject unusable IPv6 internal URLs before falling back to the LAN address</summary>\n\n`crates/​hai-core/​src/​discovery.rs:112`\n\nIPv6 literals bypass this filter because parsing them as `Ipv4Addr` fails and `is_none_or` accepts them. An announcement with a valid LAN address but `internal_url = \"http://[::1]:8123/\"` therefore opens the installer's own computer instead of the discovered device. Distinguish IPv6 literals from hostnames and reject unusable destinations, including loopback, unscoped link-local, and unreachable IPv4-mapped addresses, so the URL falls back to the discovered address.\n</details>\n</details>\n\n<details>\n<summary><strong>2 resolved since last review</strong></summary>\n\n- <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.svg\"><img src=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.png\" alt=\"Medium severity\" width=\"62\" height=\"18\" align=\"texttop\"></picture> [Long hostnames overflow card boundaries](https://github.com/home-assistant/installer/pull/694#discussion_r4643139792)\n- <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.svg\"><img src=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.png\" alt=\"Medium severity\" width=\"62\" height=\"18\" align=\"texttop\"></picture> [Preserve valid reverse-proxy URLs](https://github.com/home-assistant/installer/pull/694#discussion_r4643139716)\n</details>\n\n<sub>Review effort: Balanced</sub>",
+   "state": "COMMENTED",
+   "html_url": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-5993755600",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/installer/pulls/694",
+   "author_association": "CONTRIBUTOR",
+   "is_copilot_code_review": true,
+   "copilot_code_review_effort": "balanced",
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-5993755600"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/installer/pulls/694"
+    }
+   },
+   "submitted_at": "2026-11-20T13:53:09Z",
+   "commit_id": "83d74bcc119dd94b9ad41b3068c97f566da84fbd"
+  },
+  {
+   "id": 5993958555,
+   "node_id": "PRR_kwDOSQu-wc8AAAABZUSMmw",
+   "user": {
+    "login": "copilot-pull-request-reviewer[bot]",
+    "id": 175728472,
+    "node_id": "BOT_kgDOCnlnWA",
+    "avatar_url": "https://avatars.githubusercontent.com/in/946600?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D",
+    "html_url": "https://github.com/apps/copilot-pull-request-reviewer",
+    "followers_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/received_events",
+    "type": "Bot",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "<!-- ccr-overview-v2 -->\n\n### 🔵 Needs a closer look\n\nHuman review is needed to assess the significance of missing direct test coverage for the new command’s address forwarding and tri-state return values.\n\n**No open issues** 🎉\n\n<sub>Review effort: Balanced</sub>",
+   "state": "COMMENTED",
+   "html_url": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-5993958555",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/installer/pulls/694",
+   "author_association": "CONTRIBUTOR",
+   "is_copilot_code_review": true,
+   "copilot_code_review_effort": "balanced",
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-5993958555"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/installer/pulls/694"
+    }
+   },
+   "submitted_at": "2026-11-20T14:08:18Z",
+   "commit_id": "267c68e9e4c488b366a06d2256bfdbde6d4dcf78"
+  },
+  {
+   "id": 6020187465,
+   "node_id": "PRR_kwDOSQu-wc8AAAABZtTFSQ",
+   "user": {
+    "login": "copilot-pull-request-reviewer[bot]",
+    "id": 175728472,
+    "node_id": "BOT_kgDOCnlnWA",
+    "avatar_url": "https://avatars.githubusercontent.com/in/946600?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D",
+    "html_url": "https://github.com/apps/copilot-pull-request-reviewer",
+    "followers_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/received_events",
+    "type": "Bot",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "<!-- ccr-overview-v2 -->\n\n### 🟡 Changes recommended\n\nBrowse-processing failures before any callback are returned as empty successful results, so two such failures can cause the welcome scan to remove previously discovered instances instead of retaining them.\n\n<details open>\n<summary><strong>1 open issue</strong></summary>\n\n- <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.svg\"><img src=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.png\" alt=\"Medium severity\" width=\"62\" height=\"18\" align=\"texttop\"></picture> [Propagate DNS browse-processing failures](https://github.com/home-assistant/installer/pull/694#discussion_r4664658903) · New\n</details>\n\n<sub>Review effort: Balanced</sub>",
+   "state": "COMMENTED",
+   "html_url": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-6020187465",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/installer/pulls/694",
+   "author_association": "CONTRIBUTOR",
+   "is_copilot_code_review": true,
+   "copilot_code_review_effort": "balanced",
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-6020187465"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/installer/pulls/694"
+    }
+   },
+   "submitted_at": "2026-11-23T10:42:02Z",
+   "commit_id": "3e4690888c013c03dd7e9fe98a933af7ae143f7e"
+  },
+  {
+   "id": 6020286904,
+   "node_id": "PRR_kwDOSQu-wc8AAAABZtZJuA",
+   "user": {
+    "login": "copilot-pull-request-reviewer[bot]",
+    "id": 175728472,
+    "node_id": "BOT_kgDOCnlnWA",
+    "avatar_url": "https://avatars.githubusercontent.com/in/946600?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D",
+    "html_url": "https://github.com/apps/copilot-pull-request-reviewer",
+    "followers_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/received_events",
+    "type": "Bot",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "<!-- ccr-overview-v2 -->\n\n### 🟡 Changes recommended\n\nBrowse socket errors are discarded, causing failed lookups to appear as successful empty results and previously discovered instances to be removed after two failures.\n\n<details open>\n<summary><strong>2 open issues</strong></summary>\n\n- <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.svg\"><img src=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.png\" alt=\"Medium severity\" width=\"62\" height=\"18\" align=\"texttop\"></picture> [Preserve browse socket errors to avoid clearing discovered instances](https://github.com/home-assistant/installer/pull/694#discussion_r4664732085) · New\n- <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.svg\"><img src=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.png\" alt=\"Medium severity\" width=\"62\" height=\"18\" align=\"texttop\"></picture> [Propagate DNS browse-processing failures](https://github.com/home-assistant/installer/pull/694#discussion_r4664658903)\n</details>\n\n<sub>Review effort: Balanced</sub>",
+   "state": "COMMENTED",
+   "html_url": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-6020286904",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/installer/pulls/694",
+   "author_association": "CONTRIBUTOR",
+   "is_copilot_code_review": true,
+   "copilot_code_review_effort": "balanced",
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-6020286904"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/installer/pulls/694"
+    }
+   },
+   "submitted_at": "2026-11-23T10:48:25Z",
+   "commit_id": "ce3c0e7022e85f9580c966a918e5d827abc8f9b7"
+  },
+  {
+   "id": 6020398597,
+   "node_id": "PRR_kwDOSQu-wc8AAAABZtf-BQ",
+   "user": {
+    "login": "copilot-pull-request-reviewer[bot]",
+    "id": 175728472,
+    "node_id": "BOT_kgDOCnlnWA",
+    "avatar_url": "https://avatars.githubusercontent.com/in/946600?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D",
+    "html_url": "https://github.com/apps/copilot-pull-request-reviewer",
+    "followers_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/received_events",
+    "type": "Bot",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "<!-- ccr-overview-v2 -->\n\n### 🔵 Needs a closer look\n\nHuman assessment is needed for an unpublished moderate finding that a missed Core announcement can suppress a new landing page and leave stale state visible.\n\n**No open issues** 🎉\n\n<details>\n<summary><strong>2 resolved since last review</strong></summary>\n\n- <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.svg\"><img src=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.png\" alt=\"Medium severity\" width=\"62\" height=\"18\" align=\"texttop\"></picture> [Preserve browse socket errors to avoid clearing discovered instances](https://github.com/home-assistant/installer/pull/694#discussion_r4664732085)\n- <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.svg\"><img src=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.png\" alt=\"Medium severity\" width=\"62\" height=\"18\" align=\"texttop\"></picture> [Propagate DNS browse-processing failures](https://github.com/home-assistant/installer/pull/694#discussion_r4664658903)\n</details>\n\n<sub>Review effort: Balanced</sub>",
+   "state": "COMMENTED",
+   "html_url": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-6020398597",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/installer/pulls/694",
+   "author_association": "CONTRIBUTOR",
+   "is_copilot_code_review": true,
+   "copilot_code_review_effort": "balanced",
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-6020398597"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/installer/pulls/694"
+    }
+   },
+   "submitted_at": "2026-11-23T10:55:29Z",
+   "commit_id": "660d07ccbce069a2b7c34a022279f0e7e062270d"
+  },
+  {
+   "id": 6020487366,
+   "node_id": "PRR_kwDOSQu-wc8AAAABZtlYxg",
+   "user": {
+    "login": "copilot-pull-request-reviewer[bot]",
+    "id": 175728472,
+    "node_id": "BOT_kgDOCnlnWA",
+    "avatar_url": "https://avatars.githubusercontent.com/in/946600?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D",
+    "html_url": "https://github.com/apps/copilot-pull-request-reviewer",
+    "followers_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/received_events",
+    "type": "Bot",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "<!-- ccr-overview-v2 -->\n\n### 🟡 Changes recommended\n\nThe onboarding cache can retain a previous Home Assistant instance’s status after its UUID changes, incorrectly showing that status instead of unknown when the new instance’s check fails or returns null.\n\n<details open>\n<summary><strong>1 open issue</strong></summary>\n\n- <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.svg\"><img src=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.png\" alt=\"Medium severity\" width=\"62\" height=\"18\" align=\"texttop\"></picture> [Avoid reusing onboarding status when announcement UUID changes](https://github.com/home-assistant/installer/pull/694#discussion_r4664880186) · New\n</details>\n\n<sub>Review effort: Balanced</sub>",
+   "state": "COMMENTED",
+   "html_url": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-6020487366",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/installer/pulls/694",
+   "author_association": "CONTRIBUTOR",
+   "is_copilot_code_review": true,
+   "copilot_code_review_effort": "balanced",
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-6020487366"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/installer/pulls/694"
+    }
+   },
+   "submitted_at": "2026-11-23T11:01:11Z",
+   "commit_id": "bff48a990e70e6c7b32c8bb7ad4f82bf8338bf11"
+  },
+  {
+   "id": 6020695665,
+   "node_id": "PRR_kwDOSQu-wc8AAAABZtyGcQ",
+   "user": {
+    "login": "bramkragten",
+    "id": 5662298,
+    "node_id": "MDQ6VXNlcjU2NjIyOTg=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5662298?u=e9ad3f49389213944ba24cbbc21e659db5889927&v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bramkragten",
+    "html_url": "https://github.com/bramkragten",
+    "followers_url": "https://api.github.com/users/bramkragten/followers",
+    "following_url": "https://api.github.com/users/bramkragten/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bramkragten/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bramkragten/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bramkragten/subscriptions",
+    "organizations_url": "https://api.github.com/users/bramkragten/orgs",
+    "repos_url": "https://api.github.com/users/bramkragten/repos",
+    "events_url": "https://api.github.com/users/bramkragten/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bramkragten/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "",
+   "state": "COMMENTED",
+   "html_url": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-6020695665",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/installer/pulls/694",
+   "author_association": "MEMBER",
+   "is_copilot_code_review": false,
+   "copilot_code_review_effort": null,
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-6020695665"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/installer/pulls/694"
+    }
+   },
+   "submitted_at": "2026-11-23T11:14:38Z",
+   "commit_id": "e9abf639cdced5de3df08d26dbe44c78da02b151"
+  },
+  {
+   "id": 6020766108,
+   "node_id": "PRR_kwDOSQu-wc8AAAABZt2ZnA",
+   "user": {
+    "login": "copilot-pull-request-reviewer[bot]",
+    "id": 175728472,
+    "node_id": "BOT_kgDOCnlnWA",
+    "avatar_url": "https://avatars.githubusercontent.com/in/946600?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D",
+    "html_url": "https://github.com/apps/copilot-pull-request-reviewer",
+    "followers_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/received_events",
+    "type": "Bot",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "<!-- ccr-overview-v2 -->\n\n### 🔵 Needs a closer look\n\nHuman review is needed to assess the approval impact of missing command-level test coverage for the new Tauri command’s forwarding through Backend.\n\n**No open issues** 🎉\n\n<details>\n<summary><strong>1 resolved since last review</strong></summary>\n\n- <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.svg\"><img src=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.png\" alt=\"Medium severity\" width=\"62\" height=\"18\" align=\"texttop\"></picture> [Avoid reusing onboarding status when announcement UUID changes](https://github.com/home-assistant/installer/pull/694#discussion_r4664880186)\n</details>\n\n<sub>Review effort: Balanced</sub>",
+   "state": "COMMENTED",
+   "html_url": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-6020766108",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/installer/pulls/694",
+   "author_association": "CONTRIBUTOR",
+   "is_copilot_code_review": true,
+   "copilot_code_review_effort": "balanced",
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-6020766108"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/installer/pulls/694"
+    }
+   },
+   "submitted_at": "2026-11-23T11:19:20Z",
+   "commit_id": "e9abf639cdced5de3df08d26dbe44c78da02b151"
+  },
+  {
+   "id": 6020867105,
+   "node_id": "PRR_kwDOSQu-wc8AAAABZt8kIQ",
+   "user": {
+    "login": "copilot-pull-request-reviewer[bot]",
+    "id": 175728472,
+    "node_id": "BOT_kgDOCnlnWA",
+    "avatar_url": "https://avatars.githubusercontent.com/in/946600?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D",
+    "html_url": "https://github.com/apps/copilot-pull-request-reviewer",
+    "followers_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/received_events",
+    "type": "Bot",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "<!-- ccr-overview-v2 -->\n\n### 🔵 Needs a closer look\n\nHuman assessment is needed because automatic onboarding probes can follow redirects from untrusted LAN peers to loopback or other filtered addresses without user interaction.\n\n**No open issues** 🎉\n\n<sub>Review effort: Balanced</sub>",
+   "state": "COMMENTED",
+   "html_url": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-6020867105",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/installer/pulls/694",
+   "author_association": "CONTRIBUTOR",
+   "is_copilot_code_review": true,
+   "copilot_code_review_effort": "balanced",
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-6020867105"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/installer/pulls/694"
+    }
+   },
+   "submitted_at": "2026-11-23T11:27:02Z",
+   "commit_id": "4e5b9db472560e0363d76b5846e7aae8edda4266"
+  },
+  {
+   "id": 6020974422,
+   "node_id": "PRR_kwDOSQu-wc8AAAABZuDHVg",
+   "user": {
+    "login": "copilot-pull-request-reviewer[bot]",
+    "id": 175728472,
+    "node_id": "BOT_kgDOCnlnWA",
+    "avatar_url": "https://avatars.githubusercontent.com/in/946600?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D",
+    "html_url": "https://github.com/apps/copilot-pull-request-reviewer",
+    "followers_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/received_events",
+    "type": "Bot",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "<!-- ccr-overview-v2 -->\n\n### 🔵 Needs a closer look\n\nA critical memory-exhaustion risk omitted from the published review requires human assessment before approval.\n\n**No open issues** 🎉\n\n<sub>Review effort: Balanced</sub>",
+   "state": "COMMENTED",
+   "html_url": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-6020974422",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/installer/pulls/694",
+   "author_association": "CONTRIBUTOR",
+   "is_copilot_code_review": true,
+   "copilot_code_review_effort": "balanced",
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-6020974422"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/installer/pulls/694"
+    }
+   },
+   "submitted_at": "2026-11-23T11:35:27Z",
+   "commit_id": "0ea7f3a7ab3f90be5b6cedfcd9c903ae15ee062b"
+  },
+  {
+   "id": 6021100139,
+   "node_id": "PRR_kwDOSQu-wc8AAAABZuKyaw",
+   "user": {
+    "login": "copilot-pull-request-reviewer[bot]",
+    "id": 175728472,
+    "node_id": "BOT_kgDOCnlnWA",
+    "avatar_url": "https://avatars.githubusercontent.com/in/946600?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D",
+    "html_url": "https://github.com/apps/copilot-pull-request-reviewer",
+    "followers_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/received_events",
+    "type": "Bot",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "<!-- ccr-overview-v2 -->\n\n### 🔵 Needs a closer look\n\nNative macOS validation is needed to confirm first-launch local-network permission, permission persistence, and discovery under the changed ad-hoc signing identity, which browser/IPC mocks and the ignored network test cannot verify.\n\n**No open issues** 🎉\n\n<sub>Review effort: Balanced</sub>",
+   "state": "COMMENTED",
+   "html_url": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-6021100139",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/installer/pulls/694",
+   "author_association": "CONTRIBUTOR",
+   "is_copilot_code_review": true,
+   "copilot_code_review_effort": "balanced",
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-6021100139"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/installer/pulls/694"
+    }
+   },
+   "submitted_at": "2026-11-23T11:44:58Z",
+   "commit_id": "2bd444c2f83338435e69fbe5ae22f4da71474e19"
+  },
+  {
+   "id": 6023786926,
+   "node_id": "PRR_kwDOSQu-wc8AAAABZwuxrg",
+   "user": {
+    "login": "copilot-pull-request-reviewer[bot]",
+    "id": 175728472,
+    "node_id": "BOT_kgDOCnlnWA",
+    "avatar_url": "https://avatars.githubusercontent.com/in/946600?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D",
+    "html_url": "https://github.com/apps/copilot-pull-request-reviewer",
+    "followers_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/received_events",
+    "type": "Bot",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "<!-- ccr-overview-v2 -->\n\n### 🟡 Changes recommended\n\nA stale core announcement can incorrectly suppress a reflashed device’s new installing entry, leaving only the outdated core card.\n\n<details open>\n<summary><strong>1 open issue</strong></summary>\n\n- <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.svg\"><img src=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.png\" alt=\"Medium severity\" width=\"62\" height=\"18\" align=\"texttop\"></picture> [Ignore stale core announcements when suppressing landing pages](https://github.com/home-assistant/installer/pull/694#discussion_r4667467410) · New\n</details>\n\n<sub>Review effort: Balanced</sub>",
+   "state": "COMMENTED",
+   "html_url": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-6023786926",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/installer/pulls/694",
+   "author_association": "CONTRIBUTOR",
+   "is_copilot_code_review": true,
+   "copilot_code_review_effort": "balanced",
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-6023786926"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/installer/pulls/694"
+    }
+   },
+   "submitted_at": "2026-11-23T14:53:39Z",
+   "commit_id": "6ca62afb62542bf7edc5bb935fbf776560926ffa"
+  },
+  {
+   "id": 6023832665,
+   "node_id": "PRR_kwDOSQu-wc8AAAABZwxkWQ",
+   "user": {
+    "login": "bramkragten",
+    "id": 5662298,
+    "node_id": "MDQ6VXNlcjU2NjIyOTg=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5662298?u=e9ad3f49389213944ba24cbbc21e659db5889927&v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bramkragten",
+    "html_url": "https://github.com/bramkragten",
+    "followers_url": "https://api.github.com/users/bramkragten/followers",
+    "following_url": "https://api.github.com/users/bramkragten/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bramkragten/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bramkragten/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bramkragten/subscriptions",
+    "organizations_url": "https://api.github.com/users/bramkragten/orgs",
+    "repos_url": "https://api.github.com/users/bramkragten/repos",
+    "events_url": "https://api.github.com/users/bramkragten/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bramkragten/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "",
+   "state": "COMMENTED",
+   "html_url": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-6023832665",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/installer/pulls/694",
+   "author_association": "MEMBER",
+   "is_copilot_code_review": false,
+   "copilot_code_review_effort": null,
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-6023832665"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/installer/pulls/694"
+    }
+   },
+   "submitted_at": "2026-11-23T14:56:22Z",
+   "commit_id": "c0af80bb346ee42a8d47ab2d57b91f84101a678f"
+  },
+  {
+   "id": 6023893320,
+   "node_id": "PRR_kwDOSQu-wc8AAAABZw1RSA",
+   "user": {
+    "login": "copilot-pull-request-reviewer[bot]",
+    "id": 175728472,
+    "node_id": "BOT_kgDOCnlnWA",
+    "avatar_url": "https://avatars.githubusercontent.com/in/946600?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D",
+    "html_url": "https://github.com/apps/copilot-pull-request-reviewer",
+    "followers_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/received_events",
+    "type": "Bot",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "<!-- ccr-overview-v2 -->\n\n### 🔵 Needs a closer look\n\nThe interaction between ad-hoc signing, macOS Local Network permissions, and mDNS discovery requires validation in a packaged app because automated tests do not exercise it.\n\n**No open issues** 🎉\n\n<details>\n<summary><strong>1 resolved since last review</strong></summary>\n\n- <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.svg\"><img src=\"https://github.githubassets.com/static/images/icons/copilot-code-review/medium-v2-light.png\" alt=\"Medium severity\" width=\"62\" height=\"18\" align=\"texttop\"></picture> [Ignore stale core announcements when suppressing landing pages](https://github.com/home-assistant/installer/pull/694#discussion_r4667467410)\n</details>\n\n<sub>Review effort: Balanced</sub>",
+   "state": "COMMENTED",
+   "html_url": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-6023893320",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/installer/pulls/694",
+   "author_association": "CONTRIBUTOR",
+   "is_copilot_code_review": true,
+   "copilot_code_review_effort": "balanced",
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-6023893320"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/installer/pulls/694"
+    }
+   },
+   "submitted_at": "2026-11-23T14:59:38Z",
+   "commit_id": "c0af80bb346ee42a8d47ab2d57b91f84101a678f"
+  },
+  {
+   "id": 6029588710,
+   "node_id": "PRR_kwDOSQu-wc8AAAABZ2Q45g",
+   "user": {
+    "login": "frenck",
+    "id": 195327,
+    "node_id": "MDQ6VXNlcjE5NTMyNw==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/195327?u=c0f88e376380f7a811559aa54d5096a66f6d3488&v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/frenck",
+    "html_url": "https://github.com/frenck",
+    "followers_url": "https://api.github.com/users/frenck/followers",
+    "following_url": "https://api.github.com/users/frenck/following{/other_user}",
+    "gists_url": "https://api.github.com/users/frenck/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/frenck/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/frenck/subscriptions",
+    "organizations_url": "https://api.github.com/users/frenck/orgs",
+    "repos_url": "https://api.github.com/users/frenck/repos",
+    "events_url": "https://api.github.com/users/frenck/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/frenck/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "",
+   "state": "APPROVED",
+   "html_url": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-6029588710",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/installer/pulls/694",
+   "author_association": "MEMBER",
+   "is_copilot_code_review": false,
+   "copilot_code_review_effort": null,
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/installer/pull/694#pullrequestreview-6029588710"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/installer/pulls/694"
+    }
+   },
+   "submitted_at": "2026-11-23T21:11:11Z",
+   "commit_id": "c0af80bb346ee42a8d47ab2d57b91f84101a678f"
+  }
+ ],
+ "696": [
+  {
+   "id": 6016408360,
+   "node_id": "PRR_kwDOSQu-wc8AAAABZpsbKA",
+   "user": {
+    "login": "copilot-pull-request-reviewer[bot]",
+    "id": 175728472,
+    "node_id": "BOT_kgDOCnlnWA",
+    "avatar_url": "https://avatars.githubusercontent.com/in/946600?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D",
+    "html_url": "https://github.com/apps/copilot-pull-request-reviewer",
+    "followers_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/received_events",
+    "type": "Bot",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "<!-- ccr-overview-v2 -->\n\n### 🟢 Approval recommended\n\nNo active review issues are identified for the CI action dependency updates.\n\n**No open issues** 🎉\n\n<details>\n<summary><strong>What changed in this PR</strong></summary>\n\nUpdates pinned GitHub Actions dependencies used by the installer’s CI workflow, with no application code changes.\n\n**Changes:**\n- Updates `taiki-e/install-action` from v2.90.5 to v2.90.8 for cargo-audit, cargo-shear, and cargo-llvm-cov installation.\n- Updates `zizmorcore/zizmor-action` from v0.8.1 to v0.9.0 for workflow security analysis.\n- Retains commit-SHA pinning and existing action inputs.\n\n| File | Description |\r\n| ---- | ----------- |\r\n| `.github/​workflows/​ci.yml` | Updates action commit pins and version comments for Rust tooling installation and workflow security checks. |\n</details>\n\n<sub>Review effort: Balanced</sub>",
+   "state": "COMMENTED",
+   "html_url": "https://github.com/home-assistant/installer/pull/696#pullrequestreview-6016408360",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/installer/pulls/696",
+   "author_association": "CONTRIBUTOR",
+   "is_copilot_code_review": true,
+   "copilot_code_review_effort": "balanced",
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/installer/pull/696#pullrequestreview-6016408360"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/installer/pulls/696"
+    }
+   },
+   "submitted_at": "2026-11-23T04:00:41Z",
+   "commit_id": "20f4eb1e0748b2df1a85b672eef04de778612d25"
+  },
+  {
+   "id": 6017339541,
+   "node_id": "PRR_kwDOSQu-wc8AAAABZqlQlQ",
+   "user": {
+    "login": "MindFreeze",
+    "id": 5219205,
+    "node_id": "MDQ6VXNlcjUyMTkyMDU=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5219205?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/MindFreeze",
+    "html_url": "https://github.com/MindFreeze",
+    "followers_url": "https://api.github.com/users/MindFreeze/followers",
+    "following_url": "https://api.github.com/users/MindFreeze/following{/other_user}",
+    "gists_url": "https://api.github.com/users/MindFreeze/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/MindFreeze/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/MindFreeze/subscriptions",
+    "organizations_url": "https://api.github.com/users/MindFreeze/orgs",
+    "repos_url": "https://api.github.com/users/MindFreeze/repos",
+    "events_url": "https://api.github.com/users/MindFreeze/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/MindFreeze/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "",
+   "state": "APPROVED",
+   "html_url": "https://github.com/home-assistant/installer/pull/696#pullrequestreview-6017339541",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/installer/pulls/696",
+   "author_association": "MEMBER",
+   "is_copilot_code_review": false,
+   "copilot_code_review_effort": null,
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/installer/pull/696#pullrequestreview-6017339541"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/installer/pulls/696"
+    }
+   },
+   "submitted_at": "2026-11-23T06:22:36Z",
+   "commit_id": "20f4eb1e0748b2df1a85b672eef04de778612d25"
+  }
+ ],
+ "697": [
+  {
+   "id": 6016415102,
+   "node_id": "PRR_kwDOSQu-wc8AAAABZps1fg",
+   "user": {
+    "login": "copilot-pull-request-reviewer[bot]",
+    "id": 175728472,
+    "node_id": "BOT_kgDOCnlnWA",
+    "avatar_url": "https://avatars.githubusercontent.com/in/946600?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D",
+    "html_url": "https://github.com/apps/copilot-pull-request-reviewer",
+    "followers_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/received_events",
+    "type": "Bot",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "<!-- ccr-overview-v2 -->\n\n### 🔵 Needs a closer look\n\nThe security-critical Sigstore 0.17 upgrade includes breaking changes, but upstream sources and CI results are unavailable to confirm compilation, valid-signature acceptance, and tampering rejection.\n\n**No open issues** 🎉\n\n<details>\n<summary><strong>What changed in this PR</strong></summary>\n\nUpdates Rust dependencies used for local Home Assistant discovery and HAOS release signature verification.\n\n**Changes:**\n- Upgrades `mdns-sd` from `0.21` to `0.22`.\n- Upgrades the three direct Sigstore dependencies from `0.16` to `0.17`.\n- Refreshes locked versions, checksums, and transitive cryptography dependencies.\n\n| File | Description |\r\n| ---- | ----------- |\r\n| Cargo.toml | Updates workspace version requirements for mDNS and Sigstore dependencies. |\r\n| Cargo.lock | Locks the updated packages and adds required cryptography dependencies. |\n</details>\n\n<sub>Review effort: Balanced</sub>",
+   "state": "COMMENTED",
+   "html_url": "https://github.com/home-assistant/installer/pull/697#pullrequestreview-6016415102",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/installer/pulls/697",
+   "author_association": "CONTRIBUTOR",
+   "is_copilot_code_review": true,
+   "copilot_code_review_effort": "balanced",
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/installer/pull/697#pullrequestreview-6016415102"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/installer/pulls/697"
+    }
+   },
+   "submitted_at": "2026-11-23T04:01:58Z",
+   "commit_id": "bcdd5d297e631d2fa1dbcf90538ed1087251eb4d"
+  },
+  {
+   "id": 6017340744,
+   "node_id": "PRR_kwDOSQu-wc8AAAABZqlVSA",
+   "user": {
+    "login": "MindFreeze",
+    "id": 5219205,
+    "node_id": "MDQ6VXNlcjUyMTkyMDU=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5219205?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/MindFreeze",
+    "html_url": "https://github.com/MindFreeze",
+    "followers_url": "https://api.github.com/users/MindFreeze/followers",
+    "following_url": "https://api.github.com/users/MindFreeze/following{/other_user}",
+    "gists_url": "https://api.github.com/users/MindFreeze/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/MindFreeze/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/MindFreeze/subscriptions",
+    "organizations_url": "https://api.github.com/users/MindFreeze/orgs",
+    "repos_url": "https://api.github.com/users/MindFreeze/repos",
+    "events_url": "https://api.github.com/users/MindFreeze/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/MindFreeze/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "",
+   "state": "APPROVED",
+   "html_url": "https://github.com/home-assistant/installer/pull/697#pullrequestreview-6017340744",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/installer/pulls/697",
+   "author_association": "MEMBER",
+   "is_copilot_code_review": false,
+   "copilot_code_review_effort": null,
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/installer/pull/697#pullrequestreview-6017340744"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/installer/pulls/697"
+    }
+   },
+   "submitted_at": "2026-11-23T06:22:46Z",
+   "commit_id": "bcdd5d297e631d2fa1dbcf90538ed1087251eb4d"
+  }
+ ],
+ "698": [
+  {
+   "id": 6024135861,
+   "node_id": "PRR_kwDOSQu-wc8AAAABZxEEtQ",
+   "user": {
+    "login": "copilot-pull-request-reviewer[bot]",
+    "id": 175728472,
+    "node_id": "BOT_kgDOCnlnWA",
+    "avatar_url": "https://avatars.githubusercontent.com/in/946600?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D",
+    "html_url": "https://github.com/apps/copilot-pull-request-reviewer",
+    "followers_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/received_events",
+    "type": "Bot",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "Copilot wasn't able to review any files in this pull request. Check if the **Files changed** in this pull request are included in [default exclusions](https://docs.github.com/en/copilot/reference/review-excluded-files).\n\n\n\n",
+   "state": "COMMENTED",
+   "html_url": "https://github.com/home-assistant/installer/pull/698#pullrequestreview-6024135861",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/installer/pulls/698",
+   "author_association": "CONTRIBUTOR",
+   "is_copilot_code_review": true,
+   "copilot_code_review_effort": "balanced",
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/installer/pull/698#pullrequestreview-6024135861"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/installer/pulls/698"
+    }
+   },
+   "submitted_at": "2026-11-23T15:14:46Z",
+   "commit_id": "7b8944a7d109986769ab3298a631ca38484b6363"
+  },
+  {
+   "id": 6029849801,
+   "node_id": "PRR_kwDOSQu-wc8AAAABZ2g0yQ",
+   "user": {
+    "login": "frenck",
+    "id": 195327,
+    "node_id": "MDQ6VXNlcjE5NTMyNw==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/195327?u=c0f88e376380f7a811559aa54d5096a66f6d3488&v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/frenck",
+    "html_url": "https://github.com/frenck",
+    "followers_url": "https://api.github.com/users/frenck/followers",
+    "following_url": "https://api.github.com/users/frenck/following{/other_user}",
+    "gists_url": "https://api.github.com/users/frenck/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/frenck/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/frenck/subscriptions",
+    "organizations_url": "https://api.github.com/users/frenck/orgs",
+    "repos_url": "https://api.github.com/users/frenck/repos",
+    "events_url": "https://api.github.com/users/frenck/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/frenck/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+   },
+   "body": "",
+   "state": "APPROVED",
+   "html_url": "https://github.com/home-assistant/installer/pull/698#pullrequestreview-6029849801",
+   "pull_request_url": "https://api.github.com/repos/home-assistant/installer/pulls/698",
+   "author_association": "MEMBER",
+   "is_copilot_code_review": false,
+   "copilot_code_review_effort": null,
+   "_links": {
+    "html": {
+     "href": "https://github.com/home-assistant/installer/pull/698#pullrequestreview-6029849801"
+    },
+    "pull_request": {
+     "href": "https://api.github.com/repos/home-assistant/installer/pulls/698"
+    }
+   },
+   "submitted_at": "2026-11-23T21:31:10Z",
+   "commit_id": "7b8944a7d109986769ab3298a631ca38484b6363"
+  }
+ ]
+}

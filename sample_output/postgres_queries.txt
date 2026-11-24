@@ -1,0 +1,64 @@
+-- Organisation summary (compliance_summary, repository = __all__)
+  run_date  | total_prs | compliant_prs | compliance_rate | human_prs | human_compliance_rate |               violations                
+------------+-----------+---------------+-----------------+-----------+-----------------------+-----------------------------------------
+ 2026-11-23 |       304 |           278 |          0.9145 |       233 |                0.9185 | {"no_approval": 9, "failed_checks": 21}
+(1 row)
+
+-- Top repositories by merged PRs
+    repository     | total_prs | compliant_prs | compliance_rate | human_compliance_rate |               violations               
+-------------------+-----------+---------------+-----------------+-----------------------+----------------------------------------
+ core              |       126 |           112 |          0.8889 |                0.8889 | {"failed_checks": 14}
+ home-assistant.io |        50 |            49 |          0.9800 |                0.9792 | {"no_approval": 1}
+ frontend          |        31 |            31 |          1.0000 |                1.0000 | {}
+ android           |        14 |             4 |          0.2857 |                0.5000 | {"no_approval": 8, "failed_checks": 6}
+ supervisor        |         7 |             7 |          1.0000 |                1.0000 | {}
+ installer         |         6 |             5 |          0.8333 |                1.0000 | {"failed_checks": 1}
+ workflows         |         5 |             5 |          1.0000 |                1.0000 | {}
+ operating-system  |         5 |             5 |          1.0000 |                1.0000 | {}
+ app-whisper       |         4 |             4 |          1.0000 |                       | {}
+ docker            |         3 |             3 |          1.0000 |                1.0000 | {}
+(10 rows)
+
+-- Violations by reason
+    reason     | prs 
+---------------+-----
+ failed_checks |  21
+ no_approval   |   9
+(2 rows)
+
+-- v_violations (latest 10)
+    repository     | pr_number |                       title                        |    author     |      violation_reasons      |                             pr_url                             
+-------------------+-----------+----------------------------------------------------+---------------+-----------------------------+----------------------------------------------------------------
+ core              |    193495 | Add timer lists to ESPHome voice satellites        | synesthesiam  | {failed_checks}             | https://github.com/home-assistant/core/pull/193495
+ home-assistant.io |     51033 | 2026.11.3                                          | frenck        | {no_approval}               | https://github.com/home-assistant/home-assistant.io/pull/51033
+ core              |    194047 | 2026.11.3                                          | frenck        | {failed_checks}             | https://github.com/home-assistant/core/pull/194047
+ core              |    190578 | Render plain value_json templates without jinja    | erwindouna    | {failed_checks}             | https://github.com/home-assistant/core/pull/190578
+ android           |      7961 | Remove star graph from Ossinsight                  | TimoPtr       | {no_approval,failed_checks} | https://github.com/home-assistant/android/pull/7961
+ core              |    193083 | Bump EARN-E P1 Meter to silver quality scale       | Miggets7      | {failed_checks}             | https://github.com/home-assistant/core/pull/193083
+ android           |      7960 | Update astral-sh/setup-uv action to v10.4.0        | renovate[bot] | {no_approval,failed_checks} | https://github.com/home-assistant/android/pull/7960
+ android           |      7948 | Update androidx.compose.*                          | renovate[bot] | {no_approval}               | https://github.com/home-assistant/android/pull/7948
+ android           |      7954 | Bump compileSDK minor version to 2                 | TimoPtr       | {failed_checks}             | https://github.com/home-assistant/android/pull/7954
+ android           |      7957 | Update out of date sensor description for notifica | TimoPtr       | {failed_checks}             | https://github.com/home-assistant/android/pull/7957
+(10 rows)
+
+-- v_compliance_humans_only (repos with >= 5 PRs)
+    repository     | prs | compliant_prs | compliance_rate 
+-------------------+-----+---------------+-----------------
+ core              | 126 |           112 |          0.8889
+ home-assistant.io |  48 |            47 |          0.9792
+ frontend          |  23 |            23 |          1.0000
+ cli               |  10 |            10 |          1.0000
+ android           |   8 |             4 |          0.5000
+ version           |   5 |             5 |          1.0000
+(6 rows)
+
+-- etl_runs for the scheduled run (per task)
+      task_id       | status  | attempts_rows | avg_duration_s | api_calls | min_rate_limit_remaining 
+--------------------+---------+---------------+----------------+-----------+--------------------------
+ data_quality_check | success |             1 |            4.6 |         0 |                         
+ extract            | success |            85 |           10.3 |      1309 |                     3796
+ list_repos         | success |             1 |            3.6 |         2 |                     4996
+ load               | success |             1 |            1.1 |         0 |                         
+ transform          | success |             1 |           47.5 |         0 |                         
+(5 rows)
+
