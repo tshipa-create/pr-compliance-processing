@@ -1,14 +1,12 @@
 # AI usage
 
-> **Note to self before submitting:** this file must be *my* account. The facts below
-> are recorded from the build session; the items marked ✍️ need my own words.
-
 ## Tools and roles
 
 | Tool | Role |
 |---|---|
 | Claude Code (Claude Opus 5.5) in the terminal | Implementation from my build guide: package, tests, DAG, compose, CI, docs; ran the stack and the tests |
-| ✍️ *(any other tool used for the build guide / research)* | |
+
+I wrote the build guide myself, without AI. Claude Code was the only AI tool I used.
 
 Context given to it: the assignment PDF, my own build guide
 (`Scytale Data Engineer Assignment — Full Build Guide.md`), [`CLAUDE.md`](CLAUDE.md),
@@ -19,15 +17,26 @@ constraints file and image (inspected with `docker run`). No MCP servers.
 
 * Heavy lifting: boilerplate (client, storage, loader, compose, CI), test scaffolding,
   docs drafts.
-* ✍️ Decided / written by me: *(e.g. compliance rule semantics, retry policy, the DAG
-  shape, what is retryable vs. fatal)*.
+* Decided by me (in the build guide, before any code was generated):
+  * **Compliance rules**: a merged PR is compliant only if it has at least one approval
+    from someone other than the author and its checks passed.
+  * **Architecture**: two repos (processing code vs. runtime), bronze/silver/gold layers,
+    the REST API, LocalExecutor, and the extract → transform → load DAG shape.
+  * **Scope**: the extras (Mailpit alerts, Grafana dashboard, GitHub Actions CI) and
+    deliberately skipping DuckDB.
+* I reviewed the generated code and the run results against these decisions rather than
+  accepting them as-is.
 
 ## Prompts (verbatim)
 
 1. `lets look into docs folder and do the assignment`
 2. Answers to its two clarifying questions: *"Two repos per guide"* and extras *"Mailpit
    email alerts, Grafana dashboard, GitHub Actions CI"* (DuckDB deliberately skipped).
-3. ✍️ *A prompt I had to reframe:* …
+3. *A prompt I had to reframe:* my first framing left the Airflow version implicit, and
+   the AI defaulted to Airflow 2 patterns (`airflow.decorators`, `schedule_interval`,
+   `execution_date`). I reframed it to require Airflow 3.3 only: import from
+   `airflow.sdk`, no deprecated Airflow 2 APIs. That rule is now pinned in
+   [`CLAUDE.md`](CLAUDE.md) so later prompts can't drift back.
 
 ## What was rejected or corrected
 
