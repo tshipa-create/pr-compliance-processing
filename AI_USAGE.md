@@ -4,12 +4,12 @@
 
 | Tool | Role |
 |---|---|
-| Claude Code (Claude Opus 5.5) in the terminal | Implementation from my build guide: package, tests, DAG, compose, CI, docs; ran the stack and the tests |
+| Claude Code (Claude Opus 5.5) in the terminal | Implementation from my design doc: package, tests, DAG, compose, CI, docs; ran the stack and the tests |
 
-I wrote the build guide myself, without AI. Claude Code was the only AI tool I used.
+I wrote the design doc myself, without AI. Claude Code was the only AI tool I used.
 
-Context given to it: the assignment PDF, my own build guide
-(`Scytale Data Engineer Assignment — Full Build Guide.md`), [`CLAUDE.md`](CLAUDE.md),
+Context given to it: the assignment PDF, my own design doc
+(`PR Compliance Pipeline — Design Doc.md`), [`CLAUDE.md`](CLAUDE.md),
 live GitHub API responses, and the official Airflow 3.3.0 `docker-compose.yaml`,
 constraints file and image (inspected with `docker run`). No MCP servers.
 
@@ -17,7 +17,7 @@ constraints file and image (inspected with `docker run`). No MCP servers.
 
 * Heavy lifting: boilerplate (client, storage, loader, compose, CI), test scaffolding,
   docs drafts.
-* Decided by me (in the build guide, before any code was generated):
+* Decided by me (in the design doc, before any code was generated):
   * **Compliance rules**: a merged PR is compliant only if it has at least one approval
     from someone other than the author and its checks passed.
   * **Architecture**: two repos (processing code vs. runtime), bronze/silver/gold layers,
