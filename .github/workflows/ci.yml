@@ -18,7 +18,7 @@ jobs:
     name: lint, types, unit tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0 # SonarQube needs full history
       - uses: astral-sh/setup-uv@v6
@@ -61,7 +61,7 @@ jobs:
         options: >-
           --health-cmd pg_isready --health-interval 5s --health-timeout 5s --health-retries 10
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: astral-sh/setup-uv@v6
         with:
           enable-cache: true
@@ -75,7 +75,7 @@ jobs:
     name: DAG integrity (inside apache/airflow:3.3.0)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Install package into the official image and import the DAG
         run: |
           docker run --rm -v "$PWD:/src" -w /src --entrypoint bash apache/airflow:3.3.0 -c '
@@ -92,7 +92,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: astral-sh/setup-uv@v6
       - run: uv build
       - uses: softprops/action-gh-release@v2
