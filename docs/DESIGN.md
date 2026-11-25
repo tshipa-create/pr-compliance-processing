@@ -2,9 +2,18 @@
 
 Nov 24, 2026 · @Tshipa
 
-> Written before the build. Where the implementation deliberately differs (e.g. Python
-> 3.13 instead of 3.12, the `transform` trigger rule, the run-owned load scope), the
-> change and its reason are in [`../AI_USAGE.md`](../AI_USAGE.md) and [`adr/`](adr/).
+> **Status:** written before the build and kept as written. Running the real stack
+> changed the decisions below; the code follows this table, and the reasons are in
+> [`../AI_USAGE.md`](../AI_USAGE.md) and [`adr/`](adr/).
+>
+> | This doc says | Built | Why |
+> |---|---|---|
+> | Python 3.12 (CI) | Python 3.13 | The `apache/airflow:3.3.0` image ships 3.13 |
+> | `schedule="0 0 * * *"` | `CronDataIntervalTimetable("0 0 * * *")` | In Airflow 3 a cron string gives each run a zero-length data interval ([ADR 0004](adr/0004-data-interval-not-watermark.md)) |
+> | `transform` uses `trigger_rule="all_done"` | `all_done_min_one_success`, and silver reads only this run's bronze (`run_id`) | `all_done` reloaded stale bronze when `list_repos` itself failed |
+> | Latest review per reviewer | Latest *decisive* review (`APPROVED` / `CHANGES_REQUESTED`) per reviewer | A later `COMMENTED` review would otherwise cancel an approval ([ADR 0006](adr/0006-compliance-rule-choices.md)) |
+> | Load = upsert only | Upsert, then delete rows in this run's scope (repos × window) that are no longer in gold | Upsert alone left orphan rows after a narrower rerun (318 vs 304) ([ADR 0009](adr/0009-run-owned-load-scope.md)) |
+> | — | Manual triggers fall back to the previous UTC day | Manual runs in Airflow 3 have no data interval |
 
 ## Overview
 
@@ -222,7 +231,7 @@ pr_compliance()
 
 ## Extract
 
-Extract is where most marks are won: correct endpoints, pagination, rate limits, retries and edge cases, all behind a small typed client.
+Extract is where most of the risk is: correct endpoints, pagination, rate limits, retries and edge cases, all behind a small typed client.
 
 **Endpoints**
 
@@ -660,201 +669,4 @@ Match the Python version to the one in the `apache/airflow:3.3.0` image. Airflow
 - `SONAR_TOKEN` as a repo secret; quality-gate badge in the README. If the repos are private, add a screenshot, since reviewers can't open the dashboard.
 - Present it as the quality gate and trend view; ruff and mypy still do the fast checks. Fix or justify every issue it raises.
 - Add `pip-audit` (vulnerable dependencies) and Trivy (Docker image scan, infra repo) as one step each.
-- Add it on Day 3, after everything else works.
-
-## Documentation deliverables
-
-Documentation is graded on its own, so treat the infra README as the front door and keep every other file short and specific.
-
-| File | Repo | Contents |
-| --- | --- | --- |
-| `README.md` | Infra (main) | Badges; what it does; Mermaid architecture diagram; prerequisites; quick start (clone → `.env` → `make up` → `make demo`); configuration table; data layout; DAG and tasks; compliance rules and assumptions; logging format with example; monitoring, alerting and runbook; querying the output; tests; known limitations; troubleshooting |
-| `README.md` | Processing | Package overview, module map, how to run tests locally, link back to infra |
-| `docs/APPROACH.md` | Processing | About one page: the brief's “brief document explaining your approach” — design, trade-offs, what you'd do with more time |
-| `docs/adr/000N-*.md` | Processing | One short record per decision |
-| `AI_USAGE.md` | Processing | Required by the brief (below) |
-| `CLAUDE.md` | Processing | The context you gave your AI tools |
-| `sample_output/` | Processing | A real small run: bronze JSON, silver and gold Parquet, `summary.json`, a CSV preview, a `psql` query screenshot or text dump |
-| `CHANGELOG.md` | Both | One entry per tag |
-
-**ADRs worth writing** (context → decision → consequences, \~10 lines each)
-
-1. Two repos with a submodule.
-2. REST over GraphQL (GraphQL could fetch a PR's reviews, commits and checks in one query, \~4× fewer calls; REST chosen because the brief names those endpoints).
-3. LocalExecutor over Celery.
-4. Data interval instead of a watermark.
-5. Medallion folders without a table format.
-6. Compliance rule choices (self-approval, re-runs, no checks).
-
-**AI\_USAGE.md** — half a page, honest, covering everything the brief lists:
-
-- Tools and models, and the role of each (scaffolding, tests, docs review).
-- Where AI did the heavy lifting vs where you deliberately didn't use it (e.g. the compliance rules and rate-limit logic written by hand).
-- 2–3 verbatim prompts, including one you reframed. Save them as you go, not at the end.
-- What you rejected: invented GitHub fields, Airflow 2 syntax (`schedule_interval`, `airflow.operators.python`, `execution_date`), over-engineering.
-- How you verified: tests, real payloads in fixtures, a real DAG run.
-- Context fed in: GitHub REST docs, Airflow 3 docs, `CLAUDE.md`.
-
-**CLAUDE.md** — project conventions for the AI: Airflow 3 import rules, Python version, typing and logging rules, “never invent API fields; check the fixture”, test commands, folder layout.
-
-**Known limitations** (README) — required checks unknowable with a public token; backfill speed bound by the rate limit; local disk storage; single-node executor; what changes at 100× scale (object storage, GraphQL, Celery or Kubernetes executor, a table format).
-
-## Extra marks and what to avoid
-
-The best extra marks come from a dependable core plus a few senior touches, not from more infrastructure.
-
-| Extra | Effort | Why it scores |
-| --- | --- | --- |
-| Data interval windows + backfill | Low | Shows you understand how Airflow schedules runs |
-| Dynamic task mapping per repo | Low | Parallel, isolated retries, readable UI |
-| `is_bot_author` + humans-only metrics | Low | A real insight, not just plumbing |
-| Optional DuckDB output | Low | Ticks an optional box in the brief |
-| SQL views on the output | Low | Output answers questions immediately |
-| `make demo` | Low | Reviewer sees results in minutes |
-| ADRs + GraphQL trade-off | Low | Senior judgement, great call material |
-| `pandera` output validation | Low | Validates both ends of the transform |
-| Recorded real API responses in tests | Medium | Realistic tests without hitting GitHub |
-| Data-quality task + runbook | Medium | Production thinking most candidates skip |
-| Grafana dashboard | Medium | Visible, demo-friendly monitoring |
-| ETags / conditional requests | Medium | Saves rate limit; shows API depth |
-
-**Also signals quality**
-
-- A clean commit history: small, meaningful commits (reviewers do look).
-- Security basics: token as a connection, never logged; `.env` gitignored; pinned images; non-root container.
-- Consistent naming, docstrings on public classes and functions, no dead code or commented-out blocks.
-
-**Avoid**
-
-- Kubernetes, Celery, Kafka, Terraform, Spark, Delta Lake — the brief explicitly marks down over-engineering.
-- Business logic inside the DAG file.
-- Passing DataFrames through XCom.
-- Airflow 2 APIs.
-- Any code you can't explain line by line.
-
-## 3-day plan, checklist and call prep
-
-Get a thin end-to-end run working on day 1, make it correct on day 2, and polish on day 3. Never leave the stack broken overnight.
-
-**Day 1 — skeleton that runs**
-
-1. Create both repos, the submodule, `pyproject.toml`, pre-commit, CLAUDE.md; start AI\_USAGE notes.
-2. Docker Compose with Airflow 3.3.0 + both Postgres; UI on 8080.
-3. Config, logging, exceptions; `RateLimiter` and `GitHubClient` with pagination and retries, plus their unit tests.
-4. `PRExtractor` for one small repo, writing bronze. Save real payloads as fixtures.
-5. Processing CI green (lint, mypy, unit tests).
-
-**Day 2 — correct end to end**
-
-1. JSON Schemas, silver step, quarantine.
-2. Compliance rules with the full edge-case test list; gold + summary; pandera.
-3. DDL, views, `PostgresLoader` with integration tests.
-4. Full DAG with mapping, data interval, callbacks; first real run on 2–3 repos.
-5. Concurrency in extract; check rate-limit behaviour in the logs.
-
-**Day 3 — production polish**
-
-1. `data_quality_check` task, `etl_runs` metrics, email alerts to Mailpit.
-2. Infra CI smoke test; SonarQube Cloud job; `make demo`; optional DuckDB and Grafana.
-3. Generate `sample_output/` from a real run.
-4. README, APPROACH, ADRs, AI\_USAGE, CHANGELOG; tag `v1.0.0`; pin the submodule.
-5. Fresh-clone test on a clean machine or directory, following only the README.
-
-**Submission checklist**
-
-- [ ] `git clone --recursive` + `make up` works from scratch
-- [ ] UI at http://localhost:8080, DAG scheduled `0 0 * * *`, extract → transform → load visible
-- [ ] A successful DAG run with rows in `pr_compliance`
-- [ ] All gold columns from the brief present with correct types
-- [ ] Pagination, rate limits, retries, concurrency implemented and tested
-- [ ] Raw JSON and Parquet written; samples committed in `sample_output/`
-- [ ] JSON Schemas define the input types
-- [ ] Unified JSON logging and error hierarchy; alerting documented
-- [ ] CI green on both repos, badges in READMEs
-- [ ] README, APPROACH.md, AI\_USAGE.md, CLAUDE.md, ADRs complete
-- [ ] No secrets committed; `.env.example` complete
-- [ ] Assumptions and known limitations listed
-
-## Follow-up call preparation
-
-The call tests ownership: they pick parts of your code and ask why it's built that way and how it fails. Prepare a 5-minute demo, a 2-minute architecture story, and short, specific answers to the questions below, given in your own words.
-
-**Have open before the call**
-
-- Airflow UI with a recent successful run (Graph view, one mapped extract's log).
-- Mailpit inbox with a test alert; `psql` or DuckDB on `pr_compliance` and the views.
-- The repos in your IDE: `client.py`, `rate_limiter.py`, `rules.py`, `loader.py`, the DAG file.
-- The README, ADRs and AI\_USAGE.md; the CI runs and Sonar quality gate.
-
-**5-minute demo script**
-
-1. One sentence: what the pipeline answers (which merged PRs met review and check standards).
-2. Architecture diagram: tasks on top, bronze/silver/gold below, Postgres, email alerts.
-3. Airflow UI: schedule, mapped extract per repo, one log line in JSON.
-4. Data: a bronze JSON file, the gold Parquet, then a SQL query on the views (compliance by repo, humans vs bots).
-5. Resilience: `make test-alert` → Mailpit; mention idempotent reruns and backfill.
-6. Quality: CI green, test list for the rules, Sonar gate.
-
-**Likely questions with model answers**
-
-*Design*
-
-- **Why two repos?** Pipeline code and runtime change at different rates. Processing owns the DAG and DDL because they change with the code; infra pins a tagged version via a submodule. Downside: submodules are clumsy, so the Makefile checks for an empty folder.
-- **Why medallion?** Bronze keeps raw truth, so a rule change reruns silver → gold without hitting the API. It's a folder convention, not a lakehouse.
-- **Why Pandas, not PySpark?** Daily volume is thousands of rows; Spark adds a JVM and a cluster for no gain. I'd switch at sizes that don't fit in memory on one node.
-- **Why LocalExecutor?** One machine, a handful of tasks. Celery adds Redis and workers with no benefit here.
-
-*GitHub API*
-
-- **How does pagination work?** Follow the `Link: rel="next"` header, 100 per page, sorted by `updated` descending, stopping once `updated_at` is before the window. Safe because `updated_at` is never earlier than `merged_at`. No Search API: it caps at 1,000 results.
-- **What if a PR is updated while you're paginating?** It jumps to page 1, which I may already have read, so it could be missed. The fix is to fetch a window that overlaps the previous day and rely on the upsert, or re-read page 1 at the end. Good to raise yourself; it shows depth.
-- **Rate-limit maths?** 5,000 requests/hour with a token. About 4–5 calls per merged PR means roughly 1,000 PRs/hour. A daily run is minutes; a large backfill is spread over many runs that sleep until the reset.
-- **Three mapped tasks share one token; how does throttling stay correct?** The `X-RateLimit-Remaining` header reflects the token's shared quota, so each process sees the real remaining count. Concurrency is capped (3 tasks × 8 threads) to avoid secondary limits.
-- **What do you retry?** Connection errors, timeouts, 5xx, 429 and secondary-limit 403s, with exponential backoff and jitter. Never 401 (fail fast) or 404/422 (skip the PR and count it).
-- **Why `head.sha`?** Checks run on the PR's last commit; the merge or squash commit usually has none. **Why both status endpoints?** Check runs (GitHub Actions) and legacy commit statuses are separate systems; a repo may use either.
-
-*Airflow 3*
-
-- **What changed from Airflow 2 that you used?** `airflow.sdk` imports, the API server instead of the webserver, a separate DAG processor, tasks going through the execution API rather than the metadata DB, assets, SLAs replaced by deadline alerts.
-- **How do you rerun 1 November only?** Clear that run's tasks in the UI, or `airflow dags backfill` for that date. Each run owns its data interval and partition, so the rerun overwrites the same files and upserts the same rows.
-- **What if the run dies halfway through extract?** Bronze writes are atomic per file; the retry rewrites that repo's partition. Other repos are unaffected thanks to mapping.
-- **Why not pass DataFrames through XCom?** XCom lives in the metadata DB and is meant for small values; paths keep it light.
-
-*Rules and data*
-
-- **Why does approve-then-changes-requested fail?** Only each reviewer's latest state counts; the reviewer withdrew approval.
-- **Why ignore self-approval?** GitHub doesn't allow it in the UI, but treating the author as a reviewer would defeat the purpose of review.
-- **Why does “no checks” fail?** Compliance should be conservative; it's configurable and documented as an assumption.
-- **Required checks?** The branch-protection API needs admin rights, so all checks are treated as required. With admin access I'd read the required contexts and filter.
-- **Schema changes upstream?** Schemas allow extra fields; missing or mistyped required fields go to quarantine, and a quarantine rate above 5% fails the run.
-- **Why upsert, not truncate?** Idempotent reruns and backfills without wiping history; one transaction means no partial loads.
-
-*Quality, operations, tooling*
-
-- **What's mocked vs real in tests?** HTTP is mocked or replayed from recorded real responses; rules are pure functions on real fixtures; Postgres is real in integration tests.
-- **How would you know it broke silently?** The freshness and volume checks fail the run if nothing new arrives; the scheduler dying is caught the same way.
-- **Why Mailpit, not Slack?** Slack is what I'd use in production; the assignment must run self-contained. Alerts go through one function, so switching is a notifier and a connection.
-- **Why uv?** Speed and a lockfile; Airflow's constraints keep versions aligned with the official image.
-
-*Scale and next steps*
-
-- **What changes at 100×?** GitHub webhooks (`pull_request` closed events) instead of polling; the GraphQL API to cut calls about 4×; object storage (S3/GCS) with a table format such as Iceberg; Celery or Kubernetes executor; dbt for the gold models.
-- **Biggest weakness?** Name one honestly (e.g. required checks can't be known with a public token, or the mid-pagination update case) and say how you'd fix it.
-
-*AI usage*
-
-- **Show me something the AI got wrong.** Have two concrete examples ready, each with file and fix (e.g. Airflow 2 imports, an invented review field, retrying on 401).
-- **Which parts did you write yourself and why?** The rules, rate limiting and retry policy, and DAG shape, because they're where correctness and judgement live.
-
-**Possible live changes — make these one-line config edits**
-
-- Require 2 approvals instead of 1 (`MIN_APPROVALS`).
-- Exclude bot PRs from compliance (`EXCLUDE_BOTS`).
-- Treat “no checks” as passing (`NO_CHECKS_PASSES`).
-- Add or remove a repo (`REPO_ALLOWLIST`).
-
-**How to answer well**
-
-- Start with the decision, then the reason, then the trade-off you accepted.
-- If you don't know, say so and reason aloud about how you'd find out. Never bluff.
-- Raise the weaknesses you know about before they do; it reads as ownership.
+- Add it last, after everything else works.
