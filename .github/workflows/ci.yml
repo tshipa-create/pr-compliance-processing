@@ -76,6 +76,7 @@ jobs:
           docker run --rm -v "$PWD:/src" -w /src --entrypoint bash apache/airflow:3.3.0 -c '
             curl -sSfL -o /tmp/c.txt https://raw.githubusercontent.com/apache/airflow/constraints-3.3.0/constraints-3.13.txt &&
             uv pip install -q -c /tmp/c.txt . pytest responses freezegun &&
+            airflow db migrate > /dev/null &&
             python -m pytest tests/test_dag.py -v -p no:cacheprovider'
 
   release:
