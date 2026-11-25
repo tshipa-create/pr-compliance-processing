@@ -9,7 +9,7 @@
 I wrote the design doc myself, without AI. Claude Code was the only AI tool I used.
 
 Context given to it: the assignment PDF, my own design doc
-(`PR Compliance Pipeline — Design Doc.md`), [`CLAUDE.md`](CLAUDE.md),
+([`docs/DESIGN.md`](docs/DESIGN.md)), [`CLAUDE.md`](CLAUDE.md),
 live GitHub API responses, and the official Airflow 3.3.0 `docker-compose.yaml`,
 constraints file and image (inspected with `docker run`). No MCP servers.
 

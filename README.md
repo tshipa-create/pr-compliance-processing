@@ -35,7 +35,7 @@ src/pr_compliance/
 └── quality/checks.py            data-quality checks
 sql/init/                        01_tables.sql, 02_views.sql, 03_grafana_user.sql
 tests/                           unit/, integration/, test_dag.py, fixtures/ (real payloads)
-docs/                            APPROACH.md, adr/
+docs/                            DESIGN.md, APPROACH.md, adr/
 sample_output/                   files from a real run
 ```
 
@@ -58,6 +58,7 @@ tests inside the Airflow image). Pre-commit hooks: `uvx pre-commit install`.
 
 ## Documents
 
+* [`docs/DESIGN.md`](docs/DESIGN.md) — the original design doc, written before the build
 * [`docs/APPROACH.md`](docs/APPROACH.md) — the one-page approach
 * [`docs/adr/`](docs/adr) — decision records
 * [`AI_USAGE.md`](AI_USAGE.md) — how AI tools were used and verified
